@@ -3,7 +3,7 @@
 	<!-- home -->
 	<backgroundcolor>0x00000000</backgroundcolor>
 	<defaultcontrol>1</defaultcontrol>
-	<onload condition="Window.Previous(Startup) + Skin.HasSetting(syssound)">AlarmClock(CloseStartupsound,PlayMedia(special://home/addons/resource.uisounds.Orbis/resources/Startup.wav),00:1.5,silent)</onload>
+	<onload condition="Window.Previous(Startup) + Skin.HasSetting(syssound)">AlarmClock(CloseStartupsound,PlayMedia(special://home/addons/resource.uisounds.orbis/resources/Startup.wav),00:1.5,silent)</onload>
 	<onload condition="Window.Previous(Startup) + Skin.HasSetting(syssound) + !String.Contains(Skin.String(themedir), Spiral) + !String.Contains(Skin.String(themedir), PlayStation) + !String.Contains(Skin.String(themedir), Destiny)">AlarmClock(CloseStartupsounds,PlayMedia(special://skin/scripts/system.mp3),00:4,silent)</onload>
 	<onload condition="Window.Previous(Startup) + Skin.HasSetting(syssound) + !String.Contains(Skin.String(themedir), Spiral) + !String.Contains(Skin.String(themedir), PlayStation) + !String.Contains(Skin.String(themedir), Destiny)">AlarmClock(CloseStartupsoundse,AlarmClock(playmeinloop,PlayMedia(special://skin/scripts/system.mp3),10:00,silent,loop),00:4,silent)</onload>
 	<onload condition="!Player.HasMedia + !Window.Previous(Startup) + Skin.HasSetting(syssound) + !String.Contains(Skin.String(themedir), Spiral) + !String.Contains(Skin.String(themedir), PlayStation) + !String.Contains(Skin.String(themedir), Destiny)">PlayMedia(special://skin/scripts/system.mp3)</onload>
@@ -26,7 +26,7 @@
 	<onload condition="Window.Previous(Startup) + Skin.HasSetting(syssound) + String.Contains(Skin.String(themedir), Anniversary)">AlarmClock(CloseStartupsoundse,AlarmClock(playmeinloop,PlayMedia(special://skin/scripts/PlayStation.wav),8:50,silent,loop),00:4,silent)</onload>
 	<onload condition="!Player.HasMedia + !Window.Previous(Startup) + Skin.HasSetting(syssound) + String.Contains(Skin.String(themedir), Anniversary)">PlayMedia(special://skin/scripts/PlayStation.wav)</onload>
 	<!-- add after 1st onload play command force playback in loop at the time expiration -->
-	<onload condition="!Player.HasMedia + !Window.Previous(Startup) + Skin.HasSetting(syssound) + String.Contains(Skin.String(themedir), Anniversary)">AlarmClock(playmeinloop,PlayMedia(special://skin/scripts/PlayStation.wav),8:50,silent,loop)</onload>
+	<onload condition="!Player.HasMedia + !Window.Previous(Startup) + Skin.HasSetting(syssound) + String.Contains(Skin.String(themedir), Anniversary)">AlarmClock(playmeinloop,PlayMedia(special://skin/reso/PlayStation.wav),8:50,silent,loop)</onload>
 	<!-- add after 1st onload play command force playback in loop at the time expiration -->
 	<onunload condition="Skin.HasSetting(syssound)">CancelAlarm(playmeinloop,true)</onunload>
 	<!-- put after stop onunload, cancel loop on exit -->

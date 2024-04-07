@@ -1,7 +1,7 @@
 ﻿<includes>
 
 	<include file="Defaults.xml" />
-	<include file="Include_Home_OSMC.xml" />
+	<include file="Include_Home_ORBIS.xml" />
 	<include file="Includes_Widgets.xml" />
 	<include condition="System.HasAddon(script.skinshortcuts)" file="script-skinshortcuts-includes.xml" />
 	<include condition="!System.HasAddon(script.skinshortcuts)" file="script-skinshortcuts-static.xml" />
