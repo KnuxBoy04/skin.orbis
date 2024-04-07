@@ -725,7 +725,7 @@
 						<label>My Favorites</label>
 						<icon>icons\library.png</icon>
 						<thumb />
-						<onclick>ActivateWindow(favourites)</onclick>
+						<onclick>ActivateWindow(favouritesbrowser)</onclick>
 					</item>
 					<include>FavItems</include>
 				</content>
