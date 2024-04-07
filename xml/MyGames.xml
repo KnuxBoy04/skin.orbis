@@ -3,35 +3,26 @@
 	<!-- games -->
 	<defaultcontrol always="true">50</defaultcontrol>
 	<views>50,51,523,535,537</views>
-	
 	<!-- Textbox scroll reset -->
 	<include>MediaWindowResetScroll</include>
-
 	<!-- Sub menu menucontrol -->
 	<include condition="!Skin.HasSetting(KioskMode)">SubMenuMenucontrol</include>
-
 	<controls>
-	
 		<control type="group">
 			<include>WindowFullscreenDialogFadeAnimation</include>
-
 			<!-- Background -->
 			<include>WindowBackgroundImageMultiView</include>
-			
 			<!-- Time -->
 			<include>Time</include>
-
 			<!-- Main group -->
 			<control type="group">
 				<include>WindowFadeAnimation</include>
-
 				<!-- Views -->
 				<include>Viewtype50</include>
 				<include>Viewtype51</include>
 				<include>Viewtype523</include>
 				<include>Viewtype535</include>
 				<include>Viewtype537</include>
-
 				<!-- Scrollbar (list) -->
 				<control type="scrollbar" id="60">
 					<include>MyGames_coords1</include>
@@ -46,7 +37,6 @@
 					<textureslidernibfocus></textureslidernibfocus>
 					<visible>!Skin.HasSetting(Scrollbars) + [Control.IsVisible(50) | Control.IsVisible(51)]</visible>
 				</control>
-				
 				<!-- Scrollbar (wide) -->
 				<control type="scrollbar" id="61">
 					<include>MyGames_coords2</include>
@@ -61,7 +51,6 @@
 					<textureslidernibfocus></textureslidernibfocus>
 					<visible>!Skin.HasSetting(Scrollbars) + Control.IsVisible(523)</visible>
 				</control>
-
 				<!-- Scrollbar (wall) -->
 				<control type="scrollbar" id="63">
 					<include>MyGames_coords3</include>
@@ -77,22 +66,14 @@
 					<textureslidernibfocus></textureslidernibfocus>
 					<visible>!Skin.HasSetting(Scrollbars) + [Control.IsVisible(535) | Control.IsVisible(537)]</visible>
 				</control>
-
 				<!-- Item count -->
 				<include>ItemCount</include>
-				
 				<!-- Sub menu indicator -->
 				<include>SubMenuIndicator</include>
-				
 				<!-- Sub menu -->
 				<include>SubMenu</include>
-
 			</control>
-
 			<include>MaskingBars</include>
-			
 		</control>
-
 	</controls>
-
 </window>
