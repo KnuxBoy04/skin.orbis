@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
-<addon id="skin.orbis" version="3.7.2" name="Orbis" provider-name="KnuxBoy04">
+<addon id="skin.orbis" version="3.7.3" name="Orbis" provider-name="KnuxBoy04">
     <requires>
         <import addon="xbmc.gui" version="5.17.0"/>
         <import addon="script.favourites" version="6.0.4" />
