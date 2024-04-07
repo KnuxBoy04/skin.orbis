@@ -119,12 +119,12 @@
 					<item id="2">
 						<label>My Games</label>
 						<onclick>Right</onclick>
-						<thumb>icons/xmb/program.png</thumb>
+						<thumb>icons/xmb/programs.png</thumb>
 					</item>
 					<item id="3">
-						<label>My Favourites</label>
+						<label>My Favorites</label>
 						<onclick>Right</onclick>
-						<thumb>icons/xmbmain/icons.8.png</thumb>
+						<thumb>icons/xmb/icons.8.png</thumb>
 					</item>
 					<item id="4">
 						<label>Search</label>
@@ -271,7 +271,7 @@
 						<label>Live TV</label>
 						<icon>icons\tv.png</icon>
 						<thumb />
-						<onclick>ActivateWindow(pvr)</onclick>
+						<onclick>ActivateWindow(tvguide)</onclick>
 					</item>
 					<item id="6">
 						<label>My Games</label>
@@ -304,6 +304,13 @@
 						<icon>icons\usbmusic.png</icon>
 						<thumb />
 						<onclick>ActivateWindow(filemanager)</onclick>
+					</item>
+					<item id="7">
+						<label>Playstation Store</label>
+						<label2>icons/bg.png</label2>
+						<icon>icons\store.png</icon>
+						<thumb />
+						<onclick>ActivateWindow(addonbrowser)</onclick>
 					</item>
 				</content>
 			</control>
@@ -532,7 +539,7 @@
 						<thumb>$INFO[Skin.String(game11poster)]</thumb>
 					</item>
 					<item id="1">
-						<label>Add Game</label>
+						<label>Install Game</label>
 						<onclick condition="String.IsEmpty(Skin.String(game1name))">Skin.SetString(game1name)</onclick>
 						<onclick condition="String.IsEmpty(Skin.String(game1name))">Skin.SetFile(game1exe)</onclick>
 						<onclick condition="String.IsEmpty(Skin.String(game1name))">Skin.SetImage(game1poster)</onclick>

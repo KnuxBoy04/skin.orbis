@@ -4,7 +4,7 @@
 	<backgroundcolor>0x00000000</backgroundcolor>
 	<defaultcontrol>9000</defaultcontrol>
 	<onload condition="!String.IsEmpty(Window(settings).Property(ChangeSettingsLevel))">ClearProperty(ChangeSettingsLevel)</onload>
-	<onload condition="!Skin.HasSetting(firsttime)">RunScript(special://skin/scripts/setup.py)</onload>
+	<!--onload condition="!Skin.HasSetting(firsttime)">RunScript(special://skin/scripts/setup.py)</onload-->
 	<onload condition="!Skin.HasSetting(firsttime) + !Skin.HasSetting(DisableFiles)">Skin.ToggleSetting(DisableFiles)</onload>
 	<onload condition="!Skin.HasSetting(firsttime) + !Skin.HasSetting(DisableFiles)">Skin.ToggleSetting(DisableFavs)</onload>
 	<onload condition="String.IsEqual(Skin.String(BackgroundImage),Custom) + !Skin.HasSetting(firsttime)">Skin.SetString(BackgroundImage, )</onload>
@@ -129,7 +129,7 @@
 						<thumb>icons/xmb/weather.png</thumb>
 					</item>
 					<item id="1">
-						<label>Interface settings</label>
+						<label>Interface</label>
 						<onclick>ActivateWindow(interfacesettings)</onclick>
 						<thumb>icons/xmb/uisettings.png</thumb>
 					</item>
@@ -139,14 +139,29 @@
 						<thumb>icons/xmb/settings.png</thumb>
 					</item>
 					<item id="1">
-						<label>Network</label>
+						<label>Network and Services</label>
 						<onclick>ActivateWindow(servicesettings)</onclick>
 						<thumb>icons/xmbmain/icons.18.png</thumb>
+					</item>
+					<item id="1">
+						<label>System Log </label>
+						<onclick>ActivateWindow(eventlog)</onclick>
+						<thumb>icons/xmb/generic.png</thumb>
+					</item>
+					<item id="1">
+						<label>Content Settings</label>
+						<onclick>ActivateWindow(contentsettings)</onclick>
+						<thumb>icons/xmb/generic.png</thumb>
 					</item>
 					<item id="1">
 						<label>Media Player</label>
 						<onclick>ActivateWindow(playersettings)</onclick>
 						<thumb>icons/xmb/music.png</thumb>
+					</item>
+					<item id="1">
+						<label>Game Settings</label>
+						<onclick>ActivateWindow(gamesettings)</onclick>
+						<thumb>icons/xmb/programs.png</thumb>
 					</item>
 					<item id="1">
 						<label>Library</label>
@@ -169,7 +184,7 @@
 						<thumb>icons/xmb/generic.png</thumb>
 					</item>
 					<item id="1">
-						<label>System Info</label>
+						<label>System Information</label>
 						<onclick>ActivateWindow(systeminfo)</onclick>
 						<thumb>icons/xmb/help.png</thumb>
 					</item>

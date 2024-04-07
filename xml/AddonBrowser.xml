@@ -4,24 +4,20 @@
 	<backgroundcolor>0x00000000</backgroundcolor>
 	<defaultcontrol always="true">500</defaultcontrol>
 	<views>500</views>
-
 	<controls>
-
 		<!-- Background -->
 		<include>WindowBackgroundImage</include>
-
 		<!-- Time -->
 		<include>Time</include>
-
 		<control type="group">
-		<animation type="WindowOpen">
-              <effect type="fade" start="0" end="100" time="300" tween="cubic" easing="inout"/>
-              <effect type="zoom" start="120" end="100" time="400" tween="cubic" easing="out" center="auto"/>
-                    </animation>
-<animation type="WindowClose">
-              <effect type="fade" start="100" end="0" time="300" tween="cubic" easing="inout"/>
-              <effect type="zoom" start="100" end="120" time="400" tween="cubic" easing="out"center="auto"/>
-                    </animation>
+			<animation type="WindowOpen">
+				<effect type="fade" start="0" end="100" time="300" tween="cubic" easing="inout"/>
+				<effect type="zoom" start="120" end="100" time="400" tween="cubic" easing="out" center="auto"/>
+			</animation>
+			<animation type="WindowClose">
+				<effect type="fade" start="100" end="0" time="300" tween="cubic" easing="inout"/>
+				<effect type="zoom" start="100" end="120" time="400" tween="cubic" easing="out"center="auto"/>
+			</animation>
 			<!-- Image -->
 			<control type="image">
 				<left>120</left>
@@ -32,7 +28,6 @@
 				<colordiffuse>OverlayColorFO</colordiffuse>
 				<aspectratio aligny="center">keep</aspectratio>
 			</control>
-
 			<!-- List -->
 			<control type="fixedlist" id="500">
 				<left>750</left>
@@ -49,7 +44,6 @@
 				<viewtype label="535">list</viewtype>
 				<scrolltime tween="sine" easing="out">240</scrolltime>
 				<visible>!String.IsEmpty(Container.FolderPath)</visible>
-
 				<itemlayout height="72" width="1050">
 					<control type="label">
 						<left>32</left>
@@ -61,7 +55,6 @@
 						<textcolor>TextColor2</textcolor>
 					</control>
 				</itemlayout>
-
 				<focusedlayout height="144" width="1050">
 					<control type="label">
 						<left>32</left>
@@ -130,9 +123,7 @@
 						</control>
 					</control>
 				</focusedlayout>
-
 			</control>
-
 			<!-- Scrollbar (list) -->
 			<control type="scrollbar" id="60">
 				<left>690</left>
@@ -151,10 +142,8 @@
 				<textureslidernibfocus>-</textureslidernibfocus>
 				<visible>!Skin.HasSetting(Scrollbars) + Control.IsVisible(500)</visible>
 			</control>
-
 			<!-- Item count -->
 			<include>ItemCount</include>
-
 			<!-- Options -->
 			<control type="group" id="9002">
 				<control type="image">
@@ -175,7 +164,6 @@
 						<height>1080</height>
 						<onclick>noop</onclick>
 					</control>
-
 					<control type="image">
 						<left>0</left>
 						<top>0</top>
@@ -183,11 +171,11 @@
 						<height>1080</height>
 						<texture colordiffuse="$VAR[OverlayColor]">dialogs/Background.png</texture>
 					</control>
-
 					<!-- Look controls -->
 					<control type="grouplist" id="3001">
 						<left>20</left>
-						<top>10</top> <!-- -10 because there are two spacers -->
+						<top>10</top>
+						<!-- -10 because there are two spacers -->
 						<width>410</width>
 						<height>1040</height>
 						<onleft>500</onleft>
@@ -196,17 +184,11 @@
 						<orientation>vertical</orientation>
 						<itemgap>0</itemgap>
 						<defaultcontrol always="true">99</defaultcontrol>
-
 						<include content="SideMenuAnimation">
 							<param name="containerID">3001</param>
 						</include>
-
 						<!-- View -->
-						<!--control type="button" id="99">
-							<height>52</height>
-							<label>$INFO[Container.ViewMode]</label>
-							<onclick>Container.NextViewMode</onclick>
-						</control-->
+						<!--control type="button" id="99"><height>52</height><label>$INFO[Container.ViewMode]</label><onclick>Container.NextViewMode</onclick></control-->
 						<!-- Scrollbars -->
 						<control type="radiobutton" id="94">
 							<height>52</height>
@@ -214,8 +196,6 @@
 							<onclick>Skin.ToggleSetting(Scrollbars)</onclick>
 							<selected>!Skin.HasSetting(Scrollbars)</selected>
 						</control>
-
-
 						<control type="image" id="80">
 							<left>0</left>
 							<top>0</top>
@@ -223,8 +203,6 @@
 							<height>10</height>
 							<texture>transparent.png</texture>
 						</control>
-
-
 						<!-- Sort by -->
 						<control type="button" id="3">
 							<height>52</height>
@@ -254,8 +232,6 @@
 							<selected>Container.Filtered</selected>
 							<visible>Container.CanFilterAdvanced</visible>
 						</control>
-
-
 						<control type="image" id="81">
 							<left>0</left>
 							<top>0</top>
@@ -263,8 +239,6 @@
 							<height>10</height>
 							<texture colordiffuse="$VAR[OverlayColor]">transparent.png</texture>
 						</control>
-
-
 						<!-- Check for updates -->
 						<control type="button" id="9">
 							<height>52</height>
@@ -286,9 +260,7 @@
 					</control>
 				</control>
 			</control>
-
 		</control>
-<include>bottombar</include>
+		<include>bottombar</include>
 	</controls>
-
 </window>

@@ -1,0 +1,187 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<window>
+	<!-- GameOSD -->
+	<defaultcontrol always="true">5</defaultcontrol>
+	
+	<!-- Textbox scroll reset -->
+	<include>ResetScroll</include>
+	
+	<controls>
+
+		<!-- Player status -->
+		<control type="group">
+			<include>DialogDepth</include>
+			<include>GameOSD_coords1</include>
+			<visible>player.forwarding | player.rewinding | player.paused | player.istempo</visible>
+			<visible>![Window.IsVisible(gamevideofilter) | Window.IsVisible(gamestretchmode) | Window.IsVisible(gamevideorotation) | Window.IsVisible(gamevolume) | Window.IsVisible(gamecontrollers) | Window.IsVisible(gameadvancedsettings) | Window.IsVisible(GamePorts) | Window.IsVisible(shutdownmenu)]</visible>
+			<include>OSDVisibleHiddenAnimation</include>
+			<include>OSDOpenCloseAnimation</include>
+
+			<!-- Background -->
+			<control type="image" id="1">
+				<include>GameOSD_coords2</include>
+				<texture colordiffuse="$VAR[MenuOSDColor]">$VAR[MenuOSDBackground]</texture>
+			</control>
+
+			<!-- Pause -->
+			<control type="image" id="1">
+			<include>GameOSD_coords3</include>
+				<texture colordiffuse="$VAR[OverlayColorFO]">osd/OSDPauseNF.png</texture>
+				<visible>player.paused</visible>
+			</control>
+
+		</control>
+	
+		<control type="group">
+			<include>DialogDepth</include>
+			<include>GameOSD_coords4</include>
+			<visible>![Window.IsActive(gamevideofilter) | Window.IsVisible(gamestretchmode) | Window.IsVisible(gamevideorotation) | Window.IsVisible(gamevolume) | Window.IsVisible(gamecontrollers) | Window.IsVisible(gameadvancedsettings) | Window.IsVisible(GamePorts) | Window.IsVisible(shutdownmenu)]</visible>
+			<include>OSDVisibleHiddenAnimation</include>
+			<include>OSDOpenCloseAnimation</include>
+			<control type="group">
+			
+				<!-- Window Background -->
+				<control type="image">
+					<include>GameOSD_coords5</include>
+					<texture colordiffuse="$VAR[MenuOSDColor]">$VAR[MenuOSDBackground]</texture>
+				</control>
+				
+				<!-- Heading -->
+				<control type="label" id="2">
+					<include>GameOSD_coords6</include>
+					<align>center</align>
+					<aligny>top</aligny>
+					<font>Font33</font>
+					<label>35221</label>
+				</control>
+
+				<!-- Game OSD Buttons Grouplist -->
+				<control type="grouplist" id="5">
+					<include>GameOSD_coords7</include>
+					<itemgap>0</itemgap>
+					<orientation>vertical</orientation>
+					<scrolltime tween="sine" easing="out">240</scrolltime>
+					
+					<!-- Pause/Resume button -->
+					<control type="button" id="1001">
+						<include>GameOSD_coords8</include>
+						<textcolor>$VAR[TextColorNF]</textcolor>
+						<focusedcolor>$VAR[TextColorFO]</focusedcolor>
+						<label>$LOCALIZE[35224]</label>
+						<font>Font33</font>
+						<label2>Select + X</label2>
+						<onclick>Play</onclick>
+					</control>
+					
+					<!-- Reset button -->
+					<control type="button" id="1002">
+						<include>GameOSD_coords8</include>
+						<textcolor>$VAR[TextColorNF]</textcolor>
+						<focusedcolor>$VAR[TextColorFO]</focusedcolor>
+						<label>$LOCALIZE[13007]</label>
+						<font>Font33</font>
+						<label2>Select + B</label2>
+						<onclick>PlayerControl(Reset)</onclick>
+					</control>
+					
+					<!-- Stop button -->
+					<control type="button" id="1003">
+						<include>GameOSD_coords8</include>
+						<textcolor>$VAR[TextColorNF]</textcolor>
+						<focusedcolor>$VAR[TextColorFO]</focusedcolor>
+						<label>$LOCALIZE[35222]</label>
+						<font>Font33</font>
+						<label2>Select + Start</label2>
+						<onclick>Stop</onclick>
+					</control>
+					
+					<!-- Spacer -->
+					<control type="image" id="1004"> 
+						<include>GameOSD_coords9</include>
+						<texture>transparent.png</texture> 
+					</control>
+					
+					<!-- Game video filter button -->
+					<control type="button" id="1005">
+						<include>GameOSD_coords8</include>
+						<textcolor>$VAR[TextColorNF]</textcolor>
+						<focusedcolor>$VAR[TextColorFO]</focusedcolor>
+						<label>$LOCALIZE[35225]</label>
+						<font>Font33</font>
+						<onclick>ActivateWindow(GameVideoFilter)</onclick>
+					</control>
+					
+					<!-- Game stretch mode button -->
+					<control type="button" id="1006">
+						<include>GameOSD_coords8</include>
+						<textcolor>$VAR[TextColorNF]</textcolor>
+						<focusedcolor>$VAR[TextColorFO]</focusedcolor>
+						<label>$LOCALIZE[35233]</label>
+						<font>Font33</font>
+						<onclick>ActivateWindow(GameStretchMode)</onclick>
+					</control>
+					
+					<!-- View mode button -->
+					<control type="button" id="1007">
+						<include>GameOSD_coords8</include>
+						<textcolor>$VAR[TextColorNF]</textcolor>
+						<focusedcolor>$VAR[TextColorFO]</focusedcolor>
+						<label>$LOCALIZE[35227]</label>
+						<font>Font33</font>
+						<onclick>ActivateWindow(GameVideoRotation)</onclick>
+					</control>
+					
+					<!-- Game volume button -->
+					<control type="button" id="1008">
+						<include>GameOSD_coords8</include>
+						<textcolor>$VAR[TextColorNF]</textcolor>
+						<focusedcolor>$VAR[TextColorFO]</focusedcolor>
+						<label>$LOCALIZE[13376]</label>
+						<font>Font33</font>
+						<onclick>ActivateWindow(GameVolume)</onclick>
+					</control>
+					
+					<!-- Spacer -->
+					<control type="image" id="1009"> 
+						<include>GameOSD_coords9</include>
+						<texture>transparent.png</texture> 
+					</control>
+					
+					<!-- Game controller settings button -->
+					<control type="button" id="1010">
+						<include>GameOSD_coords8</include>
+						<textcolor>$VAR[TextColorNF]</textcolor>
+						<focusedcolor>$VAR[TextColorFO]</focusedcolor>
+						<label>$LOCALIZE[35234]</label>
+						<font>Font33</font>
+						<onclick>ActivateWindow(gamecontrollers)</onclick>
+					</control>
+					
+					<!-- Game controller ports button -->
+					<control type="button" id="1011">
+						<include>GameOSD_coords8</include>
+						<textcolor>$VAR[TextColorNF]</textcolor>
+						<focusedcolor>$VAR[TextColorFO]</focusedcolor>
+						<label>$LOCALIZE[35110]</label>
+						<font>Font33</font>
+						<onclick>ActivateWindow(GamePorts)</onclick>
+					</control>
+					
+					<!-- Game advanced settings button -->
+					<control type="button" id="1012">
+						<include>GameOSD_coords8</include>
+						<textcolor>$VAR[TextColorNF]</textcolor>
+						<focusedcolor>$VAR[TextColorFO]</focusedcolor>
+						<label>$LOCALIZE[35226]</label>
+						<font>Font33</font>
+						<onclick>ActivateWindow(GameAdvancedSettings)</onclick>
+					</control>
+					
+				</control>
+			</control>
+
+		</control>
+
+	</controls>
+
+</window>

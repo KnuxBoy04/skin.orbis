@@ -209,7 +209,7 @@
 					<height>66</height>
 					<textwidth>1120</textwidth>
 					<font>Font33</font>
-					<label>Disable library</label>
+					<label>Disable Library</label>
 					<onclick>Skin.ToggleSetting(disablelibrary)</onclick>
 					<focusedcolor>TextColor1</focusedcolor>
 					<textcolor>TextColor2</textcolor>
