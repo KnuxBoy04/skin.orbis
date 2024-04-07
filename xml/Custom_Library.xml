@@ -305,13 +305,6 @@
 						<thumb />
 						<onclick>ActivateWindow(filemanager)</onclick>
 					</item>
-					<item id="7">
-						<label>Playstation Store</label>
-						<label2>icons/bg.png</label2>
-						<icon>icons\store.png</icon>
-						<thumb />
-						<onclick>ActivateWindow(addonbrowser)</onclick>
-					</item>
 				</content>
 			</control>
 			<control type="panel" id="9000">
