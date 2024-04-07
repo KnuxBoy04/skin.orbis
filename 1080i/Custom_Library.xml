@@ -1,0 +1,878 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<window id="1801">
+	<!-- skinsettings -->
+	<defaultcontrol always="true">9000</defaultcontrol>
+	<onload>XBMC.RunScript(script.favourites)</onload>
+	<controls>
+	
+		<!-- Background -->
+		<include>WindowBackgroundImage</include>
+		<control type="group">
+		
+		<animation type="WindowOpen">
+              <effect type="fade" start="0" end="100" time="300" tween="cubic" easing="inout"/>
+              <effect type="zoom" start="120" end="100" time="400" tween="cubic" easing="out" center="auto"/>
+                    </animation>
+<animation type="WindowClose">
+              <effect type="fade" start="100" end="0" time="300" tween="cubic" easing="inout"/>
+              <effect type="zoom" start="100" end="120" time="400" tween="cubic" easing="out"center="auto"/>
+                    </animation>
+
+		<include content="Time">
+			<param name="heading">Library</param>
+		</include>
+
+<control type="panel" id="8000">
+
+<animation type="Conditional" condition="true">
+ <effect type="zoom" start="100" end="85" time="1" tween="cubic" easing="inout" center="auto"/>
+                    </animation>
+
+			
+                    
+			<left>50</left>
+			<top>200</top>
+			<width>600</width>
+			<height>875</height>
+			<focusposition>1</focusposition>
+			<defaultcontrol>1</defaultcontrol>
+			<onup>-</onup>
+			<ondown>-</ondown>
+			<onleft>-</onleft>
+			<onright>9000</onright>
+			<orientation>vertical</orientation>
+			<scrolltime tween="sine" easing="out">240</scrolltime>
+
+			<itemlayout width="500" height="130">
+<control type="group">
+
+				<control type="image">
+					<left>0</left>
+					<top>120</top>
+					<width>500</width>
+			<height>2</height>
+			<texture>color_white.png</texture>
+			<colordiffuse>80FFFFFF</colordiffuse>
+				</control>
+								<control type="image">
+					<left>0</left>
+					<top>10</top>
+					<width>110</width>
+			<height>110</height>
+			<texture>$INFO[ListItem.Thumb]</texture>
+
+				</control>
+				<control type="label">
+					<left>150</left>
+					<top>-50</top>
+					<width>900</width>
+					<height>233</height>
+					<label>$INFO[ListItem.Label]</label>
+					<font>Font36</font>
+					<textcolor>white</textcolor>
+					<align>left</align>
+					<autoscroll>false</autoscroll>
+				</control>
+
+				</control>
+			</itemlayout>
+
+			<focusedlayout width="500" height="130">
+			<control type="group">
+				<control type="image">
+					<left>0</left>
+					<top>120</top>
+					<width>500</width>
+			<height>2</height>
+			<texture>color_white.png</texture>
+			<colordiffuse>80FFFFFF</colordiffuse>
+				</control>
+
+												<control type="image">
+					<left>0</left>
+					<top>10</top>
+					<width>110</width>
+			<height>110</height>
+			<texture>$INFO[ListItem.Thumb]</texture>
+
+				</control>
+				<control type="label">
+					<left>150</left>
+					<top>-50</top>
+					<width>900</width>
+					<height>233</height>
+					<label>$INFO[ListItem.Label]</label>
+					<font>Font36</font>
+					<textcolor>white</textcolor>
+					<align>left</align>
+					<autoscroll>false</autoscroll>
+				</control>
+								<control type="image">
+            <animation type="Conditional" condition="true">
+                                        <effect type="zoom" start="100" end="111" time="1" tween="sine" easing="inout" center="auto" />
+                                    </animation>
+                              <animation type="Focus">
+                                        <effect type="fade" start="0" end="100" time="200" tween="sine" easing="in" />
+                                    </animation>
+                                    <animation type="Unfocus">
+                                        <effect type="fade" start="100" end="0" time="200" tween="sine" easing="out" />
+                                    </animation>
+					<left>0</left>
+					<top>0</top>
+					<width>500</width>
+					<height>130</height>
+					<texture border="40">fo.png</texture>
+				</control>
+				</control>
+			</focusedlayout>
+
+  <content>
+   <item id="1">
+                              <label>My Apps</label>
+
+                             <onclick>Right</onclick>
+															
+                                                                <thumb>icons/apps.png</thumb>
+                      
+                            </item>
+     <item id="2">
+                              <label>My Games</label>
+
+                             <onclick>Right</onclick>
+															
+                                                      <thumb>icons/xmb/program.png</thumb>
+                      
+                            </item>
+                                <item id="3">
+                              <label>My Favourites</label>
+
+                             <onclick>Right</onclick>
+															
+                                                                <thumb>icons/xmbmain/icons.8.png</thumb>
+                      
+                            </item>
+                                 <item id="4">
+                              <label>Search</label>
+
+                             <onclick>RunScript(script.globalsearch)</onclick>
+															
+                                                                <thumb>icons/xmb/search.png</thumb>
+                      
+                            </item>
+               
+     
+                                
+  </content>
+
+		</control>
+		
+<control type="panel" id="9000">
+
+<animation type="Conditional" condition="true">
+ <effect type="zoom" start="100" end="75" time="1" tween="cubic" easing="inout" center="auto"/>
+                    </animation>
+
+	<animation type="Visible">
+				 <effect type="fade" start="0" end="100" time="200"  tween="cubic" easing="inout" center="auto"/>
+
+                    </animation>
+                    				<animation type="Hidden">
+				 <effect type="fade" start="100" end="0" time="200" tween="cubic" easing="inout" center="auto"/>
+
+                    </animation>
+                    <visible>Container(8000).HasFocus(1)</visible>
+			<left>320</left>
+			<top>180</top>
+			<width>1895</width>
+			<height>953</height>
+			<focusposition>1</focusposition>
+			<defaultcontrol>1</defaultcontrol>
+			<onup>-</onup>
+			<ondown>-</ondown>
+			<onleft>8000</onleft>
+			<onright>-</onright>
+			<orientation>vertical</orientation>
+			<scrolltime tween="sine" easing="out">240</scrolltime>
+
+			<itemlayout width="580" height="280">
+<control type="group">
+
+				<control type="image">
+					<left>0</left>
+					<top>0</top>
+					<width>570</width>
+					<height>270</height>
+					<texture>grey.png</texture>
+			<colordiffuse>26000000</colordiffuse>
+
+				</control>
+								<control type="image">
+					<left>0</left>
+					<top>0</top>
+					<width>270</width>
+					<height>270</height>
+					<texture>icons/bg.png</texture>
+				</control>
+				<control type="image">
+					<left>0</left>
+					<top>0</top>
+					<width>270</width>
+					<height>270</height>
+					<texture>$INFO[ListItem.Icon]</texture>
+					<aspectratio>scale</aspectratio>
+				</control>
+
+				<control type="textbox">
+					<left>300</left>
+					<top>30</top>
+					<width>250</width>
+					<height>233</height>
+					<label>$INFO[ListItem.Label]</label>
+					<font>Font36</font>
+					<textcolor>white</textcolor>
+					<align>left</align>
+				</control>
+
+				</control>
+			</itemlayout>
+
+			<focusedlayout width="580" height="280">
+			<control type="group">
+				<control type="image">
+					<left>0</left>
+					<top>0</top>
+					<width>570</width>
+					<height>270</height>
+					<texture>grey.png</texture>
+			<colordiffuse>26000000</colordiffuse>
+				</control>
+								<control type="image">
+					<left>0</left>
+					<top>0</top>
+					<width>270</width>
+					<height>270</height>
+					<texture>icons/bg.png</texture>
+				</control>
+				<control type="image">
+					<left>0</left>
+					<top>0</top>
+					<width>270</width>
+					<height>270</height>
+					<texture>$INFO[ListItem.Icon]</texture>
+										<aspectratio>scale</aspectratio>
+				</control>
+				<control type="textbox">
+					<left>300</left>
+					<top>30</top>
+					<width>250</width>
+					<height>233</height>
+					<label>$INFO[ListItem.Label]</label>
+					<font>Font36</font>
+					<textcolor>white</textcolor>
+					<align>left</align>
+				</control>
+								<control type="image">
+            <animation type="Conditional" condition="true">
+                                        <effect type="zoom" start="100" end="111" time="1" tween="sine" easing="inout" center="auto" />
+                                    </animation>
+                              <animation type="Focus">
+                                        <effect type="fade" start="0" end="100" time="200" tween="sine" easing="in" />
+                                    </animation>
+                                    <animation type="Unfocus">
+                                        <effect type="fade" start="100" end="0" time="200" tween="sine" easing="out" />
+                                    </animation>
+					<left>10</left>
+					<top>0</top>
+					<width>550</width>
+					<height>270</height>
+					<texture border="100">fo.png</texture>
+				</control>
+				</control>
+			</focusedlayout>
+
+  <content>
+	<item id="9">
+							<visible>System.HasMediadvd</visible>
+					<label>Play DVD</label>
+					<label2>icons/bg.png</label2>
+					<icon>icons\disc.png</icon>
+					<thumb />
+					<onclick>PlayDisc()</onclick>
+				</item>
+   	<item id="3">
+					<label>My Videos</label>
+					<icon>icons\video.png</icon>
+					<thumb />
+					<onclick>ActivateWindow(videos)</onclick>
+				</item>
+				<item id="4">
+					<label>My Music</label>
+					<icon>icons\music.png</icon>
+					<thumb />
+					<onclick>ActivateWindow(music)</onclick>
+				</item>
+				<item id="5">
+					<label>Live TV</label>
+					<icon>icons\tv.png</icon>
+					<thumb />
+					<onclick>ActivateWindow(pvr)</onclick>
+				</item>
+				<item id="6">
+					<label>My Games</label>
+					<icon>icons\now.png</icon>
+					<thumb />
+					<onclick>ActivateWindow(programs)</onclick>
+				</item>
+					<item id="1">
+					<label>Playstation Store</label>
+					<icon>icons\store.png</icon>
+					<thumb />
+					<onclick>ActivateWindow(addonbrowser)</onclick>
+				</item>
+                            
+              			<item id="9">
+					<label>My Photos</label>
+					<label2>icons/bg.png</label2>
+					<icon>icons\gallery.png</icon>
+					<thumb />
+					<onclick>ActivateWindow(pictures)</onclick>
+				</item>
+					<item id="7">
+					<label>My Files</label>
+					<label2>icons/bg.png</label2>
+					<icon>icons\usbmusic.png</icon>
+					<thumb />
+					<onclick>ActivateWindow(filemanager)</onclick>
+				</item>
+
+
+                            
+               
+  
+  </content>
+
+		</control>
+		<control type="panel" id="9000">
+
+<animation type="Conditional" condition="true">
+ <effect type="zoom" start="100" end="75" time="1" tween="cubic" easing="inout" center="auto"/>
+                    </animation>
+
+	<animation type="Visible">
+				 <effect type="fade" start="0" end="100" time="200"  tween="cubic" easing="inout" center="auto"/>
+
+                    </animation>
+                    				<animation type="Hidden">
+				 <effect type="fade" start="100" end="0" time="200" tween="cubic" easing="inout" center="auto"/>
+
+                    </animation>
+                    <visible>Container(8000).HasFocus(2)</visible>
+			<left>320</left>
+			<top>180</top>
+			<width>1895</width>
+			<height>953</height>
+			<focusposition>1</focusposition>
+			<defaultcontrol>1</defaultcontrol>
+			<onup>-</onup>
+			<ondown>-</ondown>
+			<onleft>8000</onleft>
+			<onright>-</onright>
+			<orientation>vertical</orientation>
+			<scrolltime tween="sine" easing="out">240</scrolltime>
+
+			<itemlayout width="580" height="280">
+<control type="group">
+
+				<control type="image">
+					<left>0</left>
+					<top>0</top>
+					<width>570</width>
+					<height>270</height>
+					<texture>grey.png</texture>
+			<colordiffuse>26000000</colordiffuse>
+
+				</control>
+								<control type="image">
+					<left>0</left>
+					<top>0</top>
+					<width>270</width>
+					<height>270</height>
+					<texture>icons/bg.png</texture>
+				</control>
+				<control type="image">
+					<left>0</left>
+					<top>0</top>
+					<width>270</width>
+					<height>270</height>
+					<texture>$INFO[ListItem.Icon]</texture>
+					<aspectratio>scale</aspectratio>
+				</control>
+
+				<control type="textbox">
+					<left>300</left>
+					<top>30</top>
+					<width>250</width>
+					<height>233</height>
+					<label>$INFO[ListItem.Label]</label>
+					<font>Font36</font>
+					<textcolor>white</textcolor>
+					<align>left</align>
+				</control>
+
+				</control>
+			</itemlayout>
+
+			<focusedlayout width="580" height="280">
+			<control type="group">
+				<control type="image">
+					<left>0</left>
+					<top>0</top>
+					<width>570</width>
+					<height>270</height>
+					<texture>grey.png</texture>
+			<colordiffuse>26000000</colordiffuse>
+				</control>
+								<control type="image">
+					<left>0</left>
+					<top>0</top>
+					<width>270</width>
+					<height>270</height>
+					<texture>icons/bg.png</texture>
+				</control>
+				<control type="image">
+					<left>0</left>
+					<top>0</top>
+					<width>270</width>
+					<height>270</height>
+					<texture>$INFO[ListItem.Icon]</texture>
+										<aspectratio>scale</aspectratio>
+				</control>
+				<control type="textbox">
+					<left>300</left>
+					<top>30</top>
+					<width>250</width>
+					<height>233</height>
+					<label>$INFO[ListItem.Label]</label>
+					<font>Font36</font>
+					<textcolor>white</textcolor>
+					<align>left</align>
+				</control>
+								<control type="image">
+            <animation type="Conditional" condition="true">
+                                        <effect type="zoom" start="100" end="111" time="1" tween="sine" easing="inout" center="auto" />
+                                    </animation>
+                              <animation type="Focus">
+                                        <effect type="fade" start="0" end="100" time="200" tween="sine" easing="in" />
+                                    </animation>
+                                    <animation type="Unfocus">
+                                        <effect type="fade" start="100" end="0" time="200" tween="sine" easing="out" />
+                                    </animation>
+					<left>10</left>
+					<top>0</top>
+					<width>550</width>
+					<height>270</height>
+					<texture border="100">fo.png</texture>
+				</control>
+				</control>
+			</focusedlayout>
+
+  <content>
+   
+                            
+                              <item id="1">
+<visible>!String.IsEmpty(Skin.String(game1name))</visible>
+                                <label>$INFO[Skin.String(game1name)]</label>
+    <onclick>Skin.SetString(snapwindow, special://skin/scripts/gamelauncher.py)</onclick>
+<onclick>Skin.SetString(snapico, $INFO[Container(303).ListItem.Thumb],0)</onclick>
+<onclick>Skin.SetString(snapname, $INFO[Container(303).ListItem.Label])</onclick>
+                                <onclick>Skin.SetString(gamelaunch,$INFO[Skin.String(game1exe)])</onclick>
+                                <onclick>RunScript(special://skin/scripts/gamelauncher.py)</onclick>
+
+                                <thumb>$INFO[Skin.String(game1poster)]</thumb>
+
+                            </item>
+
+   <item id="1">
+<visible>!String.IsEmpty(Skin.String(game2name))</visible>
+                                <label>$INFO[Skin.String(game2name)]</label>
+    <onclick>Skin.SetString(snapwindow, special://skin/scripts/gamelauncher.py)</onclick>
+<onclick>Skin.SetString(snapico, $INFO[Container(303).ListItem.Thumb],0)</onclick>
+<onclick>Skin.SetString(snapname, $INFO[Container(303).ListItem.Label])</onclick>
+                                <onclick>Skin.SetString(gamelaunch,$INFO[Skin.String(game2exe)])</onclick>
+                                <onclick>RunScript(special://skin/scripts/gamelauncher.py)</onclick>
+
+                                <thumb>$INFO[Skin.String(game2poster)]</thumb>
+
+                            </item>
+
+   <item id="1">
+<visible>!String.IsEmpty(Skin.String(game3name))</visible>
+                                <label>$INFO[Skin.String(game3name)]</label>
+    <onclick>Skin.SetString(snapwindow, special://skin/scripts/gamelauncher.py)</onclick>
+<onclick>Skin.SetString(snapico, $INFO[Container(303).ListItem.Thumb],0)</onclick>
+<onclick>Skin.SetString(snapname, $INFO[Container(303).ListItem.Label])</onclick>
+                                <onclick>Skin.SetString(gamelaunch,$INFO[Skin.String(game3exe)])</onclick>
+                                <onclick>RunScript(special://skin/scripts/gamelauncher.py)</onclick>
+
+                                <thumb>$INFO[Skin.String(game3poster)]</thumb>
+
+                            </item>
+
+
+   <item id="1">
+<visible>!String.IsEmpty(Skin.String(game4name))</visible>
+                                <label>$INFO[Skin.String(game4name)]</label>
+    <onclick>Skin.SetString(snapwindow, special://skin/scripts/gamelauncher.py)</onclick>
+<onclick>Skin.SetString(snapico, $INFO[Container(303).ListItem.Thumb],0)</onclick>
+<onclick>Skin.SetString(snapname, $INFO[Container(303).ListItem.Label])</onclick>
+                                <onclick>Skin.SetString(gamelaunch,$INFO[Skin.String(game4exe)])</onclick>
+                                <onclick>RunScript(special://skin/scripts/gamelauncher.py)</onclick>
+
+                                <thumb>$INFO[Skin.String(game4poster)]</thumb>
+
+                            </item>
+
+
+   <item id="1">
+<visible>!String.IsEmpty(Skin.String(game5name))</visible>
+                                <label>$INFO[Skin.String(game5name)]</label>
+    <onclick>Skin.SetString(snapwindow, special://skin/scripts/gamelauncher.py)</onclick>
+<onclick>Skin.SetString(snapico, $INFO[Container(303).ListItem.Thumb],0)</onclick>
+<onclick>Skin.SetString(snapname, $INFO[Container(303).ListItem.Label])</onclick>
+                                <onclick>Skin.SetString(gamelaunch,$INFO[Skin.String(game5exe)])</onclick>
+                                <onclick>RunScript(special://skin/scripts/gamelauncher.py)</onclick>
+
+                                <thumb>$INFO[Skin.String(game5poster)]</thumb>
+
+                            </item>
+
+
+
+   <item id="1">
+<visible>!String.IsEmpty(Skin.String(game6name))</visible>
+                                <label>$INFO[Skin.String(game6name)]</label>
+    <onclick>Skin.SetString(snapwindow, special://skin/scripts/gamelauncher.py)</onclick>
+<onclick>Skin.SetString(snapico, $INFO[Container(303).ListItem.Thumb],0)</onclick>
+<onclick>Skin.SetString(snapname, $INFO[Container(303).ListItem.Label])</onclick>
+                                <onclick>Skin.SetString(gamelaunch,$INFO[Skin.String(game6exe)])</onclick>
+                                <onclick>RunScript(special://skin/scripts/gamelauncher.py)</onclick>
+
+                                <thumb>$INFO[Skin.String(game6poster)]</thumb>
+
+                            </item>
+
+
+
+   <item id="1">
+<visible>!String.IsEmpty(Skin.String(game7name))</visible>
+                                <label>$INFO[Skin.String(game7name)]</label>
+    <onclick>Skin.SetString(snapwindow, special://skin/scripts/gamelauncher.py)</onclick>
+<onclick>Skin.SetString(snapico, $INFO[Container(303).ListItem.Thumb],0)</onclick>
+<onclick>Skin.SetString(snapname, $INFO[Container(303).ListItem.Label])</onclick>
+                                <onclick>Skin.SetString(gamelaunch,$INFO[Skin.String(game7exe)])</onclick>
+                                <onclick>RunScript(special://skin/scripts/gamelauncher.py)</onclick>
+
+                                <thumb>$INFO[Skin.String(game7poster)]</thumb>
+
+                            </item>
+
+
+   <item id="1">
+<visible>!String.IsEmpty(Skin.String(game8name))</visible>
+                                <label>$INFO[Skin.String(game8name)]</label>
+    <onclick>Skin.SetString(snapwindow, special://skin/scripts/gamelauncher.py)</onclick>
+<onclick>Skin.SetString(snapico, $INFO[Container(303).ListItem.Thumb],0)</onclick>
+<onclick>Skin.SetString(snapname, $INFO[Container(303).ListItem.Label])</onclick>
+                                <onclick>Skin.SetString(gamelaunch,$INFO[Skin.String(game8exe)])</onclick>
+                                <onclick>RunScript(special://skin/scripts/gamelauncher.py)</onclick>
+
+                                <thumb>$INFO[Skin.String(game8poster)]</thumb>
+
+                            </item>
+
+
+   <item id="1">
+<visible>!String.IsEmpty(Skin.String(game9name))</visible>
+                                <label>$INFO[Skin.String(game9name)]</label>
+    <onclick>Skin.SetString(snapwindow, special://skin/scripts/gamelauncher.py)</onclick>
+<onclick>Skin.SetString(snapico, $INFO[Container(303).ListItem.Thumb],0)</onclick>
+<onclick>Skin.SetString(snapname, $INFO[Container(303).ListItem.Label])</onclick>
+                                <onclick>Skin.SetString(gamelaunch,$INFO[Skin.String(game9exe)])</onclick>
+                                <onclick>RunScript(special://skin/scripts/gamelauncher.py)</onclick>
+
+                                <thumb>$INFO[Skin.String(game9poster)]</thumb>
+
+                            </item>
+
+
+
+   <item id="1">
+<visible>!String.IsEmpty(Skin.String(game10name))</visible>
+                                <label>$INFO[Skin.String(game10name)]</label>
+    <onclick>Skin.SetString(snapwindow, special://skin/scripts/gamelauncher.py)</onclick>
+<onclick>Skin.SetString(snapico, $INFO[Container(303).ListItem.Thumb],0)</onclick>
+<onclick>Skin.SetString(snapname, $INFO[Container(303).ListItem.Label])</onclick>
+                                <onclick>Skin.SetString(gamelaunch,$INFO[Skin.String(game10exe)])</onclick>
+                                <onclick>RunScript(special://skin/scripts/gamelauncher.py)</onclick>
+
+                                <thumb>$INFO[Skin.String(game10poster)]</thumb>
+
+                            </item>
+   <item id="1">
+<visible>!String.IsEmpty(Skin.String(game11name))</visible>
+                                <label>$INFO[Skin.String(game11name)]</label>
+    <onclick>Skin.SetString(snapwindow, special://skin/scripts/gamelauncher.py)</onclick>
+<onclick>Skin.SetString(snapico, $INFO[Container(303).ListItem.Thumb],0)</onclick>
+<onclick>Skin.SetString(snapname, $INFO[Container(303).ListItem.Label])</onclick>
+                                <onclick>Skin.SetString(gamelaunch,$INFO[Skin.String(game11exe)])</onclick>
+                                <onclick>RunScript(special://skin/scripts/gamelauncher.py)</onclick>
+
+                                <thumb>$INFO[Skin.String(game11poster)]</thumb>
+
+                            </item>
+              			     <item id="1">
+                              <label>Add Game</label>
+
+                               <onclick condition="String.IsEmpty(Skin.String(game1name))">Skin.SetString(game1name)</onclick>
+                                <onclick condition="String.IsEmpty(Skin.String(game1name))">Skin.SetFile(game1exe)</onclick>
+                     <onclick condition="String.IsEmpty(Skin.String(game1name))">Skin.SetImage(game1poster)</onclick>
+
+   <onclick condition="!String.IsEmpty(Skin.String(game1name)) + String.IsEmpty(Skin.String(game2name))">Skin.SetString(game2name)</onclick>
+                                <onclick condition="!String.IsEmpty(Skin.String(game1name))+ String.IsEmpty(Skin.String(game2name))">Skin.SetFile(game2exe)</onclick>
+                     <onclick condition="!String.IsEmpty(Skin.String(game1name))+ String.IsEmpty(Skin.String(game2name))">Skin.SetImage(game2poster)</onclick>
+                     
+   <onclick condition="!String.IsEmpty(Skin.String(game1name)) + !String.IsEmpty(Skin.String(game2name)) + String.IsEmpty(Skin.String(game3name))">Skin.SetString(game3name)</onclick>
+                                   <onclick condition="!String.IsEmpty(Skin.String(game1name)) + !String.IsEmpty(Skin.String(game2name)) + String.IsEmpty(Skin.String(game3name))">Skin.SetFile(game3exe)</onclick>
+                        <onclick condition="!String.IsEmpty(Skin.String(game1name)) + !String.IsEmpty(Skin.String(game2name)) + String.IsEmpty(Skin.String(game3name))">Skin.SetImage(game3poster)</onclick>
+                     
+                        <onclick condition="!String.IsEmpty(Skin.String(game1name)) + !String.IsEmpty(Skin.String(game2name)) + !String.IsEmpty(Skin.String(game3name)) + String.IsEmpty(Skin.String(game4name))">Skin.SetString(game4name)</onclick>
+                                    <onclick condition="!String.IsEmpty(Skin.String(game1name)) + !String.IsEmpty(Skin.String(game2name)) + !String.IsEmpty(Skin.String(game3name)) + String.IsEmpty(Skin.String(game4name))">Skin.SetFile(game4exe)</onclick>
+                        <onclick condition="!String.IsEmpty(Skin.String(game1name)) + !String.IsEmpty(Skin.String(game2name)) + !String.IsEmpty(Skin.String(game3name)) + String.IsEmpty(Skin.String(game4name))">Skin.SetImage(game4poster)</onclick>
+                        
+                              <onclick condition="!String.IsEmpty(Skin.String(game1name)) + !String.IsEmpty(Skin.String(game2name)) + !String.IsEmpty(Skin.String(game3name)) + !String.IsEmpty(Skin.String(game4name)) + String.IsEmpty(Skin.String(game5name))">Skin.SetString(game5name)</onclick>
+                                    <onclick condition="!String.IsEmpty(Skin.String(game1name)) + !String.IsEmpty(Skin.String(game2name)) + !String.IsEmpty(Skin.String(game3name)) + !String.IsEmpty(Skin.String(game4name)) + String.IsEmpty(Skin.String(game5name))">Skin.SetFile(game5exe)</onclick>
+                        <onclick condition="!String.IsEmpty(Skin.String(game1name)) + !String.IsEmpty(Skin.String(game2name)) + !String.IsEmpty(Skin.String(game3name)) + !String.IsEmpty(Skin.String(game4name)) + String.IsEmpty(Skin.String(game5name))">Skin.SetImage(game5poster)</onclick>
+                        
+                          <onclick condition="!String.IsEmpty(Skin.String(game1name)) + !String.IsEmpty(Skin.String(game2name)) + !String.IsEmpty(Skin.String(game3name)) + !String.IsEmpty(Skin.String(game4name)) + !String.IsEmpty(Skin.String(game5name)) + String.IsEmpty(Skin.String(game6name))">Skin.SetString(game6name)</onclick>
+                                    <onclick condition="!String.IsEmpty(Skin.String(game1name)) + !String.IsEmpty(Skin.String(game2name)) + !String.IsEmpty(Skin.String(game3name)) + !String.IsEmpty(Skin.String(game4name)) + !String.IsEmpty(Skin.String(game5name)) + String.IsEmpty(Skin.String(game6name))">Skin.SetFile(game6exe)</onclick>
+                        <onclick condition="!String.IsEmpty(Skin.String(game1name)) + !String.IsEmpty(Skin.String(game2name)) + !String.IsEmpty(Skin.String(game3name)) + !String.IsEmpty(Skin.String(game4name)) + !String.IsEmpty(Skin.String(game5name)) + String.IsEmpty(Skin.String(game6name))">Skin.SetImage(game6poster)</onclick>
+                      
+<onclick condition="!String.IsEmpty(Skin.String(game1name)) + !String.IsEmpty(Skin.String(game2name)) + !String.IsEmpty(Skin.String(game3name)) + !String.IsEmpty(Skin.String(game4name)) + !String.IsEmpty(Skin.String(game5name)) + !String.IsEmpty(Skin.String(game6name)) + String.IsEmpty(Skin.String(game7name))">Skin.SetString(game7name)</onclick>
+ <onclick condition="!String.IsEmpty(Skin.String(game1name)) + !String.IsEmpty(Skin.String(game2name)) + !String.IsEmpty(Skin.String(game3name)) + !String.IsEmpty(Skin.String(game4name)) + !String.IsEmpty(Skin.String(game5name)) + !String.IsEmpty(Skin.String(game6name)) + String.IsEmpty(Skin.String(game7name))">Skin.SetFile(game7exe)</onclick>
+<onclick condition="!String.IsEmpty(Skin.String(game1name)) + !String.IsEmpty(Skin.String(game2name)) + !String.IsEmpty(Skin.String(game3name)) + !String.IsEmpty(Skin.String(game4name)) + !String.IsEmpty(Skin.String(game5name)) + !String.IsEmpty(Skin.String(game6name)) + String.IsEmpty(Skin.String(game7name))">Skin.SetImage(game7poster)</onclick>
+
+ <onclick condition="!String.IsEmpty(Skin.String(game1name)) + !String.IsEmpty(Skin.String(game2name)) + !String.IsEmpty(Skin.String(game3name)) + !String.IsEmpty(Skin.String(game4name)) + !String.IsEmpty(Skin.String(game5name)) + !String.IsEmpty(Skin.String(game6name)) + !String.IsEmpty(Skin.String(game7name)) + String.IsEmpty(Skin.String(game8name))">Skin.SetString(game8name)</onclick>
+ <onclick condition="!String.IsEmpty(Skin.String(game1name)) + !String.IsEmpty(Skin.String(game2name)) + !String.IsEmpty(Skin.String(game3name)) + !String.IsEmpty(Skin.String(game4name)) + !String.IsEmpty(Skin.String(game5name)) + !String.IsEmpty(Skin.String(game6name)) + !String.IsEmpty(Skin.String(game7name)) + String.IsEmpty(Skin.String(game8name))">Skin.SetFile(game8exe)</onclick>
+<onclick condition="!String.IsEmpty(Skin.String(game1name)) + !String.IsEmpty(Skin.String(game2name)) + !String.IsEmpty(Skin.String(game3name)) + !String.IsEmpty(Skin.String(game4name)) + !String.IsEmpty(Skin.String(game5name)) + !String.IsEmpty(Skin.String(game6name)) + !String.IsEmpty(Skin.String(game7name)) + String.IsEmpty(Skin.String(game8name))">Skin.SetImage(game8poster)</onclick>                    
+
+ <onclick condition="!String.IsEmpty(Skin.String(game1name)) + !String.IsEmpty(Skin.String(game2name)) + !String.IsEmpty(Skin.String(game3name)) + !String.IsEmpty(Skin.String(game4name)) + !String.IsEmpty(Skin.String(game5name)) + !String.IsEmpty(Skin.String(game6name)) + !String.IsEmpty(Skin.String(game7name)) + !String.IsEmpty(Skin.String(game8name)) + String.IsEmpty(Skin.String(game9name))">Skin.SetString(game9name)</onclick>
+ <onclick condition="!String.IsEmpty(Skin.String(game1name)) + !String.IsEmpty(Skin.String(game2name)) + !String.IsEmpty(Skin.String(game3name)) + !String.IsEmpty(Skin.String(game4name)) + !String.IsEmpty(Skin.String(game5name)) + !String.IsEmpty(Skin.String(game6name)) + !String.IsEmpty(Skin.String(game7name)) + !String.IsEmpty(Skin.String(game8name)) + String.IsEmpty(Skin.String(game9name))">Skin.SetFile(game9exe)</onclick>
+<onclick condition="!String.IsEmpty(Skin.String(game1name)) + !String.IsEmpty(Skin.String(game2name)) + !String.IsEmpty(Skin.String(game3name)) + !String.IsEmpty(Skin.String(game4name)) + !String.IsEmpty(Skin.String(game5name)) + !String.IsEmpty(Skin.String(game6name)) + !String.IsEmpty(Skin.String(game7name)) + !String.IsEmpty(Skin.String(game8name)) + String.IsEmpty(Skin.String(game9name))">Skin.SetImage(game9poster)</onclick>
+
+ <onclick condition="!String.IsEmpty(Skin.String(game1name)) + !String.IsEmpty(Skin.String(game2name)) + !String.IsEmpty(Skin.String(game3name)) + !String.IsEmpty(Skin.String(game4name)) + !String.IsEmpty(Skin.String(game5name)) + !String.IsEmpty(Skin.String(game6name)) + !String.IsEmpty(Skin.String(game7name)) + !String.IsEmpty(Skin.String(game8name)) + !String.IsEmpty(Skin.String(game9name)) + String.IsEmpty(Skin.String(game10name))">Skin.SetString(game10name)</onclick>
+ <onclick condition="!String.IsEmpty(Skin.String(game1name)) + !String.IsEmpty(Skin.String(game2name)) + !String.IsEmpty(Skin.String(game3name)) + !String.IsEmpty(Skin.String(game4name)) + !String.IsEmpty(Skin.String(game5name)) + !String.IsEmpty(Skin.String(game6name)) + !String.IsEmpty(Skin.String(game7name)) + !String.IsEmpty(Skin.String(game8name)) + !String.IsEmpty(Skin.String(game9name)) + String.IsEmpty(Skin.String(game10name))">Skin.SetFile(game10exe)</onclick>
+<onclick condition="!String.IsEmpty(Skin.String(game1name)) + !String.IsEmpty(Skin.String(game2name)) + !String.IsEmpty(Skin.String(game3name)) + !String.IsEmpty(Skin.String(game4name)) + !String.IsEmpty(Skin.String(game5name)) + !String.IsEmpty(Skin.String(game6name)) + !String.IsEmpty(Skin.String(game7name)) + !String.IsEmpty(Skin.String(game8name)) + !String.IsEmpty(Skin.String(game9name)) + String.IsEmpty(Skin.String(game10name))">Skin.SetImage(game10poster)</onclick>
+             
+ <onclick condition="!String.IsEmpty(Skin.String(game1name)) + !String.IsEmpty(Skin.String(game2name)) + !String.IsEmpty(Skin.String(game3name)) + !String.IsEmpty(Skin.String(game4name)) + !String.IsEmpty(Skin.String(game5name)) + !String.IsEmpty(Skin.String(game6name)) + !String.IsEmpty(Skin.String(game7name)) + !String.IsEmpty(Skin.String(game8name)) + !String.IsEmpty(Skin.String(game9name)) + !String.IsEmpty(Skin.String(game10name)) + String.IsEmpty(Skin.String(game11name))">Skin.SetString(game11name)</onclick>
+ <onclick condition="!String.IsEmpty(Skin.String(game1name)) + !String.IsEmpty(Skin.String(game2name)) + !String.IsEmpty(Skin.String(game3name)) + !String.IsEmpty(Skin.String(game4name)) + !String.IsEmpty(Skin.String(game5name)) + !String.IsEmpty(Skin.String(game6name)) + !String.IsEmpty(Skin.String(game7name)) + !String.IsEmpty(Skin.String(game8name)) + !String.IsEmpty(Skin.String(game9name)) + !String.IsEmpty(Skin.String(game10name)) + String.IsEmpty(Skin.String(game11name))">Skin.SetFile(game11exe)</onclick>
+<onclick condition="!String.IsEmpty(Skin.String(game1name)) + !String.IsEmpty(Skin.String(game2name)) + !String.IsEmpty(Skin.String(game3name)) + !String.IsEmpty(Skin.String(game4name)) + !String.IsEmpty(Skin.String(game5name)) + !String.IsEmpty(Skin.String(game6name)) + !String.IsEmpty(Skin.String(game7name)) + !String.IsEmpty(Skin.String(game8name)) + !String.IsEmpty(Skin.String(game9name)) + !String.IsEmpty(Skin.String(game10name)) + String.IsEmpty(Skin.String(game11name))">Skin.SetImage(game11poster)</onclick>
+             
+															
+                                                                <thumb>icons/add.png</thumb>
+                            
+                            </item>
+                 <item id="1">
+                              
+
+          <label fallback="31450">Delete</label>
+         <onclick>Skin.SetString(game1name, )</onclick>
+                     <onclick>Skin.SetString(game1exe, )</onclick>
+                     <onclick>Skin.SetString(game1poster, )</onclick>
+<onclick>Skin.SetString(game2name, )</onclick>
+                     <onclick>Skin.SetString(game2exe, )</onclick>
+                     <onclick>Skin.SetString(game2poster, )</onclick>
+<onclick>Skin.SetString(game3name, )</onclick>
+                     <onclick>Skin.SetString(game3exe, )</onclick>
+                     <onclick>Skin.SetString(game3poster, )</onclick>
+<onclick>Skin.SetString(game4name, )</onclick>
+                     <onclick>Skin.SetString(game4exe, )</onclick>
+                     <onclick>Skin.SetString(game4poster, )</onclick>
+<onclick>Skin.SetString(game5name, )</onclick>
+                     <onclick>Skin.SetString(game5exe, )</onclick>
+                     <onclick>Skin.SetString(game5poster, )</onclick>
+<onclick>Skin.SetString(game6name, )</onclick>
+                     <onclick>Skin.SetString(game6exe, )</onclick>
+                     <onclick>Skin.SetString(game6poster, )</onclick>
+<onclick>Skin.SetString(game7name, )</onclick>
+                     <onclick>Skin.SetString(game7exe, )</onclick>
+                     <onclick>Skin.SetString(game7poster, )</onclick>
+<onclick>Skin.SetString(game8name, )</onclick>
+                     <onclick>Skin.SetString(game8exe, )</onclick>
+                     <onclick>Skin.SetString(game8poster, )</onclick>
+<onclick>Skin.SetString(game9name, )</onclick>
+                     <onclick>Skin.SetString(game9exe, )</onclick>
+                     <onclick>Skin.SetString(game9poster, )</onclick>
+<onclick>Skin.SetString(game10name, )</onclick>
+                     <onclick>Skin.SetString(game10exe, )</onclick>
+                     <onclick>Skin.SetString(game10poster, )</onclick>
+															<onclick>Skin.SetString(game11name, )</onclick>
+                     <onclick>Skin.SetString(game11exe, )</onclick>
+                     <onclick>Skin.SetString(game11poster, )</onclick>
+															
+                                                                <thumb>icons/delete.png</thumb>
+                            
+                            </item>
+
+                            
+               
+  
+  </content>
+
+		</control>
+				<control type="panel" id="9000">
+
+<animation type="Conditional" condition="true">
+ <effect type="zoom" start="100" end="75" time="1" tween="cubic" easing="inout" center="auto"/>
+                    </animation>
+
+	<animation type="Visible">
+				 <effect type="fade" start="0" end="100" time="200"  tween="cubic" easing="inout" center="auto"/>
+
+                    </animation>
+                    				<animation type="Hidden">
+				 <effect type="fade" start="100" end="0" time="200" tween="cubic" easing="inout" center="auto"/>
+
+                    </animation>
+                    <visible>Container(8000).HasFocus(3)</visible>
+			<left>320</left>
+			<top>180</top>
+			<width>1895</width>
+			<height>953</height>
+			<focusposition>1</focusposition>
+			<defaultcontrol>1</defaultcontrol>
+			<onup>-</onup>
+			<ondown>-</ondown>
+			<onleft>8000</onleft>
+			<onright>-</onright>
+			<orientation>vertical</orientation>
+			<scrolltime tween="sine" easing="out">240</scrolltime>
+
+			<itemlayout width="580" height="280">
+<control type="group">
+
+				<control type="image">
+					<left>0</left>
+					<top>0</top>
+					<width>570</width>
+					<height>270</height>
+					<texture>grey.png</texture>
+			<colordiffuse>26000000</colordiffuse>
+
+				</control>
+								<control type="image">
+					<left>0</left>
+					<top>0</top>
+					<width>270</width>
+					<height>270</height>
+					<texture>icons/bg.png</texture>
+				</control>
+				<control type="image">
+					<left>0</left>
+					<top>0</top>
+					<width>270</width>
+					<height>270</height>
+					<texture>$INFO[ListItem.Icon]</texture>
+					<aspectratio>scale</aspectratio>
+				</control>
+
+				<control type="textbox">
+					<left>300</left>
+					<top>30</top>
+					<width>250</width>
+					<height>233</height>
+					<label>$INFO[ListItem.Label]</label>
+					<font>Font36</font>
+					<textcolor>white</textcolor>
+					<align>left</align>
+				</control>
+
+				</control>
+			</itemlayout>
+
+			<focusedlayout width="580" height="280">
+			<control type="group">
+				<control type="image">
+					<left>0</left>
+					<top>0</top>
+					<width>570</width>
+					<height>270</height>
+					<texture>grey.png</texture>
+			<colordiffuse>26000000</colordiffuse>
+				</control>
+								<control type="image">
+					<left>0</left>
+					<top>0</top>
+					<width>270</width>
+					<height>270</height>
+					<texture>icons/bg.png</texture>
+				</control>
+				<control type="image">
+					<left>0</left>
+					<top>0</top>
+					<width>270</width>
+					<height>270</height>
+					<texture>$INFO[ListItem.Icon]</texture>
+										<aspectratio>scale</aspectratio>
+				</control>
+				<control type="textbox">
+					<left>300</left>
+					<top>30</top>
+					<width>250</width>
+					<height>233</height>
+					<label>$INFO[ListItem.Label]</label>
+					<font>Font36</font>
+					<textcolor>white</textcolor>
+					<align>left</align>
+				</control>
+								<control type="image">
+            <animation type="Conditional" condition="true">
+                                        <effect type="zoom" start="100" end="111" time="1" tween="sine" easing="inout" center="auto" />
+                                    </animation>
+                              <animation type="Focus">
+                                        <effect type="fade" start="0" end="100" time="200" tween="sine" easing="in" />
+                                    </animation>
+                                    <animation type="Unfocus">
+                                        <effect type="fade" start="100" end="0" time="200" tween="sine" easing="out" />
+                                    </animation>
+					<left>10</left>
+					<top>0</top>
+					<width>550</width>
+					<height>270</height>
+					<texture border="100">fo.png</texture>
+				</control>
+				</control>
+			</focusedlayout>
+
+  <content>
+   	<item id="3">
+					<label>My Favourites</label>
+					<icon>icons\library.png</icon>
+					<thumb />
+					<onclick>ActivateWindow(favourites)</onclick>
+				</item>
+
+              				<include>FavItems</include>
+
+                            
+               
+  
+  </content>
+
+		</control>
+		</control>
+		<!-- Home items -->
+		
+<include>bottombar</include>
+	</controls>
+
+</window>

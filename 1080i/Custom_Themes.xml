@@ -1,0 +1,398 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<window id="1901">
+	<!-- skinsettings -->
+	<defaultcontrol always="true">9000</defaultcontrol>
+
+	<controls>
+	
+		<!-- Background -->
+		<include>WindowBackgroundImage</include>
+		<control type="group">
+		
+		<animation type="WindowOpen">
+              <effect type="fade" start="0" end="100" time="300" tween="cubic" easing="inout"/>
+              <effect type="zoom" start="120" end="100" time="400" tween="cubic" easing="out" center="auto"/>
+                    </animation>
+<animation type="WindowClose">
+              <effect type="fade" start="100" end="0" time="300" tween="cubic" easing="inout"/>
+              <effect type="zoom" start="100" end="120" time="400" tween="cubic" easing="out"center="auto"/>
+                    </animation>
+
+		<include content="Time">
+			<param name="heading">Themes</param>
+		</include>
+
+<control type="panel" id="9000">
+
+<animation type="Conditional" condition="true">
+ <effect type="zoom" start="100" end="85" time="1" tween="cubic" easing="inout" center="auto"/>
+                    </animation>
+
+
+			<left>70</left>
+			<top>250</top>
+			<width>1895</width>
+			<height>825</height>
+			<focusposition>1</focusposition>
+			<defaultcontrol>1</defaultcontrol>
+			<onup>-</onup>
+			<ondown>-</ondown>
+			<onleft>-</onleft>
+			<onright>-</onright>
+			<orientation>vertical</orientation>
+			<scrolltime tween="sine" easing="out">240</scrolltime>
+
+			<itemlayout width="590" height="290">
+<control type="group">
+
+				<control type="image">
+					<left>0</left>
+					<top>0</top>
+					<width>570</width>
+					<height>270</height>
+					<texture>grey.png</texture>
+			<colordiffuse>26000000</colordiffuse>
+
+				</control>
+								<control type="image">
+					<left>0</left>
+					<top>0</top>
+					<width>270</width>
+					<height>270</height>
+					<texture>icons/bg.png</texture>
+				</control>
+				<control type="image">
+					<left>0</left>
+					<top>0</top>
+					<width>270</width>
+					<height>270</height>
+					<texture>$INFO[ListItem.Icon]</texture>
+				</control>
+
+				<control type="textbox">
+					<left>300</left>
+					<top>30</top>
+					<width>250</width>
+					<height>233</height>
+					<label>$INFO[ListItem.Label]</label>
+					<font>Font36</font>
+					<textcolor>white</textcolor>
+					<align>left</align>
+				</control>
+
+				</control>
+			</itemlayout>
+
+			<focusedlayout width="590" height="290">
+			<control type="group">
+				<control type="image">
+					<left>0</left>
+					<top>0</top>
+					<width>570</width>
+					<height>270</height>
+					<texture>grey.png</texture>
+			<colordiffuse>26000000</colordiffuse>
+				</control>
+								<control type="image">
+					<left>0</left>
+					<top>0</top>
+					<width>270</width>
+					<height>270</height>
+					<texture>icons/bg.png</texture>
+				</control>
+				<control type="image">
+					<left>0</left>
+					<top>0</top>
+					<width>270</width>
+					<height>270</height>
+					<texture>$INFO[ListItem.Icon]</texture>
+				</control>
+				<control type="textbox">
+					<left>300</left>
+					<top>30</top>
+					<width>250</width>
+					<height>233</height>
+					<label>$INFO[ListItem.Label]</label>
+					<font>Font36</font>
+					<textcolor>white</textcolor>
+					<align>left</align>
+				</control>
+								<control type="image">
+            <animation type="Conditional" condition="true">
+                                        <effect type="zoom" start="100" end="111" time="1" tween="sine" easing="inout" center="auto" />
+                                    </animation>
+                              <animation type="Focus">
+                                        <effect type="fade" start="0" end="100" time="200" tween="sine" easing="in" />
+                                    </animation>
+                                    <animation type="Unfocus">
+                                        <effect type="fade" start="100" end="0" time="200" tween="sine" easing="out" />
+                                    </animation>
+					<left>10</left>
+					<top>0</top>
+					<width>550</width>
+					<height>270</height>
+					<texture border="100">fo.png</texture>
+				</control>
+				</control>
+			</focusedlayout>
+
+  <content>
+   <item id="1">
+                              <label>Flow</label>
+          <onclick>ActivateWindow(1601)</onclick>
+															
+                                                                <thumb>special://skin/THEMES/Flow/icon.png</thumb>
+                            
+                            </item>
+                         <item id="1">
+         	<onclick>Skin.SetString(color.tile, white)</onclick>
+                                        <onclick condition="String.IsEqual(Skin.String(BackgroundImage),Custom)">Skin.SetString(BackgroundImage, )</onclick>
+                                        <onclick condition="!Skin.HasSetting(BackgroundCustomColour)">Skin.ToggleSetting(BackgroundCustomColour)</onclick>
+                               <onclick>Skin.SetString(themedir, special://skin/THEMES/Dual/)</onclick>
+             
+															<onclick>Skin.SetString(color.background, FF017387)</onclick>
+
+                              <label>Dual</label>
+<onclick condition="!Skin.HasSetting(themes)">Skin.ToggleSetting(themes)</onclick>
+                               <onclick>Skin.SetString(themedir, special://skin/THEMES/Dual/)</onclick>
+                 <onclick>RunScript(special://skin/scripts/setuptheme.py)</onclick>
+															
+                                                                <thumb>special://skin/THEMES/Dual/icon.png</thumb>
+                            
+                            </item>    
+   <item id="1">
+     	<onclick>Skin.SetString(color.tile, white)</onclick>
+												<onclick>Skin.SetString(color.background, FF103b59)</onclick>
+       <onclick condition="String.IsEqual(Skin.String(BackgroundImage),Custom)">Skin.SetString(BackgroundImage, )</onclick>
+              <onclick condition="!Skin.HasSetting(BackgroundCustomColour)">Skin.ToggleSetting(BackgroundCustomColour)</onclick>
+              
+                              <label>Particles</label>
+<onclick condition="!Skin.HasSetting(themes)">Skin.ToggleSetting(themes)</onclick>
+                               <onclick>Skin.SetString(themedir, special://skin/THEMES/Particles/)</onclick>
+                       <onclick>RunScript(special://skin/scripts/setuptheme.py)</onclick>
+															
+                                                                <thumb>special://skin/THEMES/Particles/icon.png</thumb>
+                            
+                            </item>
+
+                               <item id="1">
+                              <label>Custom</label>
+                              								<onclick>Skin.SetString(color.background, FF001D66)</onclick>
+                              	<onclick>Skin.SetString(color.tile, white)</onclick>
+ <onclick condition="!Skin.HasSetting(BackgroundCustomColour)">Skin.ToggleSetting(BackgroundCustomColour)</onclick>
+					<onclick>Skin.SetString(BackgroundImage,Custom)</onclick>
+<onclick condition="Skin.HasSetting(themes)">Skin.ToggleSetting(themes)</onclick>
+                           					<onclick>Skin.SetImage(CustomBackground)</onclick>
+                             <onclick>ActivateWindow(Home)</onclick>
+															
+                                                                <thumb>icons/gallery.png</thumb>
+                            
+                            </item>
+   <item id="1">
+	<onclick>Skin.SetString(color.tile, white)</onclick>
+										<onclick>Skin.SetString(color.background, FF8C8C8C)</onclick>
+       <onclick condition="String.IsEqual(Skin.String(BackgroundImage),Custom)">Skin.SetString(BackgroundImage, )</onclick>
+              <onclick condition="!Skin.HasSetting(BackgroundCustomColour)">Skin.ToggleSetting(BackgroundCustomColour)</onclick>
+              
+                              <label>PlayStation Anniversary</label>
+<onclick condition="!Skin.HasSetting(themes)">Skin.ToggleSetting(themes)</onclick>
+                               <onclick>Skin.SetString(themedir, special://skin/THEMES/PlayStation Anniversary/)</onclick>
+                             <onclick>RunScript(special://skin/scripts/setuptheme.py)</onclick>
+															
+                                                                <thumb>special://skin/THEMES/PlayStation Anniversary/icon.png</thumb>
+                            
+                            </item>
+                                          <item id="1">
+                              <label>PlayStation Legacy</label>
+                               	<onclick>Skin.SetString(color.tile, white)</onclick>
+										<onclick>Skin.SetString(color.background, FF8C8C8C)</onclick>
+       <onclick condition="String.IsEqual(Skin.String(BackgroundImage),Custom)">Skin.SetString(BackgroundImage, )</onclick>
+              <onclick condition="!Skin.HasSetting(BackgroundCustomColour)">Skin.ToggleSetting(BackgroundCustomColour)</onclick>
+<onclick condition="!Skin.HasSetting(themes)">Skin.ToggleSetting(themes)</onclick>
+                               <onclick>Skin.SetString(themedir, special://skin/THEMES/Heroes/)</onclick>
+   <onclick>RunScript(special://skin/scripts/setuptheme.py)</onclick>
+															
+                                                                <thumb>special://skin/THEMES/Heroes/icon.png</thumb>
+                            
+                            </item> 
+                            
+                             
+                            
+   <item id="1">
+     	<onclick>Skin.SetString(color.tile, white)</onclick>
+										<onclick>Skin.SetString(color.background, FF001D66)</onclick>
+       <onclick condition="String.IsEqual(Skin.String(BackgroundImage),Custom)">Skin.SetString(BackgroundImage, )</onclick>
+              <onclick condition="!Skin.HasSetting(BackgroundCustomColour)">Skin.ToggleSetting(BackgroundCustomColour)</onclick>
+              
+                              <label>Tearaway</label>
+<onclick condition="!Skin.HasSetting(themes)">Skin.ToggleSetting(themes)</onclick>
+                               <onclick>Skin.SetString(themedir, special://skin/THEMES/Tearaway/)</onclick>
+                       <onclick>RunScript(special://skin/scripts/setuptheme.py)</onclick>
+															
+                                                                <thumb>special://skin/THEMES/Tearaway/icon.png</thumb>
+                            
+                            </item>
+                                            
+                               <item id="1">
+        	<onclick>Skin.SetString(color.tile, white)</onclick>
+																<onclick>Skin.SetString(color.background, FF001D66)</onclick>
+       <onclick condition="String.IsEqual(Skin.String(BackgroundImage),Custom)">Skin.SetString(BackgroundImage, )</onclick>
+              <onclick condition="!Skin.HasSetting(BackgroundCustomColour)">Skin.ToggleSetting(BackgroundCustomColour)</onclick>
+                              <label>Witcher 3</label>
+<onclick condition="!Skin.HasSetting(themes)">Skin.ToggleSetting(themes)</onclick>
+                               <onclick>Skin.SetString(themedir, special://skin/THEMES/Witcher 3/)</onclick>
+                 <onclick>RunScript(special://skin/scripts/setuptheme.py)</onclick>
+															
+                                                                <thumb>special://skin/THEMES/Witcher 3/icon.png</thumb>
+                            
+                            </item>
+                             
+                               <item id="1">
+   	<onclick>Skin.SetString(color.tile, silver)</onclick>
+							<onclick>Skin.SetString(color.background, FF001D66)</onclick>
+       <onclick condition="String.IsEqual(Skin.String(BackgroundImage),Custom)">Skin.SetString(BackgroundImage, )</onclick>
+              <onclick condition="!Skin.HasSetting(BackgroundCustomColour)">Skin.ToggleSetting(BackgroundCustomColour)</onclick>
+                              <label>Horizon Zero Dawn</label>
+<onclick condition="!Skin.HasSetting(themes)">Skin.ToggleSetting(themes)</onclick>
+                               <onclick>Skin.SetString(themedir, special://skin/THEMES/Horizon Zero Dawn/)</onclick>
+   <onclick>RunScript(special://skin/scripts/setuptheme.py)</onclick>
+															
+                                                                <thumb>special://skin/THEMES/Horizon Zero Dawn/icon.png</thumb>
+                            
+                            </item>
+                                     
+   <item id="1">
+   	<onclick>Skin.SetString(color.tile, FF800033)</onclick>
+														<onclick>Skin.SetString(color.background, FF001D66)</onclick>
+       <onclick condition="String.IsEqual(Skin.String(BackgroundImage),Custom)">Skin.SetString(BackgroundImage, )</onclick>
+              <onclick condition="!Skin.HasSetting(BackgroundCustomColour)">Skin.ToggleSetting(BackgroundCustomColour)</onclick>
+                              <label>Destiny</label>
+<onclick condition="!Skin.HasSetting(themes)">Skin.ToggleSetting(themes)</onclick>
+                               <onclick>Skin.SetString(themedir, special://skin/THEMES/Destiny/)</onclick>
+   <onclick>RunScript(special://skin/scripts/setuptheme.py)</onclick>
+															
+                                                                <thumb>special://skin/THEMES/Destiny/icon.png</thumb>
+                            
+                            </item>
+                            
+                               <item id="1">
+   	<onclick>Skin.SetString(color.tile, white)</onclick>
+													<onclick>Skin.SetString(color.background, FF001D66)</onclick>
+       <onclick condition="String.IsEqual(Skin.String(BackgroundImage),Custom)">Skin.SetString(BackgroundImage, )</onclick>
+              <onclick condition="!Skin.HasSetting(BackgroundCustomColour)">Skin.ToggleSetting(BackgroundCustomColour)</onclick>
+                              <label>Infinite Warfare</label>
+<onclick condition="!Skin.HasSetting(themes)">Skin.ToggleSetting(themes)</onclick>
+                               <onclick>Skin.SetString(themedir, special://skin/THEMES/Infinite Warfare/)</onclick>
+   <onclick>RunScript(special://skin/scripts/setuptheme.py)</onclick>
+															
+                                                                <thumb>special://skin/THEMES/Infinite Warfare/icon.png</thumb>
+                            
+                            </item>
+                            
+                                        
+                            
+                                     <item id="1">
+     	<onclick>Skin.SetString(color.tile, white)</onclick>
+										<onclick>Skin.SetString(color.background, FF720046)</onclick>
+       <onclick condition="String.IsEqual(Skin.String(BackgroundImage),Custom)">Skin.SetString(BackgroundImage, )</onclick>
+              <onclick condition="!Skin.HasSetting(BackgroundCustomColour)">Skin.ToggleSetting(BackgroundCustomColour)</onclick>
+              
+                              <label>Hitman 2</label>
+<onclick condition="!Skin.HasSetting(themes)">Skin.ToggleSetting(themes)</onclick>
+                               <onclick>Skin.SetString(themedir, special://skin/THEMES/Hitman 2/)</onclick>
+                       <onclick>RunScript(special://skin/scripts/setuptheme.py)</onclick>
+															
+                                                                <thumb>special://skin/THEMES/Hitman 2/icon.png</thumb>
+                            
+                            </item>
+
+                         
+                            
+   <item id="1">
+												<onclick>Skin.SetString(color.background, FF6d0707)</onclick>
+    	<onclick>Skin.SetString(color.tile, white)</onclick>
+       <onclick condition="String.IsEqual(Skin.String(BackgroundImage),Custom)">Skin.SetString(BackgroundImage, )</onclick>
+              <onclick condition="!Skin.HasSetting(BackgroundCustomColour)">Skin.ToggleSetting(BackgroundCustomColour)</onclick>
+                              <label>Spiral</label>
+<onclick condition="!Skin.HasSetting(themes)">Skin.ToggleSetting(themes)</onclick>
+                               <onclick>Skin.SetString(themedir, special://skin/THEMES/Spiral/)</onclick>
+                     <onclick>RunScript(special://skin/scripts/setuptheme.py)</onclick>
+															
+                                                                <thumb>special://skin/THEMES/Spiral/icon.png</thumb>
+                            
+                            </item>
+ 
+
+                 <item id="1">
+                     	<onclick>Skin.SetString(color.tile, darkgreen)</onclick>
+										<onclick>Skin.SetString(color.background, FF001D66)</onclick>
+       <onclick condition="String.IsEqual(Skin.String(BackgroundImage),Custom)">Skin.SetString(BackgroundImage, )</onclick>
+              <onclick condition="!Skin.HasSetting(BackgroundCustomColour)">Skin.ToggleSetting(BackgroundCustomColour)</onclick>
+                              <onclick condition="!Skin.HasSetting(themes)">Skin.ToggleSetting(themes)</onclick>
+  <label>Modern Warfare Remastered</label>
+                               <onclick>Skin.SetString(themedir, special://skin/THEMES/Call Of Duty Modern Warfare Remastered/)</onclick>
+                        <onclick>RunScript(special://skin/scripts/setuptheme.py)</onclick>
+															
+                                                                <thumb>special://skin/THEMES/Call Of Duty Modern Warfare Remastered/icon.png</thumb>
+                            
+                            </item>
+                           <item id="1">
+                               	<onclick>Skin.SetString(color.tile, white)</onclick>
+						<onclick>Skin.SetString(color.background, FF001D66)</onclick>
+       <onclick condition="String.IsEqual(Skin.String(BackgroundImage),Custom)">Skin.SetString(BackgroundImage, )</onclick>
+              <onclick condition="!Skin.HasSetting(BackgroundCustomColour)">Skin.ToggleSetting(BackgroundCustomColour)</onclick>
+                              <label>Until Dawn</label>
+<onclick condition="!Skin.HasSetting(themes)">Skin.ToggleSetting(themes)</onclick>
+                               <onclick>Skin.SetString(themedir, special://skin/THEMES/Until Dawn/)</onclick>
+                    <onclick>RunScript(special://skin/scripts/setuptheme.py)</onclick>
+															
+                                                                <thumb>special://skin/THEMES/Until Dawn/icon.png</thumb>
+                            
+                            </item>   
+                                                       <item id="1">
+                              <label>Tron</label>
+                                  	<onclick>Skin.SetString(color.tile, orange)</onclick>
+										<onclick>Skin.SetString(color.background, FF7F2D00)</onclick>
+       <onclick condition="String.IsEqual(Skin.String(BackgroundImage),Custom)">Skin.SetString(BackgroundImage, )</onclick>
+              <onclick condition="!Skin.HasSetting(BackgroundCustomColour)">Skin.ToggleSetting(BackgroundCustomColour)</onclick>
+<onclick condition="!Skin.HasSetting(themes)">Skin.ToggleSetting(themes)</onclick>
+                               <onclick>Skin.SetString(themedir, special://skin/THEMES/Tron/)</onclick>
+              <onclick>RunScript(special://skin/scripts/setuptheme.py)</onclick>
+															
+                                                                <thumb>special://skin/THEMES/Tron/icon.png</thumb>
+                            
+                            </item>   
+                            
+                                                                 
+              
+                                    
+                                      <item id="1">
+               	<onclick>Skin.SetString(color.tile, orange)</onclick>
+										<onclick>Skin.SetString(color.background, FF7F2D00)</onclick>
+       <onclick condition="String.IsEqual(Skin.String(BackgroundImage),Custom)">Skin.SetString(BackgroundImage, )</onclick>
+              <onclick condition="!Skin.HasSetting(BackgroundCustomColour)">Skin.ToggleSetting(BackgroundCustomColour)</onclick>
+                              <onclick condition="!Skin.HasSetting(themes)">Skin.ToggleSetting(themes)</onclick>
+  <label>Battlefield 4</label>
+                               <onclick>Skin.SetString(themedir, special://skin/THEMES/Battlefield/)</onclick>
+                    <onclick>RunScript(special://skin/scripts/setuptheme.py)</onclick>
+															
+                                                                <thumb>special://skin/THEMES/Battlefield/icon.png</thumb>
+                            
+                            </item>
+                                            
+
+              
+
+                            
+               
+  
+  </content>
+
+		</control>
+		</control>
+		<!-- Home items -->
+		
+<include>bottombar</include>
+	</controls>
+
+</window>

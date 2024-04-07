@@ -1,0 +1,232 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<window>
+	<!-- settings -->
+	<backgroundcolor>0x00000000</backgroundcolor>
+	<defaultcontrol>9000</defaultcontrol>
+	<onload condition="!String.IsEmpty(Window(settings).Property(ChangeSettingsLevel))">ClearProperty(ChangeSettingsLevel)</onload>
+<onload condition="!Skin.HasSetting(firsttime)">RunScript(special://skin/scripts/setup.py)</onload>
+
+	<onload condition="!Skin.HasSetting(firsttime) + !Skin.HasSetting(DisableFiles)">Skin.ToggleSetting(DisableFiles)</onload>
+		<onload condition="!Skin.HasSetting(firsttime) + !Skin.HasSetting(DisableFiles)">Skin.ToggleSetting(DisableFavs)</onload>
+	<onload condition="String.IsEqual(Skin.String(BackgroundImage),Custom) + !Skin.HasSetting(firsttime)">Skin.SetString(BackgroundImage, )</onload>
+                                        <onload condition="!Skin.HasSetting(BackgroundCustomColour) + !Skin.HasSetting(firsttime)">Skin.ToggleSetting(BackgroundCustomColour)</onload>
+                               <onload condition="!Skin.HasSetting(firsttime)">Skin.SetString(themedir, special://skin/THEMES/Flow/)</onload>
+															<onload condition="!Skin.HasSetting(firsttime)">Skin.SetString(color.background, FF001D66)</onload>
+																														<onload condition="!Skin.HasSetting(firsttime)">Skin.SetString(color.overlay, D9000000)</onload>
+															<onload condition="!Skin.HasSetting(firsttime)">Skin.SetString(color.tile, white)</onload>
+															
+															
+															<onload condition="!Skin.HasSetting(themes) + !Skin.HasSetting(firsttime)">Skin.ToggleSetting(themes)</onload>
+
+<onload condition="!Skin.HasSetting(firsttime)">Skin.ToggleSetting(FirstTime)</onload>
+	<controls>
+
+		<!-- Background -->
+		<include>WindowBackgroundImage</include>
+		<control type="group">
+		
+		<animation type="WindowOpen">
+              <effect type="fade" start="0" end="100" time="300" tween="cubic" easing="inout"/>
+              <effect type="zoom" start="120" end="100" time="400" tween="cubic" easing="out" center="auto"/>
+                    </animation>
+<animation type="WindowClose">
+              <effect type="fade" start="100" end="0" time="300" tween="cubic" easing="inout"/>
+              <effect type="zoom" start="100" end="120" time="400" tween="cubic" easing="out"center="auto"/>
+                    </animation>
+
+		<include content="Time">
+			<param name="heading">Settings</param>
+		</include>
+
+<control type="panel" id="9000">
+
+<animation type="Conditional" condition="true">
+ <effect type="zoom" start="100" end="85" time="1" tween="cubic" easing="inout" center="auto"/>
+                    </animation>
+
+
+			<left>250</left>
+			<top>200</top>
+			<width>1400</width>
+			<height>875</height>
+			<focusposition>1</focusposition>
+			<defaultcontrol>1</defaultcontrol>
+			<onup>-</onup>
+			<ondown>-</ondown>
+			<onleft>-</onleft>
+			<onright>-</onright>
+			<orientation>vertical</orientation>
+			<scrolltime tween="sine" easing="out">240</scrolltime>
+
+			<itemlayout width="1290" height="130">
+<control type="group">
+
+				<control type="image">
+					<left>0</left>
+					<top>120</top>
+					<width>1340</width>
+			<height>2</height>
+			<texture>color_white.png</texture>
+			<colordiffuse>80FFFFFF</colordiffuse>
+				</control>
+								<control type="image">
+					<left>0</left>
+					<top>10</top>
+					<width>110</width>
+			<height>110</height>
+			<texture>$INFO[ListItem.Thumb]</texture>
+
+				</control>
+				<control type="label">
+					<left>150</left>
+					<top>-50</top>
+					<width>900</width>
+					<height>233</height>
+					<label>$INFO[ListItem.Label]</label>
+					<font>Font36</font>
+					<textcolor>white</textcolor>
+					<align>left</align>
+					<autoscroll>false</autoscroll>
+				</control>
+
+				</control>
+			</itemlayout>
+
+			<focusedlayout width="1290" height="130">
+			<control type="group">
+				<control type="image">
+					<left>0</left>
+					<top>120</top>
+					<width>1340</width>
+			<height>2</height>
+			<texture>color_white.png</texture>
+			<colordiffuse>80FFFFFF</colordiffuse>
+				</control>
+
+												<control type="image">
+					<left>0</left>
+					<top>10</top>
+					<width>110</width>
+			<height>110</height>
+			<texture>$INFO[ListItem.Thumb]</texture>
+
+				</control>
+				<control type="label">
+					<left>150</left>
+					<top>-50</top>
+					<width>900</width>
+					<height>233</height>
+					<label>$INFO[ListItem.Label]</label>
+					<font>Font36</font>
+					<textcolor>white</textcolor>
+					<align>left</align>
+					<autoscroll>false</autoscroll>
+				</control>
+								<control type="image">
+            <animation type="Conditional" condition="true">
+                                        <effect type="zoom" start="100" end="111" time="1" tween="sine" easing="inout" center="auto" />
+                                    </animation>
+                              <animation type="Focus">
+                                        <effect type="fade" start="0" end="100" time="200" tween="sine" easing="in" />
+                                    </animation>
+                                    <animation type="Unfocus">
+                                        <effect type="fade" start="100" end="0" time="200" tween="sine" easing="out" />
+                                    </animation>
+					<left>50</left>
+					<top>0</top>
+					<width>1250</width>
+					<height>130</height>
+					<texture border="40">fo.png</texture>
+				</control>
+				</control>
+			</focusedlayout>
+
+  <content>
+   <item id="1">
+                              <label>Themes</label>
+
+                             <onclick>ActivateWindow(1901)</onclick>
+															
+                                                                <thumb>icons/xmb/weather.png</thumb>
+                      
+                            </item>
+  
+               
+     <item id="1">
+                              <label>Interface settings</label>
+
+                             <onclick>ActivateWindow(interfacesettings)</onclick>
+															
+                                                                <thumb>icons/xmb/settings.png</thumb>
+ 
+                            </item>
+                                <item id="1">
+                              <label>System</label>
+
+                             <onclick>ActivateWindow(systemsettings)</onclick>
+															
+                                                                <thumb>icons/xmb/program.png</thumb>
+ 
+                            </item>
+                                <item id="1">
+                              <label>Network</label>
+
+                             <onclick>ActivateWindow(servicesettings)</onclick>
+															
+                                                                <thumb>icons/xmbmain/icons.18.png</thumb>
+ 
+                            </item>
+                            
+                                <item id="1">
+                              <label>Player</label>
+
+                             <onclick>ActivateWindow(playersettings)</onclick>
+															
+                                                                <thumb>icons/xmb/music.png</thumb>
+ 
+                            </item>
+                                <item id="1">
+                              <label>Library</label>
+
+                             <onclick>ActivateWindow(mediasettings)</onclick>
+															
+                                                                <thumb>icons/xmb/video.png</thumb>
+ 
+                            </item>
+                            
+                                <item id="1">
+                              <label>TV</label>
+
+                             <onclick>ActivateWindow(pvrsettings)</onclick>
+															
+                                                                <thumb>icons/xmbmain/tvv.png</thumb>
+ 
+                            </item>
+                            
+                                <item id="1">
+                              <label>Profiles</label>
+
+                             <onclick>ActivateWindow(profiles)</onclick>
+															
+                                                                <thumb>icons/xmb/user.png</thumb>
+ 
+                            </item>
+                                         <item id="1">
+                              <label>Reset</label>
+
+                             <onclick condition="Skin.HasSetting(firsttime)">Skin.ToggleSetting(firsttime)</onclick>
+                             <onclick>ActivateWindow(Home)</onclick>
+															
+                                                                <thumb>icons/xmb/user.png</thumb>
+ 
+                            </item>
+  </content>
+
+		</control>
+		</control>
+		<!-- Home items -->
+		
+<include>bottombar</include>
+	</controls>
+
+</window>

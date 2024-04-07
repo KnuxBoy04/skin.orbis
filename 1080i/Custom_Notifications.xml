@@ -1,0 +1,188 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<window id="1802">
+	<!-- skinsettings -->
+	<defaultcontrol always="true">9000</defaultcontrol>
+	<controls>
+	
+		<!-- Background -->
+		<include>WindowBackgroundImage</include>
+		<control type="group">
+		
+		<animation type="WindowOpen">
+              <effect type="fade" start="0" end="100" time="300" tween="cubic" easing="inout"/>
+              <effect type="zoom" start="120" end="100" time="400" tween="cubic" easing="out" center="auto"/>
+                    </animation>
+<animation type="WindowClose">
+              <effect type="fade" start="100" end="0" time="300" tween="cubic" easing="inout"/>
+              <effect type="zoom" start="100" end="120" time="400" tween="cubic" easing="out"center="auto"/>
+                    </animation>
+
+		<include content="Time">
+			<param name="heading">Notifications</param>
+		</include>
+
+
+				<control type="label">
+				<animation type="Visible">
+				 <effect type="fade" start="0" end="100" time="300" tween="cubic" easing="inout" center="auto"/>
+                    </animation>
+                    				<animation type="Hidden">
+				 <effect type="fade" start="100" end="0" time="300" tween="cubic" easing="inout" center="auto"/>
+
+                    </animation>
+                    
+				<visible>String.IsEmpty(Container(9000).ListItem(1).Label)</visible>
+					<left>760</left>
+					<top>400</top>
+					<width>900</width>
+					<height>233</height>
+					<label>There are no notifications.</label>
+					<font>Font36</font>
+					<textcolor>white</textcolor>
+					<align>left</align>
+					<autoscroll>false</autoscroll>
+				</control>
+				
+				
+<control type="panel" id="9000">
+
+<animation type="Conditional" condition="true">
+ <effect type="zoom" start="100" end="85" time="1" tween="cubic" easing="inout" center="auto"/>
+                    </animation>
+
+				<animation type="Conditional" condition="!String.IsEmpty(Container(9000).ListItem(1).Label)">
+				 <effect type="fade" start="0" end="100" time="300" tween="cubic" easing="inout" center="auto"/>
+                    </animation>
+				<animation type="Conditional" condition="String.IsEmpty(Container(9000).ListItem(1).Label)">
+				 <effect type="fade" start="100" end="0" time="300" tween="cubic" easing="inout" center="auto"/>
+
+                    </animation>
+                    
+			<left>220</left>
+			<top>250</top>
+			<width>1895</width>
+		<height>845</height>
+			<focusposition>1</focusposition>
+			<defaultcontrol>1</defaultcontrol>
+			<onup>-</onup>
+			<ondown>-</ondown>
+			<onleft>-</onleft>
+			<onright>-</onright>
+		<orientation>vertical</orientation>
+			<scrolltime tween="sine" easing="out">240</scrolltime>
+
+			<itemlayout width="1290" height="180">
+<control type="group">
+
+				<control type="image">
+					<left>0</left>
+					<top>170</top>
+					<width>1340</width>
+			<height>2</height>
+			<texture>color_white.png</texture>
+			<colordiffuse>80FFFFFF</colordiffuse>
+				</control>
+								<control type="image">
+					<left>0</left>
+					<top>10</top>
+					<width>160</width>
+			<height>160</height>
+			<texture fallback="icons/xmb/weather.png">$INFO[ListItem.Thumb]</texture>
+
+				</control>
+				<control type="label">
+					<left>200</left>
+					<top>-40</top>
+					<width>900</width>
+					<height>233</height>
+					<label>Updates</label>
+					<font>Font36</font>
+					<textcolor>white</textcolor>
+					<align>left</align>
+					<autoscroll>false</autoscroll>
+				</control>
+								<control type="label">
+					<left>202</left>
+					<top>0</top>
+					<width>900</width>
+					<height>233</height>
+					<label>$INFO[ListItem.Label]</label>
+					<font>Font27</font>
+					<textcolor>white</textcolor>
+					<align>left</align>
+					<autoscroll>false</autoscroll>
+				</control>
+
+				</control>
+			</itemlayout>
+
+			<focusedlayout width="1290" height="180">
+			<control type="group">
+				<control type="image">
+					<left>0</left>
+					<top>170</top>
+					<width>1340</width>
+			<height>2</height>
+			<texture>color_white.png</texture>
+			<colordiffuse>80FFFFFF</colordiffuse>
+				</control>
+
+												<control type="image">
+					<left>0</left>
+					<top>10</top>
+					<width>160</width>
+			<height>160</height>
+			<texture fallback="icons/xmb/weather.png">$INFO[ListItem.Thumb]</texture>
+
+				</control>
+				<control type="label">
+					<left>200</left>
+					<top>-40</top>
+					<width>900</width>
+					<height>233</height>
+					<label>Updates</label>
+					<font>Font36</font>
+					<textcolor>white</textcolor>
+					<align>left</align>
+					<autoscroll>false</autoscroll>
+				</control>
+								<control type="label">
+					<left>202</left>
+					<top>0</top>
+					<width>900</width>
+					<height>233</height>
+					<label>$INFO[ListItem.Label]</label>
+					<font>Font27</font>
+					<textcolor>white</textcolor>
+					<align>left</align>
+					<autoscroll>false</autoscroll>
+				</control>
+								<control type="image">
+            <animation type="Conditional" condition="true">
+                                        <effect type="zoom" start="100" end="111" time="1" tween="sine" easing="inout" center="auto" />
+                                    </animation>
+                              <animation type="Focus">
+                                        <effect type="fade" start="0" end="100" time="200" tween="sine" easing="in" />
+                                    </animation>
+                                    <animation type="Unfocus">
+                                        <effect type="fade" start="100" end="0" time="200" tween="sine" easing="out" />
+                                    </animation>
+					<left>50</left>
+					<top>0</top>
+					<width>1250</width>
+					<height>180</height>
+					<texture border="70">fo.png</texture>
+				</control>
+				</control>
+			</focusedlayout>
+
+<content type="addons">addons://outdated/</content>
+
+		</control>
+		</control>
+		<!-- Home items -->
+		
+<include>bottombar</include>
+	</controls>
+
+</window>

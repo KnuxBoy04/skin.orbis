@@ -1,0 +1,4141 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<includes>
+
+	<include name="HomeOSMC">
+	<control type="group">
+<animation type="WindowOpen" condition="Window.Previous(Startup)">
+              <effect type="fade" start="0" end="100" time="300" tween="cubic" easing="inout" delay="1000"/>
+                    </animation>
+
+<animation type="WindowOpen" condition="!Window.Previous(Startup)">
+              <effect type="fade" start="0" end="100" time="300" tween="cubic" easing="out"/>
+              <effect type="zoom" start="85" end="100" time="400" tween="cubic" easing="out" center="auto"/>
+                    </animation>
+<animation type="WindowClose" condition="!Window.Previous(Startup)">
+              <effect type="fade" start="100" end="0" time="300" tween="cubic" easing="out"/>
+              <effect type="zoom" start="100" end="70" time="400" tween="cubic" easing="out"center="auto"/>
+                    </animation>
+
+				<control type="label">
+<animation type="Conditional" condition="!Control.HasFocus(9000)">
+				 <effect type="fade" start="0" end="100" time="200" delay="250" tween="cubic" easing="inout" center="auto"/>
+
+                    </animation>
+     				<animation type="Visible">
+				 <effect type="fade" start="0" end="100" time="200"  tween="cubic" easing="inout" center="auto"/>
+
+                    </animation>
+                    				<animation type="Hidden">
+				 <effect type="fade" start="100" end="0" time="200" tween="cubic" easing="inout" center="auto"/>
+
+                    </animation>
+                    
+				<visible>Control.HasFocus(100) + Container(100).HasFocus(1)</visible>
+					<left>100</left>
+					<top>-10</top>
+					<width>900</width>
+					<height>233</height>
+					<label>Notifications</label>
+					<font>Font36</font>
+					<textcolor>white</textcolor>
+					<align>left</align>
+					<autoscroll>false</autoscroll>
+				</control>
+				
+								<control type="label">
+<animation type="Conditional" condition="!Control.HasFocus(9000)">
+				 <effect type="fade" start="0" end="100" time="200" delay="250" tween="cubic" easing="inout" center="auto"/>
+
+                    </animation>
+     				<animation type="Visible">
+				 <effect type="fade" start="0" end="100" time="200"  tween="cubic" easing="inout" center="auto"/>
+
+                    </animation>
+                    				<animation type="Hidden">
+				 <effect type="fade" start="100" end="0" time="200" tween="cubic" easing="inout" center="auto"/>
+
+                    </animation>
+                    
+				<visible>Control.HasFocus(100) + Container(100).HasFocus(2)</visible>
+					<left>100</left>
+					<top>-10</top>
+					<width>900</width>
+					<height>233</height>
+					<label>Friends</label>
+					<font>Font36</font>
+					<textcolor>white</textcolor>
+					<align>left</align>
+					<autoscroll>false</autoscroll>
+				</control>
+				
+						<control type="label">
+<animation type="Conditional" condition="!Control.HasFocus(9000)">
+				 <effect type="fade" start="0" end="100" time="200" delay="250" tween="cubic" easing="inout" center="auto"/>
+
+                    </animation>
+     				<animation type="Visible">
+				 <effect type="fade" start="0" end="100" time="200"  tween="cubic" easing="inout" center="auto"/>
+
+                    </animation>
+                    				<animation type="Hidden">
+				 <effect type="fade" start="100" end="0" time="200" tween="cubic" easing="inout" center="auto"/>
+
+                    </animation>
+                    
+				<visible>Control.HasFocus(100) + Container(100).HasFocus(3)</visible>
+					<left>100</left>
+					<top>-10</top>
+					<width>900</width>
+					<height>233</height>
+					<label>Parties</label>
+					<font>Font36</font>
+					<textcolor>white</textcolor>
+					<align>left</align>
+					<autoscroll>false</autoscroll>
+				</control>
+									<control type="label">
+<animation type="Conditional" condition="!Control.HasFocus(9000)">
+				 <effect type="fade" start="0" end="100" time="200" delay="250" tween="cubic" easing="inout" center="auto"/>
+
+                    </animation>
+     				<animation type="Visible">
+				 <effect type="fade" start="0" end="100" time="200"  tween="cubic" easing="inout" center="auto"/>
+
+                    </animation>
+                    				<animation type="Hidden">
+				 <effect type="fade" start="100" end="0" time="200" tween="cubic" easing="inout" center="auto"/>
+
+                    </animation>
+                    
+				<visible>Control.HasFocus(100) + Container(100).HasFocus(4)</visible>
+					<left>100</left>
+					<top>-10</top>
+					<width>900</width>
+					<height>233</height>
+					<label>Messages</label>
+					<font>Font36</font>
+					<textcolor>white</textcolor>
+					<align>left</align>
+					<autoscroll>false</autoscroll>
+				</control>
+                    									<control type="label">
+<animation type="Conditional" condition="!Control.HasFocus(9000)">
+				 <effect type="fade" start="0" end="100" time="200" delay="250" tween="cubic" easing="inout" center="auto"/>
+
+                    </animation>
+     				<animation type="Visible">
+				 <effect type="fade" start="0" end="100" time="200"  tween="cubic" easing="inout" center="auto"/>
+
+                    </animation>
+                    				<animation type="Hidden">
+				 <effect type="fade" start="100" end="0" time="200" tween="cubic" easing="inout" center="auto"/>
+
+                    </animation>
+                    
+				<visible>Control.HasFocus(100) + Container(100).HasFocus(5)</visible>
+					<left>100</left>
+					<top>-10</top>
+					<width>900</width>
+					<height>233</height>
+					<label>Your Profile</label>
+					<font>Font36</font>
+					<textcolor>white</textcolor>
+					<align>left</align>
+					<autoscroll>false</autoscroll>
+				</control>
+				             									<control type="label">
+<animation type="Conditional" condition="!Control.HasFocus(9000)">
+				 <effect type="fade" start="0" end="100" time="200" delay="250" tween="cubic" easing="inout" center="auto"/>
+
+                    </animation>
+     				<animation type="Visible">
+				 <effect type="fade" start="0" end="100" time="200"  tween="cubic" easing="inout" center="auto"/>
+
+                    </animation>
+                    				<animation type="Hidden">
+				 <effect type="fade" start="100" end="0" time="200" tween="cubic" easing="inout" center="auto"/>
+
+                    </animation>
+                    
+				<visible>Control.HasFocus(100) + Container(100).HasFocus(6)</visible>
+					<left>100</left>
+					<top>-10</top>
+					<width>900</width>
+					<height>233</height>
+					<label>Trophies</label>
+					<font>Font36</font>
+					<textcolor>white</textcolor>
+					<align>left</align>
+					<autoscroll>false</autoscroll>
+				</control>
+				<control type="label">
+<animation type="Conditional" condition="!Control.HasFocus(9000)">
+				 <effect type="fade" start="0" end="100" time="200" delay="250" tween="cubic" easing="inout" center="auto"/>
+
+                    </animation>
+                    				<animation type="Visible">
+				 <effect type="fade" start="0" end="100" time="300" delay="50" tween="cubic" easing="inout" center="auto"/>
+
+                    </animation>
+                    				<animation type="Hidden">
+				 <effect type="fade" start="100" end="0" time="200" tween="cubic" easing="inout" center="auto"/>
+
+                    </animation>
+                    
+				<visible>String.IsEmpty(Container(10).ListItem(1).Label) + Control.HasFocus(100) + Container(100).HasFocus(1)</visible>
+					<left>765</left>
+					<top>270</top>
+					<width>900</width>
+					<height>233</height>
+					<label>There are no notifications.</label>
+					<font>Font36</font>
+					<textcolor>white</textcolor>
+					<align>left</align>
+					<autoscroll>false</autoscroll>
+				</control>
+								<control type="label">
+<animation type="Conditional" condition="!Control.HasFocus(9000)">
+				 <effect type="fade" start="0" end="100" time="200" delay="250" tween="cubic" easing="inout" center="auto"/>
+
+                    </animation>
+                    				<animation type="Visible">
+				 <effect type="fade" start="0" end="100" time="300" delay="50" tween="cubic" easing="inout" center="auto"/>
+
+                    </animation>
+                    				<animation type="Hidden">
+				 <effect type="fade" start="100" end="0" time="200" tween="cubic" easing="inout" center="auto"/>
+
+                    </animation>
+                    
+				<visible>Control.HasFocus(100) + Container(100).HasFocus(4)</visible>
+					<left>765</left>
+					<top>270</top>
+					<width>900</width>
+					<height>233</height>
+					<label>You have no new messages.</label>
+					<font>Font36</font>
+					<textcolor>white</textcolor>
+					<align>left</align>
+					<autoscroll>false</autoscroll>
+				</control>
+									<control type="label">
+<animation type="Conditional" condition="!Control.HasFocus(9000)">
+				 <effect type="fade" start="0" end="100" time="200" delay="250" tween="cubic" easing="inout" center="auto"/>
+
+                    </animation>
+                    				<animation type="Visible">
+				 <effect type="fade" start="0" end="100" time="300" delay="50" tween="cubic" easing="inout" center="auto"/>
+
+                    </animation>
+                    				<animation type="Hidden">
+				 <effect type="fade" start="100" end="0" time="200" tween="cubic" easing="inout" center="auto"/>
+
+                    </animation>
+                    
+				<visible>Control.HasFocus(100) + Container(100).HasFocus(5)</visible>
+					<left>900</left>
+					<top>250</top>
+					<width>900</width>
+					<height>233</height>
+					<label>$INFO[System.ProfileName]</label>
+					<font>Font36</font>
+					<textcolor>white</textcolor>
+					<align>left</align>
+					<autoscroll>false</autoscroll>
+				</control>
+				
+													<control type="label">
+<animation type="Conditional" condition="!Control.HasFocus(9000)">
+				 <effect type="fade" start="0" end="100" time="200" delay="250" tween="cubic" easing="inout" center="auto"/>
+
+                    </animation>
+                    				<animation type="Visible">
+				 <effect type="fade" start="0" end="100" time="300" delay="50" tween="cubic" easing="inout" center="auto"/>
+
+                    </animation>
+                    				<animation type="Hidden">
+				 <effect type="fade" start="100" end="0" time="200" tween="cubic" easing="inout" center="auto"/>
+
+                    </animation>
+                    
+				<visible>Control.HasFocus(100) + Container(100).HasFocus(5)</visible>
+					<left>900</left>
+					<top>290</top>
+					<width>900</width>
+					<height>233</height>
+					<label fallback="PSN">$INFO[Skin.String(gtag)]</label>
+					<font>Font27</font>
+					<textcolor>white</textcolor>
+					<align>left</align>
+					<autoscroll>false</autoscroll>
+				</control>
+												<control type="image">
+						
+												<animation type="Conditional" condition="!Control.HasFocus(9000)">
+				 <effect type="fade" start="0" end="100" time="200" delay="250" tween="cubic" easing="inout" center="auto"/>
+
+                    </animation>
+                    				<animation type="Visible">
+				 <effect type="fade" start="0" end="100" time="300" delay="50" tween="cubic" easing="inout" center="auto"/>
+
+                    </animation>
+                    				<animation type="Hidden">
+				 <effect type="fade" start="100" end="0" time="200" tween="cubic" easing="inout" center="auto"/>
+
+                    </animation>
+                    
+				<visible>Control.HasFocus(100) + Container(100).HasFocus(5)</visible>
+					<left>703</left>
+					<top>313</top>
+					<width>150</width>
+			<height>150</height>
+			<texture fallback="avatars/Defaultavatar.png">$INFO[System.ProfileThumb]</texture>
+
+				</control>
+<control type="panel" id="10">
+<visible>Control.HasFocus(100) + Container(100).HasFocus(1)</visible>
+<animation type="Conditional" condition="true">
+ <effect type="zoom" start="100" end="80" time="1" tween="cubic" easing="inout" center="auto"/>
+                    </animation>
+
+				<animation type="Conditional" condition="!String.IsEmpty(Container(10).ListItem(1).Label)">
+				 <effect type="fade" start="0" end="100" time="300" tween="cubic" easing="inout" center="auto"/>
+                    </animation>
+				<animation type="Conditional" condition="String.IsEmpty(Container(10).ListItem(1).Label)">
+				 <effect type="fade" start="100" end="0" time="300" tween="cubic" easing="inout" center="auto"/>
+
+                    </animation>
+                    <animation type="Conditional" condition="!Control.HasFocus(9000)">
+				 <effect type="fade" start="0" end="100" time="200" delay="250" tween="cubic" easing="inout" center="auto"/>
+
+                    </animation>
+                                   				<animation type="Visible">
+				 <effect type="fade" start="0" end="100" time="300" delay="50" tween="cubic" easing="inout" center="auto"/>
+                    </animation>
+                    				<animation type="Hidden">
+				 <effect type="fade" start="100" end="0" time="200" tween="cubic" easing="inout" center="auto"/>
+                    </animation>
+                    
+			<left>240</left>
+			<top>80</top>
+			<width>1895</width>
+			<height>825</height>
+			<focusposition>1</focusposition>
+			<defaultcontrol>1</defaultcontrol>
+			<onup>-</onup>
+			<ondown>-</ondown>
+			<onleft>-</onleft>
+			<onright>-</onright>
+		<orientation>vertical</orientation>
+			<scrolltime tween="sine" easing="out">240</scrolltime>
+
+			<itemlayout width="1290" height="180">
+<control type="group">
+
+				<control type="image">
+					<left>0</left>
+					<top>170</top>
+					<width>1340</width>
+			<height>2</height>
+			<texture>color_white.png</texture>
+			<colordiffuse>80FFFFFF</colordiffuse>
+				</control>
+								<control type="image">
+					<left>0</left>
+					<top>10</top>
+					<width>160</width>
+			<height>160</height>
+			<texture fallback="icons/xmb/weather.png">$INFO[ListItem.Thumb]</texture>
+
+				</control>
+				<control type="label">
+					<left>200</left>
+					<top>-40</top>
+					<width>900</width>
+					<height>233</height>
+					<label>Updates</label>
+					<font>Font36</font>
+					<textcolor>white</textcolor>
+					<align>left</align>
+					<autoscroll>false</autoscroll>
+				</control>
+								<control type="label">
+					<left>202</left>
+					<top>0</top>
+					<width>900</width>
+					<height>233</height>
+					<label>$INFO[ListItem.Label]</label>
+					<font>Font27</font>
+					<textcolor>white</textcolor>
+					<align>left</align>
+					<autoscroll>false</autoscroll>
+				</control>
+
+				</control>
+			</itemlayout>
+
+			<focusedlayout width="1290" height="180">
+			<control type="group">
+				<control type="image">
+					<left>0</left>
+					<top>170</top>
+					<width>1340</width>
+			<height>2</height>
+			<texture>color_white.png</texture>
+			<colordiffuse>80FFFFFF</colordiffuse>
+				</control>
+
+												<control type="image">
+					<left>0</left>
+					<top>10</top>
+					<width>160</width>
+			<height>160</height>
+			<texture fallback="icons/xmb/weather.png">$INFO[ListItem.Thumb]</texture>
+
+				</control>
+				<control type="label">
+					<left>200</left>
+					<top>-40</top>
+					<width>900</width>
+					<height>233</height>
+					<label>Updates</label>
+					<font>Font36</font>
+					<textcolor>white</textcolor>
+					<align>left</align>
+					<autoscroll>false</autoscroll>
+				</control>
+								<control type="label">
+					<left>202</left>
+					<top>0</top>
+					<width>900</width>
+					<height>233</height>
+					<label>$INFO[ListItem.Label]</label>
+					<font>Font27</font>
+					<textcolor>white</textcolor>
+					<align>left</align>
+					<autoscroll>false</autoscroll>
+				</control>
+								<control type="image">
+            <animation type="Conditional" condition="true">
+                                        <effect type="zoom" start="100" end="111" time="1" tween="sine" easing="inout" center="auto" />
+                                    </animation>
+                              <animation type="Focus">
+                                        <effect type="fade" start="0" end="100" time="200" tween="sine" easing="in" />
+                                    </animation>
+                                    <animation type="Unfocus">
+                                        <effect type="fade" start="100" end="0" time="200" tween="sine" easing="out" />
+                                    </animation>
+					<left>50</left>
+					<top>0</top>
+					<width>1250</width>
+					<height>180</height>
+					<texture border="100">fo.png</texture>
+				</control>
+				</control>
+			</focusedlayout>
+
+<content type="addons" limit="3">addons://outdated/</content>
+
+		</control>
+<control type="panel" id="10">
+<visible>Control.HasFocus(100) + Container(100).HasFocus(2)</visible>
+<animation type="Conditional" condition="true">
+ <effect type="zoom" start="100" end="80" time="1" tween="cubic" easing="inout" center="auto"/>
+                    </animation>
+
+<animation type="Conditional" condition="!Control.HasFocus(9000)">
+				 <effect type="fade" start="0" end="100" time="200" delay="250" tween="cubic" easing="inout" center="auto"/>
+
+                    </animation>
+                    
+               	                    				<animation type="Visible">
+				 <effect type="fade" start="0" end="100" time="300" delay="50" tween="cubic" easing="inout" center="auto"/>
+		 <effect type="zoom" start="90" end="100" time="250"  tween="sine" delay="50" easing="out" center="auto"/>
+                    </animation>
+                    				<animation type="Hidden">
+				 <effect type="fade" start="100" end="0" time="200" tween="cubic" easing="inout" center="auto"/>
+		 <effect type="zoom" start="100" end="90" time="250"  tween="sine" easing="out" center="auto"/>
+                    </animation>
+                    
+			<left>240</left>
+			<top>80</top>
+			<width>1895</width>
+			<height>825</height>
+			<focusposition>1</focusposition>
+			<defaultcontrol>1</defaultcontrol>
+			<onup>-</onup>
+			<ondown>-</ondown>
+			<onleft>-</onleft>
+			<onright>-</onright>
+		<orientation>vertical</orientation>
+			<scrolltime tween="sine" easing="out">240</scrolltime>
+
+			<itemlayout width="1290" height="180">
+<control type="group">
+
+				<control type="image">
+					<left>0</left>
+					<top>170</top>
+					<width>1340</width>
+			<height>2</height>
+			<texture>color_white.png</texture>
+			<colordiffuse>80FFFFFF</colordiffuse>
+				</control>
+								<control type="image">
+					<left>0</left>
+					<top>10</top>
+					<width>160</width>
+			<height>160</height>
+			<texture fallback="icons/xmb/weather.png">$INFO[ListItem.Thumb]</texture>
+
+				</control>
+				<control type="label">
+					<left>200</left>
+					<top>-40</top>
+					<width>900</width>
+					<height>233</height>
+					<label>$INFO[ListItem.Label]</label>
+					<font>Font36</font>
+					<textcolor>white</textcolor>
+					<align>left</align>
+					<autoscroll>false</autoscroll>
+				</control>
+								<control type="label">
+					<left>202</left>
+					<top>0</top>
+					<width>900</width>
+					<height>233</height>
+				<label>$INFO[ListItem.Label2]</label>
+					<font>Font27</font>
+					<textcolor>white</textcolor>
+					<align>left</align>
+					<autoscroll>false</autoscroll>
+				</control>
+
+				</control>
+			</itemlayout>
+
+			<focusedlayout width="1290" height="180">
+			<control type="group">
+				<control type="image">
+					<left>0</left>
+					<top>170</top>
+					<width>1340</width>
+			<height>2</height>
+			<texture>color_white.png</texture>
+			<colordiffuse>80FFFFFF</colordiffuse>
+				</control>
+
+												<control type="image">
+					<left>0</left>
+					<top>10</top>
+					<width>160</width>
+			<height>160</height>
+			<texture fallback="icons/xmb/weather.png">$INFO[ListItem.Thumb]</texture>
+
+				</control>
+				<control type="label">
+					<left>200</left>
+					<top>-40</top>
+					<width>900</width>
+					<height>233</height>
+					<label>$INFO[ListItem.Label]</label>
+					<font>Font36</font>
+					<textcolor>white</textcolor>
+					<align>left</align>
+					<autoscroll>false</autoscroll>
+				</control>
+								<control type="label">
+					<left>202</left>
+					<top>0</top>
+					<width>900</width>
+					<height>233</height>
+				<label>$INFO[ListItem.Label2]</label>
+					<font>Font27</font>
+					<textcolor>white</textcolor>
+					<align>left</align>
+					<autoscroll>false</autoscroll>
+				</control>  
+								<control type="image">
+            <animation type="Conditional" condition="true">
+                                        <effect type="zoom" start="100" end="111" time="1" tween="sine" easing="inout" center="auto" />
+                                    </animation>
+                              <animation type="Focus">
+                                        <effect type="fade" start="0" end="100" time="200" tween="sine" easing="in" />
+                                    </animation>
+                                    <animation type="Unfocus">
+                                        <effect type="fade" start="100" end="0" time="200" tween="sine" easing="out" />
+                                    </animation>
+					<left>50</left>
+					<top>0</top>
+					<width>1250</width>
+					<height>180</height>
+					<texture border="100">fo.png</texture>
+				</control>
+				</control>
+			</focusedlayout>
+
+<content>
+
+   <item id="1">
+                                                     <label>TiredGamer</label>
+         <label2>Currently Playing: Battlefield V</label2>
+
+                           
+                             <onclick>-</onclick>
+															
+                                                                <thumb>avatars/2.jpg</thumb>
+ 
+                            </item>
+   <item id="1">
+                              <label>StinkyChicken</label>
+         <label2>Currently Playing: Crash Bandicoot N Sane Triology</label2>
+                           
+                             <onclick>-</onclick>
+															
+                                                                <thumb>avatars/3.png</thumb>
+ 
+                            </item>
+   <item id="1">
+                              <label>BigBobby</label>
+         <label2>Currently Playing: Netflix</label2>
+                           
+                             <onclick>-</onclick>
+															
+                                                                <thumb>avatars/4.jpg</thumb>
+ 
+                            </item>
+   
+</content>
+
+		</control>
+		
+		<control type="panel" id="10">
+<visible>Control.HasFocus(100) + Container(100).HasFocus(3)</visible>
+<animation type="Conditional" condition="true">
+ <effect type="zoom" start="100" end="80" time="1" tween="cubic" easing="inout" center="auto"/>
+                    </animation>
+
+<animation type="Conditional" condition="!Control.HasFocus(9000)">
+				 <effect type="fade" start="0" end="100" time="200" delay="250" tween="cubic" easing="inout" center="auto"/>
+
+                    </animation>
+                    
+                    				<animation type="Visible">
+				 <effect type="fade" start="0" end="100" time="300" delay="50" tween="cubic" easing="inout" center="auto"/>
+		 <effect type="zoom" start="90" end="100" time="250"  tween="sine" delay="50" easing="out" center="auto"/>
+                    </animation>
+                    				<animation type="Hidden">
+				 <effect type="fade" start="100" end="0" time="200" tween="cubic" easing="inout" center="auto"/>
+		 <effect type="zoom" start="100" end="90" time="250"  tween="sine" easing="out" center="auto"/>
+                    </animation>
+                    
+			<left>240</left>
+			<top>150</top>
+			<width>1895</width>
+			<height>825</height>
+			<focusposition>1</focusposition>
+			<defaultcontrol>1</defaultcontrol>
+			<onup>-</onup>
+			<ondown>-</ondown>
+			<onleft>-</onleft>
+			<onright>-</onright>
+		<orientation>vertical</orientation>
+			<scrolltime tween="sine" easing="out">240</scrolltime>
+
+			<itemlayout width="1290" height="180">
+<control type="group">
+
+				<control type="image">
+					<left>0</left>
+					<top>170</top>
+					<width>1340</width>
+			<height>2</height>
+			<texture>color_white.png</texture>
+			<colordiffuse>80FFFFFF</colordiffuse>
+				</control>
+								<control type="image">
+					<left>0</left>
+					<top>10</top>
+					<width>160</width>
+			<height>160</height>
+			<texture fallback="icons/xmb/weather.png">$INFO[ListItem.Thumb]</texture>
+
+				</control>
+				<control type="label">
+					<left>200</left>
+					<top>-40</top>
+					<width>900</width>
+					<height>233</height>
+					<label>$INFO[ListItem.Label]</label>
+					<font>Font36</font>
+					<textcolor>white</textcolor>
+					<align>left</align>
+					<autoscroll>false</autoscroll>
+				</control>
+								<control type="label">
+					<left>202</left>
+					<top>0</top>
+					<width>900</width>
+					<height>233</height>
+				<label>$INFO[ListItem.Label2]</label>
+					<font>Font27</font>
+					<textcolor>white</textcolor>
+					<align>left</align>
+					<autoscroll>false</autoscroll>
+				</control>
+
+				</control>
+			</itemlayout>
+
+			<focusedlayout width="1290" height="180">
+			<control type="group">
+				<control type="image">
+					<left>0</left>
+					<top>170</top>
+					<width>1340</width>
+			<height>2</height>
+			<texture>color_white.png</texture>
+			<colordiffuse>80FFFFFF</colordiffuse>
+				</control>
+
+												<control type="image">
+					<left>0</left>
+					<top>10</top>
+					<width>160</width>
+			<height>160</height>
+			<texture fallback="icons/xmb/weather.png">$INFO[ListItem.Thumb]</texture>
+
+				</control>
+				<control type="label">
+					<left>200</left>
+					<top>-40</top>
+					<width>900</width>
+					<height>233</height>
+					<label>$INFO[ListItem.Label]</label>
+					<font>Font36</font>
+					<textcolor>white</textcolor>
+					<align>left</align>
+					<autoscroll>false</autoscroll>
+				</control>
+								<control type="label">
+					<left>202</left>
+					<top>0</top>
+					<width>900</width>
+					<height>233</height>
+				<label>$INFO[ListItem.Label2]</label>
+					<font>Font27</font>
+					<textcolor>white</textcolor>
+					<align>left</align>
+					<autoscroll>false</autoscroll>
+				</control>  
+								<control type="image">
+            <animation type="Conditional" condition="true">
+                                        <effect type="zoom" start="100" end="111" time="1" tween="sine" easing="inout" center="auto" />
+                                    </animation>
+                              <animation type="Focus">
+                                        <effect type="fade" start="0" end="100" time="200" tween="sine" easing="in" />
+                                    </animation>
+                                    <animation type="Unfocus">
+                                        <effect type="fade" start="100" end="0" time="200" tween="sine" easing="out" />
+                                    </animation>
+					<left>50</left>
+					<top>0</top>
+					<width>1250</width>
+					<height>180</height>
+					<texture border="100">fo.png</texture>
+				</control>
+				</control>
+			</focusedlayout>
+
+<content>
+
+         <item id="1">
+                              <label>StealthMan's party</label>
+         <label2>Current elapsed time: $INFO[System.UpTime]</label2>
+                           
+                             <onclick>-</onclick>
+															
+                                                                <thumb>avatars/7.png</thumb>
+ 
+                            </item>
+   <item id="1">
+                                                     <label>GhostGamer</label>
+         <label2>Total elapsed time: $INFO[System.TotalUptime]</label2>
+
+                           
+                             <onclick>-</onclick>
+															
+                                                                <thumb>avatars/8.jpg</thumb>
+ 
+                            </item>
+   
+</content>
+
+		</control>
+		
+		
+				<control type="panel" id="10">
+<visible>Control.HasFocus(100) + Container(100).HasFocus(6)</visible>
+<animation type="Conditional" condition="true">
+ <effect type="zoom" start="100" end="80" time="1" tween="cubic" easing="inout" center="auto"/>
+                    </animation>
+
+<animation type="Conditional" condition="!Control.HasFocus(9000)">
+				 <effect type="fade" start="0" end="100" time="200" delay="250" tween="cubic" easing="inout" center="auto"/>
+
+                    </animation>
+                    
+                    				<animation type="Visible">
+				 <effect type="fade" start="0" end="100" time="300" delay="50" tween="cubic" easing="inout" center="auto"/>
+		 <effect type="zoom" start="90" end="100" time="250"  tween="sine" delay="50" easing="out" center="auto"/>
+                    </animation>
+                    				<animation type="Hidden">
+				 <effect type="fade" start="100" end="0" time="200" tween="cubic" easing="inout" center="auto"/>
+		 <effect type="zoom" start="100" end="90" time="250"  tween="sine" easing="out" center="auto"/>
+                    </animation>
+                    
+			<left>240</left>
+			<top>80</top>
+			<width>1895</width>
+			<height>825</height>
+			<focusposition>1</focusposition>
+			<defaultcontrol>1</defaultcontrol>
+			<onup>-</onup>
+			<ondown>-</ondown>
+			<onleft>-</onleft>
+			<onright>-</onright>
+		<orientation>vertical</orientation>
+			<scrolltime tween="sine" easing="out">240</scrolltime>
+
+					<itemlayout width="1290" height="180">
+<control type="group">
+
+				<control type="image">
+					<left>0</left>
+					<top>170</top>
+					<width>1340</width>
+			<height>2</height>
+			<texture>color_white.png</texture>
+			<colordiffuse>80FFFFFF</colordiffuse>
+				</control>
+								<control type="image">
+					<left>0</left>
+					<top>10</top>
+					<width>160</width>
+			<height>160</height>
+			<texture fallback="icons/xmb/weather.png">$INFO[ListItem.Thumb]</texture>
+
+				</control>
+					<control type="image">
+					<left>1200</left>
+					<top>57</top>
+					<width>70</width>
+			<height>70</height>
+			<texture fallback="icons/xmb/weather.png">$INFO[ListItem.ActualIcon]</texture>
+
+				</control>
+				<control type="label">
+					<left>200</left>
+					<top>-40</top>
+					<width>900</width>
+					<height>233</height>
+					<label>$INFO[ListItem.Label]</label>
+					<font>Font36</font>
+					<textcolor>white</textcolor>
+					<align>left</align>
+					<autoscroll>false</autoscroll>
+				</control>
+								<control type="label">
+					<left>200</left>
+					<top>0</top>
+					<width>900</width>
+					<height>233</height>
+					<label>$INFO[ListItem.Label2]</label>
+					<font>Font27</font>
+					<textcolor>white</textcolor>
+					<align>left</align>
+					<autoscroll>false</autoscroll>
+				</control>
+
+				</control>
+			</itemlayout>
+
+			<focusedlayout width="1290" height="180">
+			<control type="group">
+				<control type="image">
+					<left>0</left>
+					<top>170</top>
+					<width>1340</width>
+			<height>2</height>
+			<texture>color_white.png</texture>
+			<colordiffuse>80FFFFFF</colordiffuse>
+				</control>
+
+												<control type="image">
+					<left>0</left>
+					<top>10</top>
+					<width>160</width>
+			<height>160</height>
+			<texture fallback="icons/xmb/weather.png">$INFO[ListItem.Thumb]</texture>
+
+				</control>
+				
+							<control type="image">
+					<left>1200</left>
+					<top>57</top>
+					<width>70</width>
+			<height>70</height>
+			<texture fallback="icons/xmb/weather.png">$INFO[ListItem.ActualIcon]</texture>
+
+				</control>
+				<control type="label">
+					<left>200</left>
+					<top>-40</top>
+					<width>900</width>
+					<height>233</height>
+					<label>$INFO[ListItem.Label]</label>
+					<font>Font36</font>
+					<textcolor>white</textcolor>
+					<align>left</align>
+					<autoscroll>false</autoscroll>
+				</control>
+								<control type="label">
+					<left>200</left>
+					<top>0</top>
+					<width>900</width>
+					<height>233</height>
+					<label>$INFO[ListItem.Label2]</label>
+					<font>Font27</font>
+					<textcolor>white</textcolor>
+					<align>left</align>
+					<autoscroll>false</autoscroll>
+				</control>
+								<control type="image">
+            <animation type="Conditional" condition="true">
+                                        <effect type="zoom" start="100" end="111" time="1" tween="sine" easing="inout" center="auto" />
+                                    </animation>
+                              <animation type="Focus">
+                                        <effect type="fade" start="0" end="100" time="200" tween="sine" easing="in" />
+                                    </animation>
+                                    <animation type="Unfocus">
+                                        <effect type="fade" start="100" end="0" time="200" tween="sine" easing="out" />
+                                    </animation>
+					<left>50</left>
+					<top>0</top>
+					<width>1250</width>
+					<height>180</height>
+					<texture border="70">fo.png</texture>
+				</control>
+				</control>
+			</focusedlayout>
+
+<content>
+<item id="1">
+                              <label>Battlefield 1 - World War One Hero</label>
+<label2>Platnum</label2>
+                           
+                             <onclick>-</onclick>
+															<icon>icons/trophies/trophy1.png</icon>
+                                                                <thumb>icons/trophies/battlefield1.png</thumb>
+ 
+                            </item>
+                                <item id="1">
+                              <label>Battlefield 1 - Master Of Adaption</label>
+<label2>Gold</label2>
+                           
+                             <onclick>-</onclick>
+															<icon>icons/trophies/trophy2.png</icon>
+                                                                <thumb>icons/trophies/battlefield13.png</thumb>
+ 
+                            </item>
+                           
+
+                                   <item id="1">
+                              <label>Call Of Duty WWII - Praise and Pass</label>
+<label2>Silver</label2>
+                           
+                             <onclick>-</onclick>
+															<icon>icons/trophies/trophy3.png</icon>
+                                                                <thumb>icons/trophies/ww2.png</thumb>
+ 
+                            </item>
+   
+</content>
+
+		</control>
+		
+		
+		
+	<control type="panel" id="100">
+
+
+                    
+<animation type="Conditional" condition="Control.HasFocus(200)" reversible="false">
+                                 <effect type="fade" start="100" end="0" time="350" tween="circle" easing="inout" />
+                    </animation>
+                    <animation type="Conditional" condition="!Control.HasFocus(200)" reversible="false">
+                                 <effect type="fade" start="0" end="100" time="350" delay="450" tween="circle" easing="inout" />
+                    </animation>
+
+<animation type="Conditional" condition="Control.HasFocus(100)" reversible="false">
+
+                                 <effect type="fade" start="0" end="100" time="100" delay="350" tween="sine" easing="out" />
+
+
+                    </animation>
+  <animation type="Conditional" condition="!Control.HasFocus(100)" reversible="false">
+                                                                <effect type="fade" start="200" end="0" time="220" tween="circle" easing="inout" />
+                                            <effect type="zoom" start="100" end="90" time="450" tween="circle" easing="inout" />
+                        <effect type="slide" start="0,850" end="0,300" time="450" tween="circle" easing="inout" />
+                    </animation>
+           
+                
+                    
+<animation type="Conditional" condition="!Control.HasFocus(100)" reversible="false">
+                        <effect type="zoom" start="100" end="80" time="450" tween="circle" easing="inout" />
+                    </animation>
+
+			<left>190</left>
+			<top>670</top>
+			<width>2850</width>
+			<height>379</height>
+			<focusposition>1</focusposition>
+			<defaultcontrol>1</defaultcontrol>
+			<onup>-</onup>
+			<ondown>9000</ondown>
+			<onleft>-</onleft>
+			<onright>-</onright>
+			<orientation>horizontal</orientation>
+			<scrolltime tween="sine" easing="out">240</scrolltime>
+
+			<itemlayout width="200" height="300">
+<control type="group">
+
+
+				<control type="image">
+					<left>25</left>
+					<top>0</top>
+					<width>100</width>
+					<height>100</height>
+			<texture fallback="avatars/defaultavatar.png">$INFO[ListItem.ActualIcon]</texture>
+				</control>
+				</control>
+			</itemlayout>
+
+			<focusedlayout width="200" height="300">
+
+
+			<control type="group">
+                  
+
+            <animation type="Focus">
+                                        <effect type="zoom" start="100" end="135" time="200" tween="sine" easing="inout" center="50,70" />
+                                    </animation>
+                                    <animation type="Unfocus">
+                                        <effect type="zoom" start="135" end="100" time="200" tween="sine" easing="inout" center="50,70" />
+                                    </animation>
+                                    
+                                    
+                                    				<control type="image">
+                                    				           <animation type="Focus">
+      <effect type="fade" start="0" end="100" time="200" tween="sine" easing="in" />
+                                        <effect type="zoom" start="120" end="120" time="1" tween="sine" easing="inout" center="auto" />
+        
+                                    </animation>
+        <animation type="Unfocus">
+      <effect type="fade" start="100" end="0" time="200" tween="sine" easing="in" />
+                                        <effect type="zoom" start="120" end="120" time="1" tween="sine" easing="inout" center="auto" />
+        
+                                    </animation>
+					<left>25</left>
+					<top>0</top>
+					<width>100</width>
+					<height>100</height>
+					<texture>$INFO[ListItem.Thumb]</texture>
+				</control>
+				<control type="image">
+					<left>25</left>
+					<top>0</top>
+					<width>100</width>
+					<height>100</height>
+					<texture fallback="avatars/defaultavatar.png">$INFO[ListItem.ActualIcon]</texture>
+				</control>
+
+				</control>
+				<control type="label">
+           <animation type="Focus">
+                                        <effect type="fade" start="0" end="100" time="200" tween="sine" easing="in" />
+                                    </animation>
+                                    <animation type="Unfocus">
+                                        <effect type="fade" start="100" end="0" time="200" tween="sine" easing="out" />
+                                    </animation>
+					<left>-165</left>
+					<top>125</top>
+					<width>500</width>
+					<height>33</height>
+					<label>$INFO[ListItem.Label]</label>
+					<font>Font30</font>
+					<textcolor>white</textcolor>
+					<align>center</align>
+				</control>
+			</focusedlayout>
+
+			<content>
+							<item id="1">
+					<label>Notifications</label>
+					<icon>icons\newxmb\notification.png</icon>
+					<thumb />
+					<onclick>ActivateWindow(1802)</onclick>
+					<visible>!Skin.HasSetting(themes)</visible>
+				</item>
+				<item id="3">
+					<label>Parties</label>
+					<icon>icons\newxmb\party.png</icon>
+					<thumb />
+					<onclick>ActivateWindow(1804)</onclick>
+					<visible>!Skin.HasSetting(themes)</visible>
+				</item>
+				<item id="4">
+					<label>Messages</label>
+					<icon>icons\newxmb\message.png</icon>
+					<thumb />
+					<onclick>ActivateWindow(1805)</onclick>
+					<visible>!Skin.HasSetting(themes)</visible>
+				</item>
+											<item id="2">
+					<label>Friends </label>
+					<icon>icons\newxmb\friend.png</icon>
+					<thumb />
+								<onclick>ActivateWindow(1803)</onclick>
+					<visible>!Skin.HasSetting(themes)</visible>
+				</item>
+				<item id="5">
+					<label>Profile</label>
+					<icon>$INFO[System.ProfileThumb]</icon>
+					<thumb />
+					<onclick>ActivateWindow(1806)</onclick>
+					<visible>!Skin.HasSetting(themes)</visible>
+				</item>
+				<item id="6">
+					<label>Trophies</label>
+					<icon>icons\newxmb\trophy.png</icon>
+					<visible>!Skin.HasSetting(themes)</visible>
+					<thumb />
+          <onclick>ActivateWindow(1807)</onclick>
+				</item>
+				<item>
+					<label>Settings</label>
+					<icon>icons\newxmb\setting.png</icon>
+					<thumb />
+					<onclick>ActivateWindow(settings)</onclick>
+					<visible>!Skin.HasSetting(themes)</visible>
+				</item>
+				<item>
+					<label>Power </label>
+					<icon>icons\newxmb\power.png</icon>
+					<thumb />
+					<onclick>ActivateWindow(shutdownmenu)</onclick>
+					<visible>!Skin.HasSetting(themes)</visible>
+				</item>
+							<item id="1">
+					<label>Notifications</label>
+					<icon>$INFO[Skin.String(themedir)]texture/function_icon/notification.png</icon>
+					<thumb>$INFO[Skin.String(themedir)]texture/function_icon/notification_glow.png</thumb>
+					<onclick>ActivateWindow(1802)</onclick>
+					<visible>Skin.HasSetting(themes)</visible>
+				</item>
+				<item id="3">
+					<label>Parties</label>
+					<icon>$INFO[Skin.String(themedir)]texture/function_icon/party.png</icon>
+										<thumb>$INFO[Skin.String(themedir)]texture/function_icon/party_glow.png</thumb>
+					<thumb />
+					<onclick>ActivateWindow(1804)</onclick>
+					<visible>Skin.HasSetting(themes)</visible>
+				</item>
+				<item id="4">
+					<label>Messages</label>
+					<icon>$INFO[Skin.String(themedir)]texture/function_icon/message.png</icon>
+										<thumb>$INFO[Skin.String(themedir)]texture/function_icon/message_glow.png</thumb>
+					<thumb />
+					<onclick>ActivateWindow(1805)</onclick>
+					<visible>Skin.HasSetting(themes)</visible>
+				</item>
+											<item id="2">
+					<label>Friends </label>
+					<icon>$INFO[Skin.String(themedir)]texture/function_icon/friend.png</icon>
+										<thumb>$INFO[Skin.String(themedir)]texture/function_icon/friend_glow.png</thumb>
+					<thumb />
+					<onclick>ActivateWindow(1803)</onclick>
+					<visible>Skin.HasSetting(themes)</visible>
+				</item>
+				<item id="5">
+					<label>Profile</label>
+					<icon>$INFO[System.ProfileThumb]</icon>
+					<thumb />
+					<onclick>ActivateWindow(1806)</onclick>
+					<visible>Skin.HasSetting(themes)</visible>
+				</item>
+				<item id="6">
+					<label>Trophies</label>
+					<icon>$INFO[Skin.String(themedir)]texture/function_icon/trophy.png</icon>
+										<thumb>$INFO[Skin.String(themedir)]texture/function_icon/trophy_glow.png</thumb>
+					<visible>Skin.HasSetting(themes)</visible>
+					<thumb />
+          <onclick>ActivateWindow(1807)</onclick>
+				</item>
+				<item>
+					<label>Settings </label>
+					<icon>$INFO[Skin.String(themedir)]texture/function_icon/setting.png</icon>
+										<thumb>$INFO[Skin.String(themedir)]texture/function_icon/setting_glow.png</thumb>
+					<thumb />
+					<onclick>ActivateWindow(settings)</onclick>
+					<visible>Skin.HasSetting(themes)</visible>
+				</item>
+				<item>
+					<label>Power </label>
+					<icon>$INFO[Skin.String(themedir)]texture/function_icon/power.png</icon>
+										<thumb>$INFO[Skin.String(themedir)]texture/function_icon/power_glow.png</thumb>
+					<thumb />
+					<onclick>ActivateWindow(shutdownmenu)</onclick>
+					<visible>Skin.HasSetting(themes)</visible>
+				</item>
+			</content>
+
+		</control>
+
+
+		<!-- Main list -->
+
+				<control type="image">
+				                    <animation type="Visible">
+                        <effect type="fade" start="0" end="100" time="350" tween="cubic" easing="inout" />
+                    </animation>
+                                   <animation type="Hidden">
+                        <effect type="fade" start="100" end="0" time="350" tween="cubic" easing="inout" />
+                    </animation>
+					<left>0</left>
+					<top>220</top>
+					<width>1920</width>
+					<height>2</height>
+				<texture background="true">color_white.png</texture>
+			<colordiffuse>80FFFFFF</colordiffuse>
+			<visible>[Container(9000).HasFocus(6) | Container(9000).HasFocus(500) | Container(9000).HasFocus(700)] + Control.HasFocus(200)</visible>
+				</control>
+								<control type="image">
+				                    <animation type="Visible">
+                        <effect type="fade" start="0" end="100" time="350" tween="cubic" easing="inout" />
+                    </animation>
+                                   <animation type="Hidden">
+                        <effect type="fade" start="100" end="0" time="350" tween="cubic" easing="inout" />
+                    </animation>
+					<left>220</left>
+					<top>220</top>
+					<width>330</width>
+					<height>60</height>
+				<texture background="true">color_white.png</texture>
+			<colordiffuse>33f1f1f1</colordiffuse>
+			<visible>[Container(9000).HasFocus(6) | Container(9000).HasFocus(500) | Container(9000).HasFocus(700)] + Control.HasFocus(200)</visible>
+				</control>
+
+				<control type="label">
+				                    <animation type="Visible">
+                        <effect type="fade" start="0" end="100" time="350" tween="cubic" easing="inout" />
+                    </animation>
+                                   <animation type="Hidden">
+                        <effect type="fade" start="100" end="0" time="350" tween="cubic" easing="inout" />
+                    </animation>
+                    			<visible>[Container(9000).HasFocus(6) | Container(9000).HasFocus(500) | Container(9000).HasFocus(700)] + Control.HasFocus(200)</visible>
+					<left>215</left>
+					<top>220</top>
+					<width>330</width>
+					<height>60</height>
+					<label>$INFO[Container(9000).ListItem.Label]</label>
+					<font>Font36</font>
+					<textcolor>white</textcolor>
+					<align>center</align>
+					<autoscroll>false</autoscroll>
+				</control>
+				
+		<control type="fixedlist" id="9000">
+
+<animation type="WindowOpen" condition="Window.Previous(Startup)">
+              <effect type="fade" start="0" end="100" time="100" delay="1000"tween="cubic" easing="inout"/>
+
+                        <effect type="zoom" start="65" end="100" time="1000" delay="2200" tween="cubic" easing="inout" center="850,-50"/>
+                    </animation>
+
+
+<animation type="Conditional" condition="!Control.HasFocus(9000)">
+ <effect type="zoom" start="100" end="95" time="350" tween="circle" easing="inout" center="auto"/>
+                    </animation>
+<animation type="Conditional" condition="Control.HasFocus(100)" reversible="false">
+                        <effect type="fade" start="100" end="60" time="400" tween="cubic" easing="inout" />
+                        <effect type="slide" start="0,0" end="200,750" time="400" tween="circle" easing="inout" />
+                    </animation>
+<animation type="Conditional" condition="!Control.HasFocus(100)" reversible="false">
+                        <effect type="fade" start="60" end="100" time="400" tween="cubic" easing="inout" />
+                        <effect type="slide" start="200,750" end="0,0" time="400" tween="circle" easing="inout" />
+                    </animation>
+                    
+                    <animation type="Conditional" condition="[Container(9000).HasFocus(6) | Container(9000).HasFocus(500) | Container(9000).HasFocus(700)] + Control.HasFocus(200)">
+                        <effect type="fade" start="100" end="0" time="200" tween="cubic" easing="inout" />
+ <effect type="zoom" start="100" end="90" time="350" tween="circle" easing="in" center="500,5000"/>
+                        <effect type="rotatex" start="0" end="-100" time="400" tween="circle" easing="inout" center="center"/>
+                    </animation>
+
+                    
+<animation type="Conditional" condition="!Container(9000).HasFocus(2) + [Control.HasFocus(300) | Control.HasFocus(400) | Control.HasFocus(200)]">
+                        <effect type="fade" start="100" end="60" time="300" tween="cubic" easing="inout" />
+                        <effect type="slide" start="0,0" end="0,-250" time="350" tween="circle" easing="inout" />
+                    </animation>
+                    
+     
+                    
+<animation type="Conditional" condition="Container(9000).HasFocus(2) + [Control.HasFocus(400) | Control.HasFocus(300) | Control.HasFocus(200)]">
+                        <effect type="fade" start="100" end="60" time="300" tween="cubic" easing="inout" />
+                        <effect type="slide" start="0,0" end="0,-450" time="350" tween="circle" easing="inout" />
+                    </animation>
+                    
+			<left>-50</left>
+			<top>220</top>
+			<width>2850</width>
+			<height>679</height>
+			<focusposition>1</focusposition>
+			<defaultcontrol>1</defaultcontrol>
+			<onup>Control.SetFocus(100,0)</onup>
+			<ondown>200</ondown>
+			<ondown condition="Container(9000).HasFocus(8) + !System.HasPVRAddon + System.InternetState">ActivateWindow(pvrsettings)</ondown>
+			<onleft>-</onleft>
+			<onright>-</onright>
+			<orientation>horizontal</orientation>
+			<scrolltime tween="sine" easing="out">240</scrolltime>
+
+			<itemlayout width="275" height="300">
+<control type="group">
+
+                                    
+                                         <animation type="unFocus">
+                                        <effect type="zoom" start="100" end="125" time="200" tween="sine" easing="inout" center="50,-10" />
+                                    </animation>
+                                    <animation type="focus">
+                                        <effect type="zoom" start="125" end="100" time="200" tween="sine" easing="inout" center="50,-10" />
+                                    </animation>
+                                    
+				<control type="image">
+					<left>0</left>
+					<top>0</top>
+					<width>270</width>
+					<height>270</height>
+					<texture>$INFO[ListItem.Label2]</texture>
+					<aspectratio>scale</aspectratio>
+			<colordiffuse>73000000</colordiffuse>
+			<visible>!String.Contains(Skin.String(themedir), Flow)</visible>
+				</control>
+								<control type="image">
+					<left>0</left>
+					<top>0</top>
+					<width>270</width>
+					<height>270</height>
+					<texture>$INFO[ListItem.Label2]</texture>
+					<aspectratio>scale</aspectratio>
+
+			<visible>String.Contains(Skin.String(themedir), Flow)</visible>
+				</control>
+				<control type="image">
+					<left>0</left>
+					<top>0</top>
+					<width>270</width>
+					<height>270</height>
+					<texture>$INFO[ListItem.ActualIcon]</texture>
+					<aspectratio>scale</aspectratio>
+				</control>
+			<control type="image">
+					<left>0</left>
+					<top>0</top>
+					<width>135</width>
+					<height>135</height>
+					<texture>$INFO[ListItem.Property(FAV1)]</texture>
+					<aspectratio>scale</aspectratio>
+				</control>
+			<control type="image">
+					<left>135</left>
+					<top>0</top>
+					<width>135</width>
+					<height>135</height>
+					<texture>$INFO[ListItem.Property(FAV2)]</texture>
+					<aspectratio>scale</aspectratio>
+				</control>
+			<control type="image">
+					<left>0</left>
+					<top>135</top>
+					<width>135</width>
+					<height>135</height>
+					<texture>$INFO[ListItem.Property(FAV3)]</texture>
+					<aspectratio>scale</aspectratio>
+				</control>
+				</control>
+			</itemlayout>
+
+			<focusedlayout width="320" height="300">
+			<control type="group">
+			
+     <animation type="conditional" condition="Control.HasFocus(1)">
+                                        <effect type="zoom" start="100" end="115" time="200" tween="sine" easing="inout" center="-20,0" />
+                                    </animation>
+                                    
+            <animation type="conditional" condition="Control.HasFocus(100) | Control.HasFocus(200) | Control.HasFocus(300) | Control.HasFocus(400)">
+                                        <effect type="zoom" start="100" end="115" time="200" tween="sine" easing="inout" center="-20,0" />
+                                    </animation>
+            <animation type="Focus">
+                                        <effect type="zoom" start="100" end="125" time="200" tween="sine" easing="inout" center="50,-10" />
+                                    </animation>
+                                    <animation type="Unfocus">
+                                        <effect type="zoom" start="125" end="100" time="200" tween="sine" easing="inout" center="50,-10" />
+                                    </animation>
+
+					<control type="image">
+					<left>0</left>
+					<top>0</top>
+					<width>270</width>
+					<height>270</height>
+					<texture>$INFO[ListItem.Label2]</texture>
+					<aspectratio>scale</aspectratio>
+			<colordiffuse>73000000</colordiffuse>
+			<visible>!String.Contains(Skin.String(themedir), Flow)</visible>
+				</control>
+								<control type="image">
+					<left>0</left>
+					<top>0</top>
+					<width>270</width>
+					<height>270</height>
+					<texture>$INFO[ListItem.Label2]</texture>
+					<aspectratio>scale</aspectratio>
+
+			<visible>String.Contains(Skin.String(themedir), Flow)</visible>
+				</control>
+				<control type="image">
+					<left>0</left>
+					<top>0</top>
+					<width>270</width>
+					<height>270</height>
+					<texture>$INFO[ListItem.ActualIcon]</texture>
+					<aspectratio>scale</aspectratio>
+				</control>
+			<control type="image">
+					<left>0</left>
+					<top>0</top>
+					<width>135</width>
+					<height>135</height>
+					<texture>$INFO[ListItem.Property(FAV1)]</texture>
+					<aspectratio>scale</aspectratio>
+				</control>
+			<control type="image">
+					<left>135</left>
+					<top>0</top>
+					<width>135</width>
+					<height>135</height>
+					<texture>$INFO[ListItem.Property(FAV2)]</texture>
+					<aspectratio>scale</aspectratio>
+				</control>
+			<control type="image">
+					<left>0</left>
+					<top>135</top>
+					<width>135</width>
+					<height>135</height>
+					<texture>$INFO[ListItem.Property(FAV3)]</texture>
+					<aspectratio>scale</aspectratio>
+				</control>
+
+				<control type="image">
+                              <animation type="Focus">
+                                        <effect type="fade" start="0" end="100" time="200" tween="sine" easing="in" />
+                                    </animation>
+                                    <animation type="Unfocus">
+                                        <effect type="fade" start="100" end="0" time="200" tween="sine" easing="out" />
+                                    </animation>
+					<left>0</left>
+					<top>270</top>
+					<width>270</width>
+					<height>60</height>
+					<texture>color_black.png</texture>
+					<aspectratio>scale</aspectratio>
+			<colordiffuse>A6FFFFFF</colordiffuse>
+							<visible>!String.Contains(Skin.String(themedir), Flow) | !String.Contains(Skin.String(themedir), Dual) | !Skin.HasSetting(themes)</visible>
+				</control>
+				
+								<control type="image">
+                              <animation type="Focus">
+                                        <effect type="fade" start="0" end="100" time="200" tween="sine" easing="in" />
+                                    </animation>
+                                    <animation type="Unfocus">
+                                        <effect type="fade" start="100" end="0" time="200" tween="sine" easing="out" />
+                                    </animation>
+					<left>0</left>
+					<top>270</top>
+					<width>270</width>
+					<height>60</height>
+				<texture background="true">color_white.png</texture>
+				<colordiffuse>$INFO[Skin.String(color.background)]</colordiffuse>
+				<visible>String.Contains(Skin.String(themedir), Flow) | String.Contains(Skin.String(themedir), Dual) + Skin.HasSetting(themes)</visible>
+				</control>
+				<control type="label">
+                              <animation type="Focus">
+                                        <effect type="fade" start="0" end="100" time="200" tween="sine" easing="in" />
+                                    </animation>
+                                    <animation type="Unfocus">
+                                        <effect type="fade" start="100" end="0" time="200" tween="sine" easing="out" />
+                                    </animation>
+               <animation type="visible">
+                                        <effect type="fade" start="0" end="100" time="200" tween="sine" easing="in" />
+                                    </animation>
+                                    <animation type="hidden">
+                                        <effect type="fade" start="100" end="0" time="200" tween="sine" easing="out" />
+                                    </animation>
+					<left>106</left>
+					<top>280</top>
+					<width>1400</width>
+					<height>33</height>
+					<label>Start</label>
+					<font>Font30</font>
+					<textcolor>white</textcolor>
+<visible>!Container(9000).HasFocus(1) + !Container(9000).HasFocus(2) + !Container(9000).HasFocus(6) + !Container(9000).HasFocus(700) + !Container(9000).HasFocus(500)</visible>
+				</control>
+				<control type="image">
+                              <animation type="Focus">
+                                        <effect type="fade" start="0" end="100" time="200" tween="sine" easing="in" />
+                                    </animation>
+                                    <animation type="Unfocus">
+                                        <effect type="fade" start="100" end="0" time="200" tween="sine" easing="out" />
+                                    </animation>
+                <animation type="visible">
+                                        <effect type="fade" start="0" end="100" time="200" tween="sine" easing="in" />
+                                    </animation>
+                                    <animation type="hidden">
+                                        <effect type="fade" start="100" end="0" time="200" tween="sine" easing="out" />
+                                    </animation>
+					<left>125</left>
+					<top>283</top>
+					<width>20</width>
+					<height>30</height>
+					<texture>icons/arrow.png</texture>
+<visible>Container(9000).HasFocus(1) | Container(9000).HasFocus(2) | Container(9000).HasFocus(6) | Container(9000).HasFocus(700) | Container(9000).HasFocus(500)</visible>
+				</control>
+								<control type="image">
+
+            <animation type="Conditional" condition="true">
+                                        <effect type="zoom" start="100" end="111" time="1" tween="sine" easing="inout" center="auto" />
+                                    </animation>
+                              <animation type="Focus">
+                                        <effect type="fade" start="0" end="100" time="200" tween="sine" easing="in" />
+                                    </animation>
+                                    <animation type="Unfocus">
+                                        <effect type="fade" start="100" end="0" time="200" tween="sine" easing="out" />
+                                    </animation>
+					<left>0</left>
+					<top>0</top>
+					<width>269</width>
+					<height>330</height>
+					<texture>fo.png</texture>
+								<colordiffuse>$INFO[Skin.String(color.tile)]</colordiffuse>
+				</control>
+
+
+				</control>
+				<control type="label">
+                   <animation type="Focus">
+                                        <effect type="fade" start="0" end="100" time="200" tween="sine" easing="in" />
+                                    </animation>
+                                    <animation type="Unfocus">
+                                        <effect type="fade" start="100" end="0" time="200" tween="sine" easing="out" />
+                                    </animation>
+					<left>350</left>
+					<top>330</top>
+					<width>1400</width>
+					<height>33</height>
+					<label>$INFO[Container(9000).ListItem.Label]</label>
+					<font>Font57</font>
+					<textcolor>DialogColor1</textcolor>
+				</control>
+			</focusedlayout>
+
+			<content>
+				<item id="1">
+					<label>Playstation Store</label>
+					<icon>icons\store.png</icon>
+					<thumb />
+					<onclick>ActivateWindow(addonbrowser)</onclick>
+				</item>
+				<item id="2">
+					<label>What's New</label>
+					<icon>icons\xmbmain\new3.png</icon>
+					<thumb />
+					<onclick>-</onclick>
+				</item>
+											<item id="9">
+							<visible>System.HasMediadvd + !Skin.HasSetting(themes)</visible>
+					<label>Play DVD</label>
+					<label2>icons/bg.png</label2>
+					<icon>icons\disc.png</icon>
+					<thumb />
+					<onclick>PlayDisc()</onclick>
+				</item>
+								<item id="7">
+					<label>My Library</label>
+					<label2>icons/bg.png</label2>
+					<icon>icons\library.png</icon>
+					<visible>!Skin.HasSetting(themes) + !Skin.HasSetting(disablelibrary)</visible>
+					<thumb />
+					<onclick>ActivateWindow(1801)</onclick>
+				</item>
+								<item id="8">
+					<label>Live TV</label>
+					<label2>icons/bg.png</label2>
+					<icon>icons\tvvideo.png</icon>
+					<visible>!Skin.HasSetting(themes) + !Skin.HasSetting(disabletv)</visible>
+					<thumb />
+					<onclick>ActivateWindow(PVR)</onclick>
+				</item>
+								<item id="9">
+					<label>My Photos</label>
+					<label2>icons/bg.png</label2>
+					<icon>icons\gallery.png</icon>
+					<visible>!Skin.HasSetting(themes) + !Skin.HasSetting(disablephotos)</visible>
+					<thumb />
+					<onclick>ActivateWindow(pictures)</onclick>
+				</item>
+												<item id="7">
+					<label>My Files</label>
+					<label2>icons/bg.png</label2>
+					<icon>icons\usbmusic.png</icon>
+					<visible>!Skin.HasSetting(themes) + !Skin.HasSetting(disablefiles)</visible>
+					<thumb />
+					<onclick>ActivateWindow(filemanager)</onclick>
+				</item>
+		<item id="9">
+							<visible>System.HasMediadvd + Skin.HasSetting(themes)</visible>
+					<label>Play DVD</label>
+					<label2>icons/bg.png</label2>
+					<icon>$INFO[Skin.String(themedir)]texture/content_icon/disc.png</icon>
+					<thumb />
+					<onclick>PlayDisc()</onclick>
+				</item>
+								<item id="7">
+					<label>My Library</label>
+					<label2>icons/bg.png</label2>
+					<icon>$INFO[Skin.String(themedir)]texture/content_icon/library.png</icon>
+					<visible>Skin.HasSetting(themes) + !Skin.HasSetting(disablelibrary)</visible>
+					<thumb />
+					<onclick>ActivateWindow(1801)</onclick>
+				</item>
+								<item id="8">
+					<label>Live TV</label>
+					<label2>icons/bg.png</label2>
+					<icon>$INFO[Skin.String(themedir)]texture/content_icon/tvvideo.png</icon>
+					<visible>Skin.HasSetting(themes) + !Skin.HasSetting(disabletv)</visible>
+					<thumb />
+					<onclick>ActivateWindow(PVR)</onclick>
+				</item>
+								<item id="9">
+					<label>My Photos</label>
+					<label2>icons/bg.png</label2>
+					<icon>$INFO[Skin.String(themedir)]texture/content_icon/gallery.png</icon>
+					<visible>Skin.HasSetting(themes) + !Skin.HasSetting(disablephotos)</visible>
+					<thumb />
+					<onclick>ActivateWindow(pictures)</onclick>
+				</item>
+												<item id="7">
+					<label>My Files</label>
+										<label2>icons/bg.png</label2>
+					<icon>$INFO[Skin.String(themedir)]texture/content_icon/usbmusic.png</icon>
+					<visible>Skin.HasSetting(themes) + !Skin.HasSetting(disablefiles)</visible>
+					<thumb />
+					<onclick>ActivateWindow(filemanager)</onclick>
+				</item>
+												<item id="500">
+					<label>My Apps</label>
+					<label2>icons/bg.png</label2>
+					<icon>icons\folders.png</icon>
+<property name="FAV1">$INFO[Skin.String(themedir)]texture/content_icon/tvvideo.png</property>
+<property name="FAV2">$INFO[Skin.String(themedir)]texture/content_icon/gallery.png</property>
+<property name="FAV3">icons/video.png</property>
+					<onclick>ActivateWindow(1801)</onclick>
+					<onclick>Control.SetFocus(8000,0)</onclick>
+								<visible>Skin.HasSetting(appsfolder) + Skin.HasSetting(themes)</visible>
+				</item>
+												<item id="500">
+					<label>My Apps</label>
+					<label2>icons/bg.png</label2>
+					<icon>icons\folders.png</icon>
+<property name="FAV1">icons/tvvideo.png</property>
+<property name="FAV2">icons/gallery.png</property>
+<property name="FAV3">icons/video.png</property>
+					<onclick>ActivateWindow(1801)</onclick>
+					<onclick>Control.SetFocus(8000,0)</onclick>
+								<visible>Skin.HasSetting(appsfolder) + !Skin.HasSetting(themes)</visible>
+				</item>
+				<item id="6">
+					<label>My Games</label>
+					<label2>icons/bg.png</label2>
+					<icon>icons\folders.png</icon>
+<property name="FAV1">$INFO[Skin.String(game1poster)]</property>
+<property name="FAV2">$INFO[Skin.String(game2poster)]</property>
+<property name="FAV3">$INFO[Skin.String(game3poster)]</property>
+					<onclick>ActivateWindow(1801)</onclick>
+					<onclick>Control.SetFocus(8000,1)</onclick>
+								<visible>!Skin.HasSetting(disablegames)</visible>
+				</item>
+								<item id="700">
+					<label>My Favourites</label>
+					<label2>icons/bg.png</label2>
+					<icon>icons\folders.png</icon>
+<property name="FAV1">$INFO[Window(0).Property(favourite.1.Thumb)]</property>
+<property name="FAV2">$INFO[Window(0).Property(favourite.2.Thumb)]</property>
+<property name="FAV3">$INFO[Window(0).Property(favourite.3.Thumb)]</property>
+					<onclick>ActivateWindow(1801)</onclick>
+					<onclick>Control.SetFocus(8000,2)</onclick>
+					<visible>Skin.HasSetting(favsfolder)</visible>
+				</item>
+								<item id="3">
+					<label>My Videos</label>
+					<icon>icons\video.png</icon>
+					<thumb />
+					<onclick>ActivateWindow(videos)</onclick>
+					<visible>!Skin.HasSetting(disablevideo)</visible>
+				</item>
+				<item id="4">
+					<label>My Music</label>
+					<icon>icons\music.png</icon>
+					<thumb />
+					<onclick>ActivateWindow(music)</onclick>
+			<visible>!Skin.HasSetting(disablemusic)</visible>
+				</item>
+
+
+				<include condition="!Skin.HasSetting(disablefavs) + !Skin.HasSetting(favsfolder)">FavItems</include>
+		       
+
+			</content>
+
+		</control>
+<control type="group">
+
+<animation type="Conditional" condition="Control.HasFocus(100)" reversible="false">
+                        <effect type="fade" start="100" end="0" time="200" tween="cubic" easing="inout" />
+                    </animation>
+<animation type="Conditional" condition="!Control.HasFocus(100)" reversible="false">
+                        <effect type="fade" start="0" end="100" time="350" delay="200" tween="cubic" easing="inout" />
+                    </animation>
+                    
+<visible>!Skin.HasSetting(disablecontent)</visible>
+
+<control type="group">
+	<visible>Container(9000).HasFocus(1) + System.InternetState</visible>
+
+
+<animation type="Conditional" condition="!Control.HasFocus(200) + !Control.HasFocus(300)" reversible="false">
+                        <effect type="slide" start="0,-375" end="0,0" time="300" tween="cubic" easing="inout" />
+                    </animation>
+                    
+<animation type="Conditional" condition="Control.HasFocus(200) | Control.HasFocus(300)" reversible="false">
+                        <effect type="slide" start="0,0" end="0,-375" time="300" tween="cubic" easing="inout" />
+                    </animation>
+
+<animation type="Conditional" condition="Control.HasFocus(100)">
+                        <effect type="slide" start="0,0" end="200,750" time="300" tween="cubic" easing="inout" />
+                    </animation>
+
+<animation type="Visible">
+                        <effect type="fade" start="0" end="100" time="300" tween="cubic" easing="inout" />
+                    </animation>
+<animation type="Hidden">
+                        <effect type="fade" start="100" end="0" time="300" tween="cubic" easing="inout" />
+                    </animation>
+			<control type="image">
+
+					<left>512</left>
+					<top>705</top>
+					<width>890</width>
+					<height>680</height>
+					<texture>fallback.png</texture>
+								<colordiffuse>80FFFFFF</colordiffuse>
+				</control>
+				
+
+				
+				
+				
+								<control type="panel" id="300">
+
+
+			
+                    
+			<left>556</left>
+			<top>1280</top>
+			<width>1200</width>
+			<height>953</height>
+			<focusposition>1</focusposition>
+			<defaultcontrol>1</defaultcontrol>
+			<onup>200</onup>
+			<ondown>-</ondown>
+			<onleft>-</onleft>
+			<onright>-</onright>
+			<orientation>vertical</orientation>
+			<scrolltime tween="sine" easing="out">240</scrolltime>
+
+			<itemlayout width="500" height="130">
+<control type="group">
+
+								<control type="image">
+            <animation type="Conditional" condition="true">
+                                        <effect type="zoom" start="100" end="111" time="1" tween="sine" easing="inout" center="auto" />
+                                                       <effect type="fade" start="100" end="50" time="200" tween="sine" easing="in" />
+                                    </animation>
+          
+					<left>0</left>
+					<top>0</top>
+					<width>803</width>
+					<height>100</height>
+					<texture border="40">fo.png</texture>
+					<colordiffuse>darkgrey</colordiffuse>
+				</control>
+
+				<control type="label">
+					<left>230</left>
+					<top>-67</top>
+					<width>900</width>
+					<height>233</height>
+					<label>$INFO[ListItem.Label]</label>
+					<font>Font36</font>
+					<textcolor>darkgrey</textcolor>
+					<align>left</align>
+					<autoscroll>false</autoscroll>
+				</control>
+
+				</control>
+			</itemlayout>
+
+			<focusedlayout width="500" height="130">
+			<control type="group">
+
+
+
+
+										<control type="image">
+            <animation type="Conditional" condition="true">
+                                        <effect type="zoom" start="100" end="111" time="1" tween="sine" easing="inout" center="auto" />
+                                                            <effect type="fade" start="100" end="50" time="200" tween="sine" easing="in" />
+                                    </animation>
+   
+					<left>0</left>
+					<top>0</top>
+					<width>803</width>
+					<height>100</height>
+					<texture border="40">fo.png</texture>
+					<colordiffuse>darkgrey</colordiffuse>
+				</control>
+										<control type="image">
+            <animation type="Conditional" condition="true">
+                                        <effect type="zoom" start="100" end="111" time="1" tween="sine" easing="inout" center="auto" />
+                                    </animation>
+                              <animation type="Focus">
+                                        <effect type="fade" start="0" end="100" time="200" tween="sine" easing="in" />
+                                    </animation>
+                                    <animation type="Unfocus">
+                                        <effect type="fade" start="100" end="0" time="200" tween="sine" easing="out" />
+                                    </animation>
+					<left>0</left>
+					<top>0</top>
+					<width>803</width>
+					<height>100</height>
+					<texture border="40">fo.png</texture>
+
+				</control>
+				<control type="label">
+					<left>230</left>
+					<top>-67</top>
+					<width>900</width>
+					<height>233</height>
+					<label>$INFO[ListItem.Label]</label>
+					<font>Font36</font>
+					<textcolor>darkgrey</textcolor>
+					<align>left</align>
+					<autoscroll>false</autoscroll>
+				</control>
+				<control type="label">
+				                     <animation type="Focus">
+                                        <effect type="fade" start="0" end="100" time="200" tween="sine" easing="in" />
+                                    </animation>
+                                    <animation type="Unfocus">
+                                        <effect type="fade" start="100" end="0" time="200" tween="sine" easing="out" />
+                                    </animation>
+					<left>230</left>
+					<top>-67</top>
+					<width>900</width>
+					<height>233</height>
+					<label>$INFO[ListItem.Label]</label>
+					<font>Font36</font>
+					<textcolor>white</textcolor>
+					<align>left</align>
+					<autoscroll>false</autoscroll>
+				</control>
+				</control>
+			</focusedlayout>
+
+  <content>
+
+   <item id="1">
+                              <label>Go to PlayStation Store</label>
+
+                             <onclick>ActivateWindow(addonbrowser)</onclick>
+															
+                       
+                      
+                            </item>
+
+
+               
+     
+                                
+  </content>
+
+		</control>
+		
+		
+				
+<control type="panel" id="200">
+
+<animation type="Conditional" condition="true">
+ <effect type="zoom" start="100" end="75" time="1" tween="cubic" easing="inout" center="auto"/>
+                    </animation>
+			<left>376</left>
+			<top>600</top>
+			<width>1200</width>
+			<height>953</height>
+			<focusposition>1</focusposition>
+			<defaultcontrol>1</defaultcontrol>
+			<onup>9000</onup>
+			<ondown>300</ondown>
+			<onleft>-</onleft>
+			<onright>-</onright>
+			<orientation>vertical</orientation>
+			<scrolltime tween="sine" easing="out">240</scrolltime>
+
+			<itemlayout width="580" height="380">
+<control type="group">
+
+				<control type="image">
+					<left>0</left>
+					<top>0</top>
+					<width>570</width>
+					<height>340</height>
+					<texture>$INFO[ListItem.Icon]</texture>
+										<aspectratio>scale</aspectratio>
+				</control>
+				<control type="image">
+					<left>0</left>
+					<top>280</top>
+					<width>570</width>
+					<height>90</height>
+					<texture>fallback.png</texture>
+										<aspectratio>scale</aspectratio>
+				</control>
+				<control type="textbox">
+					<left>15</left>
+					<top>302</top>
+					<width>450</width>
+					<height>233</height>
+					<label>$INFO[ListItem.Label]</label>
+					<font>Font36</font>
+					<textcolor>white</textcolor>
+					<align>left</align>
+				</control>
+
+				</control>
+			</itemlayout>
+
+			<focusedlayout width="580" height="380">
+			<control type="group">
+				<control type="image">
+					<left>0</left>
+					<top>0</top>
+					<width>570</width>
+					<height>340</height>
+					<texture>$INFO[ListItem.Icon]</texture>
+										<aspectratio>scale</aspectratio>
+				</control>
+				<control type="image">
+					<left>0</left>
+					<top>280</top>
+					<width>570</width>
+					<height>90</height>
+					<texture>fallback.png</texture>
+										<aspectratio>scale</aspectratio>
+				</control>
+				<control type="textbox">
+					<left>15</left>
+					<top>302</top>
+					<width>450</width>
+					<height>233</height>
+					<label>$INFO[ListItem.Label]</label>
+					<font>Font36</font>
+					<textcolor>white</textcolor>
+					<align>left</align>
+				</control>
+								<control type="image">
+            <animation type="Conditional" condition="true">
+                                        <effect type="zoom" start="100" end="111" time="1" tween="sine" easing="inout" center="auto" />
+                                    </animation>
+                              <animation type="Focus">
+                                        <effect type="fade" start="0" end="100" time="200" tween="sine" easing="in" />
+                                    </animation>
+                                    <animation type="Unfocus">
+                                        <effect type="fade" start="100" end="0" time="200" tween="sine" easing="out" />
+                                    </animation>
+					<left>10</left>
+					<top>0</top>
+					<width>550</width>
+					<height>370</height>
+					<texture border="100">fo.png</texture>
+				</control>
+				</control>
+			</focusedlayout>
+
+  <content>
+
+   	<item id="3">
+					<label>YouTube</label>
+					<icon>icons\apps\youtube.jpg</icon>
+					<thumb />
+                 <onclick>ActivateWindow(10025,&quot;plugin://plugin.video.youtube/&quot;,return)</onclick>
+				</item>
+   	<item id="3">
+					<label>Twitch</label>
+					<icon>icons\apps\twitch.jpg</icon>
+					<thumb />
+        <onclick>ActivateWindow(10025,&quot;plugin://plugin.video.twitch/&quot;,return)</onclick>
+				</item>
+				<item id="5">
+					<label>Vimeo</label>
+					<icon>icons\apps\vimeo.jpg</icon>
+					<thumb />
+				        <onclick>ActivateWindow(10025,&quot;plugin://plugin.video.vimeo/&quot;,return)</onclick>
+				</item>
+				<item id="6">
+					<label>Dailymotion</label>
+					<icon>icons\apps\dailymotion.jpg</icon>
+					<thumb />
+				        <onclick>ActivateWindow(10025,&quot;plugin://plugin.video.dailymotion_com/&quot;,return)</onclick>
+				</item>
+				
+  
+  
+  </content>
+
+		</control>
+									<control type="image">
+<animation type="Visible">
+                        <effect type="fade" start="0" end="100" time="300" tween="cubic" easing="inout" />
+                    </animation>
+<animation type="Hidden">
+                        <effect type="fade" start="100" end="0" time="300" tween="cubic" easing="inout" />
+                    </animation>
+					<left>512</left>
+					<top>705</top>
+					<width>890</width>
+					<height>680</height>
+					<texture>fallback.png</texture>
+								<colordiffuse>23FFFFFF</colordiffuse>
+								<visible>!Control.HasFocus(200) + !Control.HasFocus(300)</visible>
+				</control>
+		
+			</control>
+
+				<control type="image">
+	<visible>Container(9000).HasFocus(8) + !System.HasPVRAddon + System.InternetState + !String.Contains(Skin.String(themedir), Flow) + !String.Contains(Skin.String(themedir), Dual) + Skin.HasSetting(themes)</visible>
+
+<animation type="Conditional" condition="Control.HasFocus(100)">
+                        <effect type="fade" start="100" end="60" time="300" tween="cubic" easing="inout" />
+                        <effect type="slide" start="0,0" end="200,750" time="300" tween="cubic" easing="inout" />
+                    </animation>
+
+<animation type="Visible">
+                        <effect type="fade" start="0" end="100" time="300" tween="cubic" easing="inout" />
+                    </animation>
+<animation type="Hidden">
+                        <effect type="fade" start="100" end="0" time="300" tween="cubic" easing="inout" />
+                    </animation>
+					<left>-100</left>
+					<top>300</top>
+					<width>2100</width>
+					<height>800</height>
+					<texture>icons/fade.png</texture>
+								<colordiffuse>80FFFFFF</colordiffuse>
+				</control>
+
+								<control type="image">
+	<visible>Container(9000).HasFocus(8) + !System.HasPVRAddon + System.InternetState</visible>
+
+<animation type="Conditional" condition="Control.HasFocus(100)">
+                        <effect type="fade" start="100" end="60" time="300" tween="cubic" easing="inout" />
+                        <effect type="slide" start="0,0" end="200,750" time="300" tween="cubic" easing="inout" />
+                    </animation>
+
+<animation type="Visible">
+                        <effect type="fade" start="0" end="100" time="300" tween="cubic" easing="inout" />
+                    </animation>
+<animation type="Hidden">
+                        <effect type="fade" start="100" end="0" time="300" tween="cubic" easing="inout" />
+                    </animation>
+					<left>910</left>
+					<top>940</top>
+					<width>90</width>
+					<height>90</height>
+					<texture>icons/arrw.png</texture>
+				</control>
+				<control type="label">
+
+<visible>Container(9000).HasFocus(8) + !System.HasPVRAddon + System.InternetState</visible>
+
+<animation type="Conditional" condition="Control.HasFocus(100)">
+                        <effect type="fade" start="100" end="60" time="300" tween="cubic" easing="inout" />
+                        <effect type="slide" start="0,0" end="200,750" time="300" tween="cubic" easing="inout" />
+                    </animation>
+
+<animation type="Visible">
+                        <effect type="fade" start="0" end="100" time="300" tween="cubic" easing="inout" />
+                    </animation>
+<animation type="Hidden">
+                        <effect type="fade" start="100" end="0" time="300" tween="cubic" easing="inout" />
+                    </animation>
+					<left>250</left>
+					<top>780</top>
+					<width>1400</width>
+					<height>233</height>
+					<label>Access live TV by configuring PVR in the[CR]settings menu.</label>
+					<font>Font36</font>
+					<textcolor>white</textcolor>
+					<align>center</align>
+			<include>WindowFadeAnimation</include>
+				</control>
+				
+								<control type="image">
+								<visible>System.InternetState + !Container(9000).HasFocus(1) + !Container(9000).HasFocus(2) + !Container(9000).HasFocus(3) + !Container(9000).HasFocus(4) + !Container(9000).HasFocus(5) + !Container(9000).HasFocus(6) + !Container(9000).HasFocus(7) + !Container(9000).HasFocus(8) + !Container(9000).HasFocus(9) + !Container(9000).HasFocus(500) + !Container(9000).HasFocus(700)</visible>
+
+<animation type="Conditional" condition="Control.HasFocus(200)">
+       <effect type="fade" start="0" end="100" time="300" tween="cubic" easing="inout" />
+                        <effect type="slide" start="0,0" end="0,-250" time="300" tween="cubic" easing="inout" />
+                    </animation>
+<animation type="Conditional" condition="!Control.HasFocus(200)">
+       <effect type="fade" start="100" end="0" time="200" tween="cubic" easing="inout" />
+ <effect type="zoom" start="100" end="95" time="300" tween="cubic" easing="inout" center="auto"/>
+                    </animation>
+<animation type="Conditional" condition="Control.HasFocus(100)">
+                        <effect type="slide" start="0,0" end="200,750" time="300" tween="cubic" easing="inout" />
+                    </animation>
+
+<animation type="Visible">
+                        <effect type="fade" start="0" end="100" time="300" tween="cubic" easing="inout" />
+                    </animation>
+<animation type="Hidden">
+                        <effect type="fade" start="100" end="0" time="300" tween="cubic" easing="inout" />
+                    </animation>
+<animation type="Conditional" condition="true">
+ <effect type="zoom" start="100" end="85" time="1" tween="cubic" easing="inout" center="auto"/>
+                    </animation>
+					<left>33</left>
+			<top>572</top>
+					<width>550</width>
+			<height>700</height>
+			<texture>fallback.png</texture>
+			<colordiffuse>80FFFFFF</colordiffuse>
+				</control>
+				
+												<control type="image">
+								<visible>System.InternetState + !Container(9000).HasFocus(1) + !Container(9000).HasFocus(2) + !Container(9000).HasFocus(3) + !Container(9000).HasFocus(4) + !Container(9000).HasFocus(5) + !Container(9000).HasFocus(6) + !Container(9000).HasFocus(7) + !Container(9000).HasFocus(8) + !Container(9000).HasFocus(9) + !Container(9000).HasFocus(500) + !Container(9000).HasFocus(700)</visible>
+
+<animation type="Conditional" condition="Control.HasFocus(200)">
+       <effect type="fade" start="0" end="100" time="300" tween="cubic" easing="inout" />
+                        <effect type="slide" start="0,0" end="0,-250" time="300" tween="cubic" easing="inout" />
+                    </animation>
+<animation type="Conditional" condition="!Control.HasFocus(200)">
+       <effect type="fade" start="100" end="0" time="200" tween="cubic" easing="inout" />
+ <effect type="zoom" start="100" end="95" time="300" tween="cubic" easing="inout" center="auto"/>
+                    </animation>
+<animation type="Conditional" condition="Control.HasFocus(100)">
+                        <effect type="slide" start="0,0" end="200,750" time="300" tween="cubic" easing="inout" />
+                    </animation>
+
+<animation type="Visible">
+                        <effect type="fade" start="0" end="100" time="300" tween="cubic" easing="inout" />
+                    </animation>
+<animation type="Hidden">
+                        <effect type="fade" start="100" end="0" time="300" tween="cubic" easing="inout" />
+                    </animation>
+<animation type="Conditional" condition="true">
+ <effect type="zoom" start="100" end="85" time="1" tween="cubic" easing="inout" center="auto"/>
+                    </animation>
+					<left>74</left>
+			<top>630</top>
+					<width>140</width>
+			<height>140</height>
+			<texture>$INFO[Container(9000).ListItem.ActualIcon]</texture>
+<aspectratio>scale</aspectratio>
+				</control>
+				
+								<control type="label">
+						<visible>System.InternetState + !Container(9000).HasFocus(1) + !Container(9000).HasFocus(2) + !Container(9000).HasFocus(3) + !Container(9000).HasFocus(4) + !Container(9000).HasFocus(5) + !Container(9000).HasFocus(6) + !Container(9000).HasFocus(7) + !Container(9000).HasFocus(8) + !Container(9000).HasFocus(9) + !Container(9000).HasFocus(500) + !Container(9000).HasFocus(700)</visible>
+
+<animation type="Conditional" condition="Control.HasFocus(200)">
+       <effect type="fade" start="0" end="100" time="300" tween="cubic" easing="inout" />
+                        <effect type="slide" start="0,0" end="0,-250" time="300" tween="cubic" easing="inout" />
+                    </animation>
+<animation type="Conditional" condition="!Control.HasFocus(200)">
+       <effect type="fade" start="100" end="0" time="200" tween="cubic" easing="inout" />
+ <effect type="zoom" start="100" end="95" time="300" tween="cubic" easing="inout" center="auto"/>
+                    </animation>
+<animation type="Conditional" condition="Control.HasFocus(100)">
+                        <effect type="slide" start="0,0" end="200,750" time="300" tween="cubic" easing="inout" />
+                    </animation>
+
+<animation type="Visible">
+                        <effect type="fade" start="0" end="100" time="300" tween="cubic" easing="inout" />
+                    </animation>
+<animation type="Hidden">
+                        <effect type="fade" start="100" end="0" time="300" tween="cubic" easing="inout" />
+                    </animation>
+<animation type="Conditional" condition="true">
+ <effect type="zoom" start="100" end="85" time="1" tween="cubic" easing="inout" center="auto"/>
+                    </animation>
+					<left>190</left>
+			<top>590</top>
+					<width>360</width>
+			<height>140</height>
+					<label>$INFO[Container(9000).ListItem.Label]</label>
+					<font>Font50</font>
+					<textcolor>white</textcolor>
+					<align>left</align>
+					<autoscroll>false</autoscroll>
+				</control>
+				
+												<control type="label">
+						<visible>String.Contains(Container(9000).ListItem.Icon, tv) + System.InternetState + !Container(9000).HasFocus(1) + !Container(9000).HasFocus(2) + !Container(9000).HasFocus(3) + !Container(9000).HasFocus(4) + !Container(9000).HasFocus(5) + !Container(9000).HasFocus(6) + !Container(9000).HasFocus(7) + !Container(9000).HasFocus(8) + !Container(9000).HasFocus(9) + !Container(9000).HasFocus(500) + !Container(9000).HasFocus(700)</visible>
+
+<animation type="Conditional" condition="Control.HasFocus(200)">
+       <effect type="fade" start="0" end="100" time="300" tween="cubic" easing="inout" />
+                        <effect type="slide" start="0,0" end="0,-250" time="300" tween="cubic" easing="inout" />
+                    </animation>
+<animation type="Conditional" condition="!Control.HasFocus(200)">
+       <effect type="fade" start="100" end="0" time="200" tween="cubic" easing="inout" />
+ <effect type="zoom" start="100" end="95" time="300" tween="cubic" easing="inout" center="auto"/>
+                    </animation>
+<animation type="Conditional" condition="Control.HasFocus(100)">
+                        <effect type="slide" start="0,0" end="200,750" time="300" tween="cubic" easing="inout" />
+                    </animation>
+
+<animation type="Visible">
+                        <effect type="fade" start="0" end="100" time="300" tween="cubic" easing="inout" />
+                    </animation>
+<animation type="Hidden">
+                        <effect type="fade" start="100" end="0" time="300" tween="cubic" easing="inout" />
+                    </animation>
+<animation type="Conditional" condition="true">
+ <effect type="zoom" start="100" end="85" time="1" tween="cubic" easing="inout" center="auto"/>
+                    </animation>
+					<left>200</left>
+			<top>630</top>
+					<width>240</width>
+			<height>140</height>
+					<label>TV Show</label>
+					<font>Font36</font>
+					<textcolor>grey</textcolor>
+					<align>left</align>
+					<autoscroll>false</autoscroll>
+				</control>
+																<control type="label">
+						<visible>String.Contains(Container(9000).ListItem.Icon, movie) + System.InternetState + !Container(9000).HasFocus(1) + !Container(9000).HasFocus(2) + !Container(9000).HasFocus(3) + !Container(9000).HasFocus(4) + !Container(9000).HasFocus(5) + !Container(9000).HasFocus(6) + !Container(9000).HasFocus(7) + !Container(9000).HasFocus(8) + !Container(9000).HasFocus(9) + !Container(9000).HasFocus(500) + !Container(9000).HasFocus(700)</visible>
+
+<animation type="Conditional" condition="Control.HasFocus(200)">
+       <effect type="fade" start="0" end="100" time="300" tween="cubic" easing="inout" />
+                        <effect type="slide" start="0,0" end="0,-250" time="300" tween="cubic" easing="inout" />
+                    </animation>
+<animation type="Conditional" condition="!Control.HasFocus(200)">
+       <effect type="fade" start="100" end="0" time="200" tween="cubic" easing="inout" />
+ <effect type="zoom" start="100" end="95" time="300" tween="cubic" easing="inout" center="auto"/>
+                    </animation>
+<animation type="Conditional" condition="Control.HasFocus(100)">
+                        <effect type="slide" start="0,0" end="200,750" time="300" tween="cubic" easing="inout" />
+                    </animation>
+
+<animation type="Visible">
+                        <effect type="fade" start="0" end="100" time="300" tween="cubic" easing="inout" />
+                    </animation>
+<animation type="Hidden">
+                        <effect type="fade" start="100" end="0" time="300" tween="cubic" easing="inout" />
+                    </animation>
+<animation type="Conditional" condition="true">
+ <effect type="zoom" start="100" end="85" time="1" tween="cubic" easing="inout" center="auto"/>
+                    </animation>
+					<left>200</left>
+			<top>630</top>
+					<width>240</width>
+			<height>140</height>
+					<label>Movie</label>
+					<font>Font36</font>
+					<textcolor>grey</textcolor>
+					<align>left</align>
+					<autoscroll>false</autoscroll>
+				</control>
+																		<control type="label">
+						<visible>String.Contains(Container(9000).ListItem.Icon, addon) + System.InternetState + !Container(9000).HasFocus(1) + !Container(9000).HasFocus(2) + !Container(9000).HasFocus(3) + !Container(9000).HasFocus(4) + !Container(9000).HasFocus(5) + !Container(9000).HasFocus(6) + !Container(9000).HasFocus(7) + !Container(9000).HasFocus(8) + !Container(9000).HasFocus(9) + !Container(9000).HasFocus(500) + !Container(9000).HasFocus(700)</visible>
+
+<animation type="Conditional" condition="Control.HasFocus(200)">
+       <effect type="fade" start="0" end="100" time="300" tween="cubic" easing="inout" />
+                        <effect type="slide" start="0,0" end="0,-250" time="300" tween="cubic" easing="inout" />
+                    </animation>
+<animation type="Conditional" condition="!Control.HasFocus(200)">
+       <effect type="fade" start="100" end="0" time="200" tween="cubic" easing="inout" />
+ <effect type="zoom" start="100" end="95" time="300" tween="cubic" easing="inout" center="auto"/>
+                    </animation>
+<animation type="Conditional" condition="Control.HasFocus(100)">
+                        <effect type="slide" start="0,0" end="200,750" time="300" tween="cubic" easing="inout" />
+                    </animation>
+
+<animation type="Visible">
+                        <effect type="fade" start="0" end="100" time="300" tween="cubic" easing="inout" />
+                    </animation>
+<animation type="Hidden">
+                        <effect type="fade" start="100" end="0" time="300" tween="cubic" easing="inout" />
+                    </animation>
+<animation type="Conditional" condition="true">
+ <effect type="zoom" start="100" end="85" time="1" tween="cubic" easing="inout" center="auto"/>
+                    </animation>
+					<left>200</left>
+			<top>630</top>
+					<width>240</width>
+			<height>140</height>
+					<label>Application</label>
+					<font>Font36</font>
+					<textcolor>grey</textcolor>
+					<align>left</align>
+					<autoscroll>false</autoscroll>
+				</control>
+																<control type="label">
+						<visible>!String.Contains(Container(9000).ListItem.Icon, movie) + !String.Contains(Container(9000).ListItem.Icon, tv) + !String.Contains(Container(9000).ListItem.Icon, addon) + System.InternetState + !Container(9000).HasFocus(1) + !Container(9000).HasFocus(2) + !Container(9000).HasFocus(3) + !Container(9000).HasFocus(4) + !Container(9000).HasFocus(5) + !Container(9000).HasFocus(6) + !Container(9000).HasFocus(7) + !Container(9000).HasFocus(8) + !Container(9000).HasFocus(9) + !Container(9000).HasFocus(500) + !Container(9000).HasFocus(700)</visible>
+
+<animation type="Conditional" condition="Control.HasFocus(200)">
+       <effect type="fade" start="0" end="100" time="300" tween="cubic" easing="inout" />
+                        <effect type="slide" start="0,0" end="0,-250" time="300" tween="cubic" easing="inout" />
+                    </animation>
+<animation type="Conditional" condition="!Control.HasFocus(200)">
+       <effect type="fade" start="100" end="0" time="200" tween="cubic" easing="inout" />
+ <effect type="zoom" start="100" end="95" time="300" tween="cubic" easing="inout" center="auto"/>
+                    </animation>
+<animation type="Conditional" condition="Control.HasFocus(100)">
+                        <effect type="slide" start="0,0" end="200,750" time="300" tween="cubic" easing="inout" />
+                    </animation>
+
+<animation type="Visible">
+                        <effect type="fade" start="0" end="100" time="300" tween="cubic" easing="inout" />
+                    </animation>
+<animation type="Hidden">
+                        <effect type="fade" start="100" end="0" time="200" tween="cubic" easing="inout" />
+                    </animation>
+<animation type="Conditional" condition="true">
+ <effect type="zoom" start="100" end="85" time="1" tween="cubic" easing="inout" center="auto"/>
+                    </animation>
+					<left>200</left>
+			<top>630</top>
+					<width>240</width>
+			<height>140</height>
+					<label>My Library</label>
+					<font>Font36</font>
+					<textcolor>grey</textcolor>
+					<align>left</align>
+					<autoscroll>false</autoscroll>
+				</control>
+				
+																			<control type="label">
+						<visible>System.InternetState + !Container(9000).HasFocus(1) + !Container(9000).HasFocus(2) + !Container(9000).HasFocus(3) + !Container(9000).HasFocus(4) + !Container(9000).HasFocus(5) + !Container(9000).HasFocus(6) + !Container(9000).HasFocus(7) + !Container(9000).HasFocus(8) + !Container(9000).HasFocus(9) + !Container(9000).HasFocus(500) + !Container(9000).HasFocus(700)</visible>
+
+<animation type="Conditional" condition="Control.HasFocus(200)">
+       <effect type="fade" start="0" end="100" time="300" tween="cubic" easing="inout" />
+                        <effect type="slide" start="0,0" end="0,-250" time="300" tween="cubic" easing="inout" />
+                    </animation>
+<animation type="Conditional" condition="!Control.HasFocus(200)">
+       <effect type="fade" start="100" end="0" time="200" tween="cubic" easing="inout" />
+ <effect type="zoom" start="100" end="95" time="300" tween="cubic" easing="inout" center="auto"/>
+                    </animation>
+<animation type="Conditional" condition="Control.HasFocus(100)">
+                        <effect type="slide" start="0,0" end="200,750" time="300" tween="cubic" easing="inout" />
+                    </animation>
+
+<animation type="Visible">
+                        <effect type="fade" start="0" end="100" time="300" tween="cubic" easing="inout" />
+                    </animation>
+<animation type="Hidden">
+                        <effect type="fade" start="100" end="0" time="200" tween="cubic" easing="inout" />
+                    </animation>
+<animation type="Conditional" condition="true">
+ <effect type="zoom" start="100" end="85" time="1" tween="cubic" easing="inout" center="auto"/>
+                    </animation>
+					<left>1100</left>
+			<top>850</top>
+					<width>440</width>
+			<height>140</height>
+					<label>Check back soon!</label>
+					<font>Font36</font>
+					<textcolor>white</textcolor>
+					<align>left</align>
+					<autoscroll>false</autoscroll>
+				</control>
+				
+						
+				<control type="panel" id="200">
+<visible>System.InternetState + !Container(9000).HasFocus(1) + !Container(9000).HasFocus(2) + !Container(9000).HasFocus(3) + !Container(9000).HasFocus(4) + !Container(9000).HasFocus(5) + !Container(9000).HasFocus(6) + !Container(9000).HasFocus(7) + !Container(9000).HasFocus(8) + !Container(9000).HasFocus(9) + !Container(9000).HasFocus(500) + !Container(9000).HasFocus(700)</visible>
+
+<animation type="Conditional" condition="Control.HasFocus(200)">
+       <effect type="fade" start="0" end="100" time="300" tween="cubic" easing="inout" />
+                        <effect type="slide" start="0,0" end="0,-250" time="300" tween="cubic" easing="inout" />
+                    </animation>
+<animation type="Conditional" condition="!Control.HasFocus(200)">
+       <effect type="fade" start="100" end="0" time="200" tween="cubic" easing="inout" />
+ <effect type="zoom" start="100" end="95" time="300" tween="cubic" easing="inout" center="auto"/>
+                    </animation>
+<animation type="Conditional" condition="Control.HasFocus(100)">
+                        <effect type="slide" start="0,0" end="200,750" time="300" tween="cubic" easing="inout" />
+                    </animation>
+
+<animation type="Visible">
+                        <effect type="fade" start="0" end="100" time="300" tween="cubic" easing="inout" />
+                    </animation>
+<animation type="Hidden">
+                        <effect type="fade" start="100" end="0" time="200" tween="cubic" easing="inout" />
+                    </animation>
+<animation type="Conditional" condition="true">
+ <effect type="zoom" start="100" end="85" time="1" tween="cubic" easing="inout" center="auto"/>
+                    </animation>
+
+			
+                    
+			<left>50</left>
+			<top>700</top>
+			<width>600</width>
+			<height>875</height>
+			<focusposition>1</focusposition>
+			<defaultcontrol>1</defaultcontrol>
+			<onup>9000</onup>
+			<ondown>-</ondown>
+			<onleft>-</onleft>
+			<onright>-</onright>
+			<orientation>vertical</orientation>
+			<scrolltime tween="sine" easing="out">240</scrolltime>
+
+			<itemlayout width="500" height="130">
+<control type="group">
+<animation type="Conditional" condition="true">
+ <effect type="fade" start="100" end="50" time="1" tween="cubic" easing="inout" center="auto"/>
+                    </animation>
+				<control type="image">
+					<left>0</left>
+					<top>120</top>
+					<width>500</width>
+			<height>2</height>
+			<texture>color_white.png</texture>
+			<colordiffuse>80FFFFFF</colordiffuse>
+				</control>
+								<control type="image">
+					<left>0</left>
+					<top>10</top>
+					<width>110</width>
+			<height>110</height>
+			<texture>$INFO[ListItem.Thumb]</texture>
+
+				</control>
+				<control type="label">
+					<left>150</left>
+					<top>-50</top>
+					<width>900</width>
+					<height>233</height>
+					<label>$INFO[ListItem.Label]</label>
+					<font>Font36</font>
+					<textcolor>white</textcolor>
+					<align>left</align>
+					<autoscroll>false</autoscroll>
+				</control>
+
+				</control>
+			</itemlayout>
+
+			<focusedlayout width="500" height="130">
+			<control type="group">
+			<animation type="Focus">
+                        <effect type="fade" start="50" end="100" time="300" tween="cubic" easing="inout" />
+                    </animation>
+                    			<animation type="UnFocus">
+                        <effect type="fade" start="100" end="50" time="300" tween="cubic" easing="inout" />
+                    </animation>
+				<control type="image">
+					<left>0</left>
+					<top>120</top>
+					<width>500</width>
+			<height>2</height>
+			<texture>color_white.png</texture>
+			<colordiffuse>80FFFFFF</colordiffuse>
+				</control>
+
+												<control type="image">
+					<left>0</left>
+					<top>10</top>
+					<width>110</width>
+			<height>110</height>
+			<texture>$INFO[ListItem.Thumb]</texture>
+
+				</control>
+				<control type="label">
+					<left>150</left>
+					<top>-50</top>
+					<width>900</width>
+					<height>233</height>
+					<label>$INFO[ListItem.Label]</label>
+					<font>Font36</font>
+					<textcolor>white</textcolor>
+					<align>left</align>
+					<autoscroll>false</autoscroll>
+				</control>
+								<control type="image">
+            <animation type="Conditional" condition="true">
+                                        <effect type="zoom" start="100" end="111" time="1" tween="sine" easing="inout" center="auto" />
+                                    </animation>
+                              <animation type="Focus">
+                                        <effect type="fade" start="0" end="100" time="200" tween="sine" easing="in" />
+                                    </animation>
+                                    <animation type="Unfocus">
+                                        <effect type="fade" start="100" end="0" time="200" tween="sine" easing="out" />
+                                    </animation>
+					<left>0</left>
+					<top>0</top>
+					<width>500</width>
+					<height>130</height>
+					<texture border="40">fo.png</texture>
+				</control>
+				</control>
+			</focusedlayout>
+
+  <content>
+
+   <item id="1">
+                              <label>Overview</label>
+
+                             <onclick>-</onclick>
+															
+                                                                <thumb>icons/xmb/program.png</thumb>
+                      
+                            </item>
+
+                                 <item id="2">
+                              <label>Activities</label>
+
+                             <onclick>-</onclick>
+															
+                                                                <thumb>icons/xmbmain/icons.9.png</thumb>
+                      
+                            </item>
+                                     <item id="2">
+                              <label>Storage</label>
+
+                             <onclick>ActivateWindow(filemanager)</onclick>
+															
+                                                                <thumb>icons/xmbmain/icons.8.png</thumb>
+                      
+                            </item>
+                                 <item id="3">
+                              <label>PlayStation Store</label>
+
+                             <onclick>ActivateWindow(addonbrowser)</onclick>
+															
+                                                                <thumb>icons/store2.png</thumb>
+                      
+                            </item>
+               
+     
+                                
+  </content>
+
+		</control>
+				
+				<control type="image">
+
+<visible>!Control.HasFocus(200) + System.InternetState + !String.Contains(Skin.String(themedir), Flow) + !String.Contains(Skin.String(themedir), Dual) + Skin.HasSetting(themes) + !Container(9000).HasFocus(1) + !Container(9000).HasFocus(2) + !Container(9000).HasFocus(3) + !Container(9000).HasFocus(4) + !Container(9000).HasFocus(5) + !Container(9000).HasFocus(6) + !Container(9000).HasFocus(7) + !Container(9000).HasFocus(8) + !Container(9000).HasFocus(9) + !Container(9000).HasFocus(500) + !Container(9000).HasFocus(700)</visible>
+<animation type="Conditional" condition="Control.HasFocus(100)">
+                        <effect type="fade" start="100" end="60" time="300" tween="cubic" easing="inout" />
+                        <effect type="slide" start="0,0" end="200,750" time="300" tween="cubic" easing="inout" />
+                    </animation>
+
+<animation type="Visible">
+                        <effect type="fade" start="0" end="100" time="300" tween="cubic" easing="inout" />
+                    </animation>
+<animation type="Hidden">
+                        <effect type="fade" start="0" end="0" time="1" tween="cubic" easing="inout" />
+                    </animation>
+					<left>-100</left>
+					<top>300</top>
+					<width>2100</width>
+					<height>800</height>
+					<texture>icons/fade.png</texture>
+													<colordiffuse>80FFFFFF</colordiffuse>
+				</control>
+
+								<control type="image">
+<visible>!Control.HasFocus(200) + System.InternetState + !Container(9000).HasFocus(1) + !Container(9000).HasFocus(2) + !Container(9000).HasFocus(3) + !Container(9000).HasFocus(4) + !Container(9000).HasFocus(5) + !Container(9000).HasFocus(6) + !Container(9000).HasFocus(7) + !Container(9000).HasFocus(8) + !Container(9000).HasFocus(9) + !Container(9000).HasFocus(500) + !Container(9000).HasFocus(700)</visible>
+
+<animation type="Conditional" condition="Control.HasFocus(100)">
+                        <effect type="fade" start="100" end="60" time="300" tween="cubic" easing="inout" />
+                        <effect type="slide" start="0,0" end="200,750" time="300" tween="cubic" easing="inout" />
+                    </animation>
+
+<animation type="Visible">
+                        <effect type="fade" start="0" end="100" time="300" tween="cubic" easing="inout" />
+                    </animation>
+<animation type="Hidden">
+                        <effect type="fade" start="0" end="0" time="1" tween="cubic" easing="inout" />
+                    </animation>
+					<left>910</left>
+					<top>940</top>
+					<width>90</width>
+					<height>90</height>
+					<texture>icons/arrw.png</texture>
+				</control>
+				<control type="label">
+
+<visible>!Control.HasFocus(200) + System.InternetState + !Container(9000).HasFocus(1) + !Container(9000).HasFocus(2) + !Container(9000).HasFocus(3) + !Container(9000).HasFocus(4) + !Container(9000).HasFocus(5) + !Container(9000).HasFocus(6) + !Container(9000).HasFocus(7) + !Container(9000).HasFocus(8) + !Container(9000).HasFocus(9) + !Container(9000).HasFocus(500) + !Container(9000).HasFocus(700)</visible>
+
+<animation type="Conditional" condition="Control.HasFocus(100)">
+                        <effect type="fade" start="100" end="60" time="300" tween="cubic" easing="inout" />
+                        <effect type="slide" start="0,0" end="200,750" time="300" tween="cubic" easing="inout" />
+                    </animation>
+
+<animation type="Visible">
+                        <effect type="fade" start="0" end="100" time="300" tween="cubic" easing="inout" />
+                    </animation>
+<animation type="Hidden">
+                        <effect type="fade" start="0" end="0" time="1" tween="cubic" easing="inout" />
+                    </animation>
+					<left>250</left>
+					<top>780</top>
+					<width>1400</width>
+					<height>233</height>
+					<label>More on $INFO[ListItem.Label]</label>
+					<font>Font36</font>
+					<textcolor>white</textcolor>
+					<align>center</align>
+			<include>WindowFadeAnimation</include>
+				</control>
+				
+
+
+				<control type="image">
+<visible>!System.InternetState + !Container(9000).HasFocus(3) + !Container(9000).HasFocus(4) + !Container(9000).HasFocus(6) + !Container(9000).HasFocus(500) + !Container(9000).HasFocus(700)</visible>
+<animation type="WindowOpen" condition="Window.Previous(Startup)">
+
+              <effect type="fade" start="0" end="100" time="300" tween="cubic" easing="inout" delay="2900"/>
+     
+                    </animation>
+<animation type="Conditional" condition="Control.HasFocus(100)">
+                        <effect type="fade" start="100" end="60" time="300" tween="cubic" easing="inout" />
+                        <effect type="slide" start="0,0" end="200,750" time="300" tween="cubic" easing="inout" />
+                    </animation>
+
+<animation type="Visible">
+                        <effect type="fade" start="0" end="100" time="300" tween="cubic" easing="inout" />
+                    </animation>
+<animation type="Hidden">
+                        <effect type="fade" start="100" end="0" time="300" tween="cubic" easing="inout" />
+                    </animation>
+					<left>-100</left>
+					<top>300</top>
+					<width>2100</width>
+					<height>800</height>
+					<texture>icons/fade.png</texture>
+				</control>
+				<control type="image">
+<visible>!System.InternetState + !Container(9000).HasFocus(3) + !Container(9000).HasFocus(4) + !Container(9000).HasFocus(6) + !Container(9000).HasFocus(500) + !Container(9000).HasFocus(700)</visible>
+<animation type="WindowOpen" condition="Window.Previous(Startup)">
+
+              <effect type="fade" start="0" end="100" time="300" tween="cubic" easing="inout" delay="2900"/>
+     
+                    </animation>
+<animation type="Conditional" condition="Control.HasFocus(100)">
+                        <effect type="fade" start="100" end="60" time="300" tween="cubic" easing="inout" />
+                        <effect type="slide" start="0,0" end="200,750" time="300" tween="cubic" easing="inout" />
+                    </animation>
+
+<animation type="Visible">
+                        <effect type="fade" start="0" end="100" time="300" tween="cubic" easing="inout" />
+                    </animation>
+<animation type="Hidden">
+                        <effect type="fade" start="100" end="0" time="300" tween="cubic" easing="inout" />
+                    </animation>
+					<left>445</left>
+					<top>715</top>
+					<width>200</width>
+					<height>200</height>
+					<texture>web.png</texture>
+				</control>
+				<control type="label">
+
+<visible>!System.InternetState + !Container(9000).HasFocus(3) + !Container(9000).HasFocus(4) + !Container(9000).HasFocus(6) + !Container(9000).HasFocus(500) + !Container(9000).HasFocus(700)</visible>
+<animation type="WindowOpen" condition="Window.Previous(Startup)">
+
+              <effect type="fade" start="0" end="100" time="300" tween="cubic" easing="inout" delay="2900"/>
+     
+                    </animation>
+<animation type="Conditional" condition="Control.HasFocus(100)">
+                        <effect type="fade" start="100" end="60" time="300" tween="cubic" easing="inout" />
+                        <effect type="slide" start="0,0" end="200,750" time="300" tween="cubic" easing="inout" />
+                    </animation>
+
+<animation type="Visible">
+                        <effect type="fade" start="0" end="100" time="300" tween="cubic" easing="inout" />
+                    </animation>
+<animation type="Hidden">
+                        <effect type="fade" start="100" end="0" time="300" tween="cubic" easing="inout" />
+                    </animation>
+					<left>600</left>
+					<top>700</top>
+					<width>1400</width>
+					<height>233</height>
+					<label>Connect to the internet and view the latest information[CR]for this application.</label>
+					<font>Font36</font>
+					<textcolor>white</textcolor>
+					<align>left</align>
+			<include>WindowFadeAnimation</include>
+				</control>
+
+
+
+	
+
+
+
+
+
+				<control type="image">
+<visible>Container(9000).HasFocus(4) + String.IsEqual(Container(200).NumItems,0)</visible>
+
+<animation type="Conditional" condition="Control.HasFocus(100)">
+                        <effect type="fade" start="100" end="60" time="300" tween="cubic" easing="inout" />
+                        <effect type="slide" start="0,0" end="200,750" time="300" tween="cubic" easing="inout" />
+                    </animation>
+
+<animation type="Visible">
+                        <effect type="fade" start="0" end="100" time="300" tween="cubic" easing="inout" />
+                    </animation>
+<animation type="Hidden">
+                        <effect type="fade" start="100" end="0" time="300" tween="cubic" easing="inout" />
+                    </animation>
+					<left>-100</left>
+					<top>300</top>
+					<width>2100</width>
+					<height>800</height>
+					<texture>icons/fade.png</texture>
+													<colordiffuse>80FFFFFF</colordiffuse>
+				</control>
+				<control type="label">
+
+<visible>Container(9000).HasFocus(4) + String.IsEqual(Container(200).NumItems,0)</visible>
+
+<animation type="Conditional" condition="Control.HasFocus(100)">
+                        <effect type="fade" start="100" end="60" time="300" tween="cubic" easing="inout" />
+                        <effect type="slide" start="0,0" end="200,750" time="300" tween="cubic" easing="inout" />
+                    </animation>
+
+<animation type="Visible">
+                        <effect type="fade" start="0" end="100" time="300" tween="cubic" easing="inout" />
+                    </animation>
+<animation type="Hidden">
+                        <effect type="fade" start="100" end="0" time="300" tween="cubic" easing="inout" />
+                    </animation>
+					<left>250</left>
+					<top>800</top>
+					<width>1400</width>
+					<height>233</height>
+					<label>Add some music to your library and[CR]albums will show up here.</label>
+					<font>Font36</font>
+					<textcolor>white</textcolor>
+					<align>center</align>
+			<include>WindowFadeAnimation</include>
+				</control>
+
+<control type="panel" id="200">
+<animation type="Conditional" condition="!Control.HasFocus(200)">
+ <effect type="zoom" start="100" end="85" time="350" tween="cubic" easing="inout" center="300,1000"/>
+                    </animation>
+                    
+	<visible>Container(9000).HasFocus(6)</visible>
+<animation type="Conditional" condition="Control.HasFocus(200)">
+                        <effect type="slide" start="0,0" end="35,-250" time="300" tween="cubic" easing="inout" />
+                    </animation>
+<animation type="Conditional" condition="!Control.HasFocus(200)">
+ <effect type="zoom" start="100" end="95" time="300" tween="cubic" easing="inout" center="auto"/>
+                    </animation>
+<animation type="Conditional" condition="Control.HasFocus(100)">
+                        <effect type="slide" start="0,0" end="200,750" time="300" tween="cubic" easing="inout" />
+                    </animation>
+
+<animation type="Visible">
+                        <effect type="fade" start="0" end="100" time="300" tween="cubic" easing="inout" />
+                    </animation>
+<animation type="Hidden">
+                        <effect type="fade" start="100" end="0" time="300" tween="cubic" easing="inout" />
+                    </animation>
+			<left>220</left>
+			<top>650</top>
+			<width>1670</width>
+			<height>379</height>
+			<focusposition>1</focusposition>
+			<defaultcontrol>1</defaultcontrol>
+			<onup>9000</onup>
+			<ondown>-</ondown>
+			<onleft>-</onleft>
+			<onright>-</onright>
+			<orientation>horizontal</orientation>
+			<scrolltime tween="sine" easing="out">240</scrolltime>
+
+			<itemlayout width="280" height="275">
+<control type="group">
+            <animation type="conditional" condition="true">
+ 
+                  <effect type="fade" start="100" end="80" time="200" tween="sine" easing="in" />
+                                    </animation>
+
+				<control type="image">
+					<left>0</left>
+					<top>0</top>
+					<width>270</width>
+					<height>270</height>
+					<texture>$INFO[ListItem.Icon]</texture>
+				</control>
+				</control>
+			</itemlayout>
+
+			<focusedlayout width="325" height="320">
+			<control type="group">
+            <animation type="Focus">
+                                        <effect type="zoom" start="100" end="108" time="200" tween="sine" easing="inout" center="120,-10" />
+                  <effect type="fade" start="80" end="100" time="200" tween="sine" easing="in" />
+                                    </animation>
+                                    <animation type="Unfocus">
+                                        <effect type="zoom" start="108" end="100" time="200" tween="sine" easing="inout" center="120,-10" />
+                  <effect type="fade" start="100" end="80" time="200" tween="sine" easing="in" />
+                                    </animation>
+				<control type="image">
+					<left>0</left>
+					<top>0</top>
+					<width>270</width>
+					<height>270</height>
+					<texture>$INFO[ListItem.Icon]</texture>
+				</control>
+								<control type="image">
+            <animation type="Conditional" condition="true">
+                                        <effect type="zoom" start="100" end="111" time="1" tween="sine" easing="inout" center="auto" />
+                                    </animation>
+                              <animation type="Focus">
+                                        <effect type="fade" start="0" end="100" time="200" tween="sine" easing="in" />
+                                    </animation>
+                                    <animation type="Unfocus">
+                                        <effect type="fade" start="100" end="0" time="200" tween="sine" easing="out" />
+                                    </animation>
+					<left>0</left>
+					<top>0</top>
+					<width>270</width>
+					<height>270</height>
+					<texture>fo.png</texture>
+				</control>
+				</control>
+			</focusedlayout>
+
+  <content>
+  
+
+
+
+
+                            
+                              <item id="1">
+<visible>!String.IsEmpty(Skin.String(game1name))</visible>
+                                <label>$INFO[Skin.String(game1name)]</label>
+    <onclick>Skin.SetString(snapwindow, special://skin/scripts/gamelauncher.py)</onclick>
+<onclick>Skin.SetString(snapico, $INFO[Container(303).ListItem.Thumb],0)</onclick>
+<onclick>Skin.SetString(snapname, $INFO[Container(303).ListItem.Label])</onclick>
+                                <onclick>Skin.SetString(gamelaunch,$INFO[Skin.String(game1exe)])</onclick>
+                                <onclick>RunScript(special://skin/scripts/gamelauncher.py)</onclick>
+
+                                <thumb>$INFO[Skin.String(game1poster)]</thumb>
+
+                            </item>
+
+   <item id="1">
+<visible>!String.IsEmpty(Skin.String(game2name))</visible>
+                                <label>$INFO[Skin.String(game2name)]</label>
+    <onclick>Skin.SetString(snapwindow, special://skin/scripts/gamelauncher.py)</onclick>
+<onclick>Skin.SetString(snapico, $INFO[Container(303).ListItem.Thumb],0)</onclick>
+<onclick>Skin.SetString(snapname, $INFO[Container(303).ListItem.Label])</onclick>
+                                <onclick>Skin.SetString(gamelaunch,$INFO[Skin.String(game2exe)])</onclick>
+                                <onclick>RunScript(special://skin/scripts/gamelauncher.py)</onclick>
+
+                                <thumb>$INFO[Skin.String(game2poster)]</thumb>
+
+                            </item>
+
+   <item id="1">
+<visible>!String.IsEmpty(Skin.String(game3name))</visible>
+                                <label>$INFO[Skin.String(game3name)]</label>
+    <onclick>Skin.SetString(snapwindow, special://skin/scripts/gamelauncher.py)</onclick>
+<onclick>Skin.SetString(snapico, $INFO[Container(303).ListItem.Thumb],0)</onclick>
+<onclick>Skin.SetString(snapname, $INFO[Container(303).ListItem.Label])</onclick>
+                                <onclick>Skin.SetString(gamelaunch,$INFO[Skin.String(game3exe)])</onclick>
+                                <onclick>RunScript(special://skin/scripts/gamelauncher.py)</onclick>
+
+                                <thumb>$INFO[Skin.String(game3poster)]</thumb>
+
+                            </item>
+
+
+   <item id="1">
+<visible>!String.IsEmpty(Skin.String(game4name))</visible>
+                                <label>$INFO[Skin.String(game4name)]</label>
+    <onclick>Skin.SetString(snapwindow, special://skin/scripts/gamelauncher.py)</onclick>
+<onclick>Skin.SetString(snapico, $INFO[Container(303).ListItem.Thumb],0)</onclick>
+<onclick>Skin.SetString(snapname, $INFO[Container(303).ListItem.Label])</onclick>
+                                <onclick>Skin.SetString(gamelaunch,$INFO[Skin.String(game4exe)])</onclick>
+                                <onclick>RunScript(special://skin/scripts/gamelauncher.py)</onclick>
+
+                                <thumb>$INFO[Skin.String(game4poster)]</thumb>
+
+                            </item>
+
+
+   <item id="1">
+<visible>!String.IsEmpty(Skin.String(game5name))</visible>
+                                <label>$INFO[Skin.String(game5name)]</label>
+    <onclick>Skin.SetString(snapwindow, special://skin/scripts/gamelauncher.py)</onclick>
+<onclick>Skin.SetString(snapico, $INFO[Container(303).ListItem.Thumb],0)</onclick>
+<onclick>Skin.SetString(snapname, $INFO[Container(303).ListItem.Label])</onclick>
+                                <onclick>Skin.SetString(gamelaunch,$INFO[Skin.String(game5exe)])</onclick>
+                                <onclick>RunScript(special://skin/scripts/gamelauncher.py)</onclick>
+
+                                <thumb>$INFO[Skin.String(game5poster)]</thumb>
+
+                            </item>
+
+
+
+   <item id="1">
+<visible>!String.IsEmpty(Skin.String(game6name))</visible>
+                                <label>$INFO[Skin.String(game6name)]</label>
+    <onclick>Skin.SetString(snapwindow, special://skin/scripts/gamelauncher.py)</onclick>
+<onclick>Skin.SetString(snapico, $INFO[Container(303).ListItem.Thumb],0)</onclick>
+<onclick>Skin.SetString(snapname, $INFO[Container(303).ListItem.Label])</onclick>
+                                <onclick>Skin.SetString(gamelaunch,$INFO[Skin.String(game6exe)])</onclick>
+                                <onclick>RunScript(special://skin/scripts/gamelauncher.py)</onclick>
+
+                                <thumb>$INFO[Skin.String(game6poster)]</thumb>
+
+                            </item>
+
+
+
+   <item id="1">
+<visible>!String.IsEmpty(Skin.String(game7name))</visible>
+                                <label>$INFO[Skin.String(game1name)]</label>
+    <onclick>Skin.SetString(snapwindow, special://skin/scripts/gamelauncher.py)</onclick>
+<onclick>Skin.SetString(snapico, $INFO[Container(303).ListItem.Thumb],0)</onclick>
+<onclick>Skin.SetString(snapname, $INFO[Container(303).ListItem.Label])</onclick>
+                                <onclick>Skin.SetString(gamelaunch,$INFO[Skin.String(game7exe)])</onclick>
+                                <onclick>RunScript(special://skin/scripts/gamelauncher.py)</onclick>
+
+                                <thumb>$INFO[Skin.String(game7poster)]</thumb>
+
+                            </item>
+
+
+   <item id="1">
+<visible>!String.IsEmpty(Skin.String(game8name))</visible>
+                                <label>$INFO[Skin.String(game1name)]</label>
+    <onclick>Skin.SetString(snapwindow, special://skin/scripts/gamelauncher.py)</onclick>
+<onclick>Skin.SetString(snapico, $INFO[Container(303).ListItem.Thumb],0)</onclick>
+<onclick>Skin.SetString(snapname, $INFO[Container(303).ListItem.Label])</onclick>
+                                <onclick>Skin.SetString(gamelaunch,$INFO[Skin.String(game8exe)])</onclick>
+                                <onclick>RunScript(special://skin/scripts/gamelauncher.py)</onclick>
+
+                                <thumb>$INFO[Skin.String(game8poster)]</thumb>
+
+                            </item>
+
+
+   <item id="1">
+<visible>!String.IsEmpty(Skin.String(game9name))</visible>
+                                <label>$INFO[Skin.String(game9name)]</label>
+    <onclick>Skin.SetString(snapwindow, special://skin/scripts/gamelauncher.py)</onclick>
+<onclick>Skin.SetString(snapico, $INFO[Container(303).ListItem.Thumb],0)</onclick>
+<onclick>Skin.SetString(snapname, $INFO[Container(303).ListItem.Label])</onclick>
+                                <onclick>Skin.SetString(gamelaunch,$INFO[Skin.String(game9exe)])</onclick>
+                                <onclick>RunScript(special://skin/scripts/gamelauncher.py)</onclick>
+
+                                <thumb>$INFO[Skin.String(game9poster)]</thumb>
+
+                            </item>
+
+
+
+   <item id="1">
+<visible>!String.IsEmpty(Skin.String(game10name))</visible>
+                                <label>$INFO[Skin.String(game10name)]</label>
+    <onclick>Skin.SetString(snapwindow, special://skin/scripts/gamelauncher.py)</onclick>
+<onclick>Skin.SetString(snapico, $INFO[Container(303).ListItem.Thumb],0)</onclick>
+<onclick>Skin.SetString(snapname, $INFO[Container(303).ListItem.Label])</onclick>
+                                <onclick>Skin.SetString(gamelaunch,$INFO[Skin.String(game10exe)])</onclick>
+                                <onclick>RunScript(special://skin/scripts/gamelauncher.py)</onclick>
+
+                                <thumb>$INFO[Skin.String(game10poster)]</thumb>
+
+                            </item>
+
+   <item id="1">
+<visible>!String.IsEmpty(Skin.String(game11name))</visible>
+                                <label>$INFO[Skin.String(game11name)]</label>
+    <onclick>Skin.SetString(snapwindow, special://skin/scripts/gamelauncher.py)</onclick>
+<onclick>Skin.SetString(snapico, $INFO[Container(303).ListItem.Thumb],0)</onclick>
+<onclick>Skin.SetString(snapname, $INFO[Container(303).ListItem.Label])</onclick>
+                                <onclick>Skin.SetString(gamelaunch,$INFO[Skin.String(game11exe)])</onclick>
+                                <onclick>RunScript(special://skin/scripts/gamelauncher.py)</onclick>
+
+                                <thumb>$INFO[Skin.String(game11poster)]</thumb>
+
+                            </item>
+                            
+
+
+
+  
+  </content>
+
+		</control>
+
+<control type="panel" id="200">
+<animation type="Conditional" condition="!Control.HasFocus(200)">
+ <effect type="zoom" start="100" end="85" time="350" tween="cubic" easing="inout" center="300,1000"/>
+                    </animation>
+	<visible>Container(9000).HasFocus(700)</visible>
+<animation type="Conditional" condition="Control.HasFocus(200)">
+                        <effect type="slide" start="0,0" end="35,-250" time="300" tween="cubic" easing="inout" />
+                    </animation>
+<animation type="Conditional" condition="!Control.HasFocus(200)">
+ <effect type="zoom" start="100" end="95" time="300" tween="cubic" easing="inout" center="auto"/>
+                    </animation>
+<animation type="Conditional" condition="Control.HasFocus(100)">
+                        <effect type="slide" start="0,0" end="200,750" time="300" tween="cubic" easing="inout" />
+                    </animation>
+
+<animation type="Visible">
+                        <effect type="fade" start="0" end="100" time="300" tween="cubic" easing="inout" />
+                    </animation>
+<animation type="Hidden">
+                        <effect type="fade" start="100" end="0" time="300" tween="cubic" easing="inout" />
+                    </animation>
+			<left>220</left>
+			<top>650</top>
+			<width>1670</width>
+			<height>379</height>
+			<focusposition>1</focusposition>
+			<defaultcontrol>1</defaultcontrol>
+			<onup>9000</onup>
+			<ondown>-</ondown>
+			<onleft>-</onleft>
+			<onright>-</onright>
+			<orientation>horizontal</orientation>
+			<scrolltime tween="sine" easing="out">240</scrolltime>
+
+			<itemlayout width="280" height="275">
+<control type="group">
+            <animation type="conditional" condition="true">
+ 
+                  <effect type="fade" start="100" end="80" time="200" tween="sine" easing="in" />
+                                    </animation>
+
+				<control type="image">
+					<left>0</left>
+					<top>0</top>
+					<width>270</width>
+					<height>270</height>
+					<texture>$INFO[ListItem.Icon]</texture>
+					<aspectratio>scale</aspectratio>
+				</control>
+				</control>
+			</itemlayout>
+
+			<focusedlayout width="325" height="320">
+			<control type="group">
+            <animation type="Focus">
+                                        <effect type="zoom" start="100" end="108" time="200" tween="sine" easing="inout" center="120,-10" />
+                  <effect type="fade" start="80" end="100" time="200" tween="sine" easing="in" />
+                                    </animation>
+                                    <animation type="Unfocus">
+                                        <effect type="zoom" start="108" end="100" time="200" tween="sine" easing="inout" center="120,-10" />
+                  <effect type="fade" start="100" end="80" time="200" tween="sine" easing="in" />
+                                    </animation>
+				<control type="image">
+					<left>0</left>
+					<top>0</top>
+					<width>270</width>
+					<height>270</height>
+					<texture>$INFO[ListItem.Icon]</texture>
+					<aspectratio>scale</aspectratio>
+				</control>
+								<control type="image">
+            <animation type="Conditional" condition="true">
+                                        <effect type="zoom" start="100" end="111" time="1" tween="sine" easing="inout" center="auto" />
+                                    </animation>
+                              <animation type="Focus">
+                                        <effect type="fade" start="0" end="100" time="200" tween="sine" easing="in" />
+                                    </animation>
+                                    <animation type="Unfocus">
+                                        <effect type="fade" start="100" end="0" time="200" tween="sine" easing="out" />
+                                    </animation>
+					<left>0</left>
+					<top>0</top>
+					<width>270</width>
+					<height>270</height>
+					<texture>fo.png</texture>
+				</control>
+				</control>
+			</focusedlayout>
+
+  <content>
+  
+				<include>FavItems</include>
+
+
+  
+  </content>
+
+		</control>
+<control type="panel" id="200"> 
+<animation type="Conditional" condition="!Control.HasFocus(200)">
+ <effect type="zoom" start="100" end="85" time="350" tween="cubic" easing="inout" center="300,1000"/>
+                    </animation>
+	<visible>Container(9000).HasFocus(500)</visible>
+<animation type="Conditional" condition="Control.HasFocus(200)">
+                        <effect type="slide" start="0,0" end="35,-250" time="300" tween="cubic" easing="inout" />
+                    </animation>
+<animation type="Conditional" condition="!Control.HasFocus(200)">
+ <effect type="zoom" start="100" end="95" time="300" tween="cubic" easing="inout" center="auto"/>
+                    </animation>
+<animation type="Conditional" condition="Control.HasFocus(100)">
+                        <effect type="slide" start="0,0" end="200,750" time="300" tween="cubic" easing="inout" />
+                    </animation>
+
+<animation type="Visible">
+                        <effect type="fade" start="0" end="100" time="300" tween="cubic" easing="inout" />
+                    </animation>
+<animation type="Hidden">
+                        <effect type="fade" start="100" end="0" time="300" tween="cubic" easing="inout" />
+                    </animation>
+			<left>220</left>
+			<top>650</top>
+			<width>1670</width>
+			<height>379</height>
+			<focusposition>1</focusposition>
+			<defaultcontrol>1</defaultcontrol>
+			<onup>9000</onup>
+			<ondown>-</ondown>
+			<onleft>-</onleft>
+			<onright>-</onright>
+			<orientation>horizontal</orientation>
+			<scrolltime tween="sine" easing="out">240</scrolltime>
+
+			<itemlayout width="280" height="275">
+<control type="group">
+            <animation type="conditional" condition="true">
+ 
+                  <effect type="fade" start="100" end="80" time="200" tween="sine" easing="in" />
+                                    </animation>
+
+					<control type="image">
+					<left>0</left>
+					<top>0</top>
+					<width>270</width>
+					<height>270</height>
+					<texture>$INFO[ListItem.Label2]</texture>
+					<aspectratio>scale</aspectratio>
+			<colordiffuse>73000000</colordiffuse>
+			<visible>!String.Contains(Skin.String(themedir), Flow)</visible>
+				</control>
+								<control type="image">
+					<left>0</left>
+					<top>0</top>
+					<width>270</width>
+					<height>270</height>
+					<texture>$INFO[ListItem.Label2]</texture>
+					<aspectratio>scale</aspectratio>
+
+			<visible>String.Contains(Skin.String(themedir), Flow)</visible>
+				</control>
+				
+				<control type="image">
+					<left>0</left>
+					<top>0</top>
+					<width>270</width>
+					<height>270</height>
+					<texture>$INFO[ListItem.Icon]</texture>
+				</control>
+				</control>
+			</itemlayout>
+
+			<focusedlayout width="325" height="320">
+			<control type="group">
+
+            <animation type="Focus">
+                                        <effect type="zoom" start="100" end="108" time="200" tween="sine" easing="inout" center="120,-10" />
+                  <effect type="fade" start="80" end="100" time="200" tween="sine" easing="in" />
+                                    </animation>
+                                    <animation type="Unfocus">
+                                        <effect type="zoom" start="108" end="100" time="200" tween="sine" easing="inout" center="120,-10" />
+                  <effect type="fade" start="100" end="80" time="200" tween="sine" easing="in" />
+                                    </animation>
+                                    					<control type="image">
+					<left>0</left>
+					<top>0</top>
+					<width>270</width>
+					<height>270</height>
+					<texture>$INFO[ListItem.Label2]</texture>
+					<aspectratio>scale</aspectratio>
+			<colordiffuse>73000000</colordiffuse>
+			<visible>!String.Contains(Skin.String(themedir), Flow)</visible>
+				</control>
+								<control type="image">
+					<left>0</left>
+					<top>0</top>
+					<width>270</width>
+					<height>270</height>
+					<texture>$INFO[ListItem.Label2]</texture>
+					<aspectratio>scale</aspectratio>
+
+			<visible>String.Contains(Skin.String(themedir), Flow)</visible>
+				</control>
+				<control type="image">
+					<left>0</left>
+					<top>0</top>
+					<width>270</width>
+					<height>270</height>
+					<texture>$INFO[ListItem.Icon]</texture>
+				</control>
+								<control type="image">
+            <animation type="Conditional" condition="true">
+                                        <effect type="zoom" start="100" end="111" time="1" tween="sine" easing="inout" center="auto" />
+                                    </animation>
+                              <animation type="Focus">
+                                        <effect type="fade" start="0" end="100" time="200" tween="sine" easing="in" />
+                                    </animation>
+                                    <animation type="Unfocus">
+                                        <effect type="fade" start="100" end="0" time="200" tween="sine" easing="out" />
+                                    </animation>
+					<left>0</left>
+					<top>0</top>
+					<width>270</width>
+					<height>270</height>
+					<texture>fo.png</texture>
+				</control>
+				</control>
+			</focusedlayout>
+
+  <content>
+  
+
+								<item id="8">
+					<label>Live TV</label>
+					<label2>icons/bg.png</label2>
+					<icon>icons\tvvideo.png</icon>
+					<visible>!Skin.HasSetting(themes)</visible>
+					<thumb />
+					<onclick>ActivateWindow(PVR)</onclick>
+				</item>
+								<item id="9">
+					<label>My Photos</label>
+					<label2>icons/bg.png</label2>
+					<icon>icons\gallery.png</icon>
+					<visible>!Skin.HasSetting(themes)</visible>
+					<thumb />
+					<onclick>ActivateWindow(pictures)</onclick>
+				</item>
+
+
+								<item id="8">
+					<label>Live TV</label>
+					<label2>icons/bg.png</label2>
+					<icon>$INFO[Skin.String(themedir)]texture/content_icon/tvvideo.png</icon>
+					<visible>Skin.HasSetting(themes)</visible>
+					<thumb />
+					<onclick>ActivateWindow(PVR)</onclick>
+				</item>
+								<item id="9">
+					<label>My Photos</label>
+					<label2>icons/bg.png</label2>
+					<icon>$INFO[Skin.String(themedir)]texture/content_icon/gallery.png</icon>
+					<visible>Skin.HasSetting(themes)</visible>
+					<thumb />
+					<onclick>ActivateWindow(pictures)</onclick>
+				</item>
+
+
+								<item id="3">
+					<label>My Videos</label>
+					<icon>icons\video.png</icon>
+					<thumb />
+					<onclick>ActivateWindow(videos)</onclick>
+
+				</item>
+				<item id="4">
+					<label>My Music</label>
+					<icon>icons\music.png</icon>
+					<thumb />
+					<onclick>ActivateWindow(music)</onclick>
+
+				</item>
+												<item id="7">
+					<label>My Files</label>
+										<label2>icons/bg.png</label2>
+					<icon>$INFO[Skin.String(themedir)]texture/content_icon/usbmusic.png</icon>
+					<visible>Skin.HasSetting(themes)</visible>
+					<thumb />
+					<onclick>ActivateWindow(filemanager)</onclick>
+				</item>
+  												<item id="7">
+					<label>My Files</label>
+					<label2>icons/bg.png</label2>
+					<icon>icons\usbmusic.png</icon>
+					<visible>!Skin.HasSetting(themes)</visible>
+					<thumb />
+					<onclick>ActivateWindow(filemanager)</onclick>
+				</item>
+  </content>
+
+		</control>
+		
+		<control type="group">
+		<left>-40</left>
+		<top>0.5</top>
+		
+					<animation type="Conditional" condition="!Control.HasFocus(400)" reversible="false">
+ <effect type="fade" start="100" end="80" time="200" tween="cubic" easing="inout" center="auto"/>
+   <effect type="zoom" start="104" end="100" time="300" tween="cubic" easing="inout" center="auto"/>
+                    </animation>
+			<animation type="Conditional" condition="Control.HasFocus(400)" reversible="false">
+ <effect type="fade" start="80" end="100" time="200" tween="cubic" easing="inout" center="auto"/>
+  <effect type="zoom" start="100" end="104" time="300" tween="cubic" easing="inout" center="auto"/>
+                    </animation>
+                    
+                    
+				<control type="image">
+            
+<visible>Container(9000).HasFocus(2) + System.InternetState + !String.Contains(Skin.String(themedir), Flow) + !String.Contains(Skin.String(themedir), Dual) + !String.Contains(Skin.String(themedir), Particles)</visible>
+<animation type="WindowOpen" condition="Window.Previous(Startup)">
+
+              <effect type="fade" start="0" end="100" time="300" tween="cubic" easing="inout" delay="2900"/>
+     
+                    </animation>
+
+
+<animation type="Conditional" condition="Control.HasFocus(200) | Control.HasFocus(300) | Control.HasFocus(400)">
+                        <effect type="slide" start="0,0" end="0,-453" time="300" tween="cubic" easing="inout" />
+                    </animation>
+<animation type="Conditional" condition="!Control.HasFocus(200) + !Control.HasFocus(300) + !Control.HasFocus(400)">
+ <effect type="zoom" start="100" end="95" time="300" tween="cubic" easing="inout" center="auto"/>
+                    </animation>
+<animation type="Conditional" condition="Control.HasFocus(100)">
+                        <effect type="slide" start="0,0" end="200,750" time="300" tween="cubic" easing="inout" />
+                    </animation>
+
+<animation type="Visible">
+                        <effect type="fade" start="0" end="100" time="300" tween="cubic" easing="inout" />
+                    </animation>
+<animation type="Hidden">
+                        <effect type="fade" start="100" end="0" time="300" tween="cubic" easing="inout" />
+                    </animation>
+				<left>1290</left>
+			<top>713</top>
+			<width>550</width>
+			<height>610</height>
+					<texture>fallback.png</texture>
+			<colordiffuse>B3FFFFFF</colordiffuse>
+				</control>
+		
+								<control type="label">
+								
+				
+<visible>Container(9000).HasFocus(2) + System.InternetState</visible>
+<animation type="WindowOpen" condition="Window.Previous(Startup)">
+
+              <effect type="fade" start="0" end="100" time="300" tween="cubic" easing="inout" delay="2900"/>
+     
+                    </animation>
+
+
+<animation type="Conditional" condition="Control.HasFocus(200) | Control.HasFocus(300) | Control.HasFocus(400)">
+                        <effect type="slide" start="0,0" end="-5,-470" time="300" tween="cubic" easing="inout" />
+                    </animation>
+<animation type="Conditional" condition="!Control.HasFocus(200) + !Control.HasFocus(300) + !Control.HasFocus(400)">
+ <effect type="zoom" start="100" end="95" time="300" tween="cubic" easing="inout" center="auto"/>
+                    </animation>
+<animation type="Conditional" condition="Control.HasFocus(100)">
+                        <effect type="slide" start="0,0" end="200,750" time="300" tween="cubic" easing="inout" />
+                    </animation>
+
+<animation type="Visible">
+                        <effect type="fade" start="0" end="100" time="300" tween="cubic" easing="inout" />
+                    </animation>
+<animation type="Hidden">
+                        <effect type="fade" start="100" end="0" time="300" tween="cubic" easing="inout" />
+                    </animation>
+
+                    
+			<left>1323</left>
+			<top>700</top>
+					<width>360</width>
+			<height>140</height>
+					<label>Now Playing</label>
+					<font>Font36</font>
+					<textcolor>white</textcolor>
+					<align>left</align>
+					<autoscroll>false</autoscroll>
+				</control>
+				
+					<control type="panel" id="400">
+					
+
+                    
+                    
+<visible>Container(9000).HasFocus(2) + System.InternetState</visible>
+<animation type="WindowOpen" condition="Window.Previous(Startup)">
+
+              <effect type="fade" start="0" end="100" time="300" tween="cubic" easing="inout" delay="2900"/>
+     
+                    </animation>
+
+
+<animation type="Conditional" condition="Control.HasFocus(200) | Control.HasFocus(300) | Control.HasFocus(400)">
+                        <effect type="slide" start="0,0" end="0,-460" time="300" tween="cubic" easing="inout" />
+                    </animation>
+<animation type="Conditional" condition="!Control.HasFocus(200) + !Control.HasFocus(300) + !Control.HasFocus(400)">
+ <effect type="zoom" start="100" end="95" time="300" tween="cubic" easing="inout" center="auto"/>
+                    </animation>
+<animation type="Conditional" condition="Control.HasFocus(100)">
+                        <effect type="slide" start="0,0" end="200,750" time="300" tween="cubic" easing="inout" />
+                    </animation>
+
+<animation type="Visible">
+                        <effect type="fade" start="0" end="100" time="300" tween="cubic" easing="inout" />
+                    </animation>
+<animation type="Hidden">
+                        <effect type="fade" start="100" end="0" time="300" tween="cubic" easing="inout" />
+                    </animation>
+			<left>1313</left>
+			<top>790</top>
+			<width>500</width>
+			<height>679</height>
+			<focusposition>1</focusposition>
+			<defaultcontrol>1</defaultcontrol>
+			<onup>9000</onup>
+			<ondown>-</ondown>
+			<onleft>200</onleft>
+			<onright>-</onright>
+			<orientation>vertical</orientation>
+			<scrolltime tween="sine" easing="out">240</scrolltime>
+
+			<itemlayout width="500" height="130">
+<control type="group">
+
+
+								<control type="image">
+					<left>-5</left>
+					<top>10</top>
+					<width>115</width>
+			<height>110</height>
+			<texture>$INFO[ListItem.Thumb]</texture>
+
+				</control>
+								<control type="label">
+					<left>150</left>
+					<top>-75</top>
+					<width>900</width>
+					<height>233</height>
+					<label>$INFO[ListItem.Label]</label>
+					<font>Font36</font>
+					<textcolor>white</textcolor>
+					<align>left</align>
+					<autoscroll>false</autoscroll>
+				</control>
+				<control type="label">
+					<left>150</left>
+					<top>-35</top>
+					<width>900</width>
+					<height>233</height>
+					<label>$INFO[ListItem.Label2]</label>
+					<font>Font30</font>
+					<textcolor>white</textcolor>
+					<align>left</align>
+					<autoscroll>false</autoscroll>
+				</control>
+
+				</control>
+			</itemlayout>
+
+			<focusedlayout width="500" height="130">
+			<control type="group">
+
+
+
+								<control type="image">
+					<left>-5</left>
+					<top>10</top>
+					<width>115</width>
+			<height>110</height>
+			<texture>$INFO[ListItem.Thumb]</texture>
+
+				</control>
+								<control type="label">
+					<left>150</left>
+					<top>-75</top>
+					<width>900</width>
+					<height>233</height>
+					<label>$INFO[ListItem.Label]</label>
+					<font>Font36</font>
+					<textcolor>white</textcolor>
+					<align>left</align>
+					<autoscroll>false</autoscroll>
+				</control>
+				<control type="label">
+					<left>150</left>
+					<top>-35</top>
+					<width>900</width>
+					<height>233</height>
+					<label>$INFO[ListItem.Label2]</label>
+					<font>Font30</font>
+					<textcolor>white</textcolor>
+					<align>left</align>
+					<autoscroll>false</autoscroll>
+				</control>
+								<control type="image">
+            <animation type="Conditional" condition="true">
+                                        <effect type="zoom" start="100" end="111" time="1" tween="sine" easing="inout" center="auto" />
+                                    </animation>
+                              <animation type="Focus">
+                                        <effect type="fade" start="0" end="100" time="200" tween="sine" easing="in" />
+                                    </animation>
+                                    <animation type="Unfocus">
+                                        <effect type="fade" start="100" end="0" time="200" tween="sine" easing="out" />
+                                    </animation>
+					<left>10</left>
+					<top>0</top>
+					<width>480</width>
+					<height>130</height>
+					<texture border="40">fo.png</texture>
+				</control>
+				</control>
+			</focusedlayout>
+
+  <content>
+
+   <item id="1">
+                              <label>Destiny 2</label>
+                              <label2>Stinky Chicken</label2>
+
+                             <onclick>-</onclick>
+															
+                                                                <thumb>icons/apps/destiny2.jpg</thumb>
+                      
+                            </item>
+
+                               <item id="1">
+                              <label>Red Dead Redemption 2</label>
+                              <label2>GhostMuscles</label2>
+
+                             <onclick>-</onclick>
+															
+                                                                <thumb>icons/apps/rdd2.jpg</thumb>
+                      
+                            </item>
+                             <item id="1">
+                              <label>Hitman 2</label>
+                              <label2>TiredGamer</label2>
+
+                             <onclick>-</onclick>
+															
+                                                                <thumb>icons/apps/hitman2.jpg</thumb>
+                      
+                            </item>
+                                          <item id="1">
+                              <label>A Way Out</label>
+                              <label2>SniperGuy</label2>
+
+                             <onclick>-</onclick>
+															
+                                                                <thumb>icons/apps/way out.jpg</thumb>
+                      
+                            </item>
+     
+                                
+  </content>
+
+		</control>
+</control>
+		
+		
+		<control type="group">
+		<left>-90</left>
+			<animation type="Conditional" condition="!Control.HasFocus(200) + !Control.HasFocus(300)" reversible="false">
+ <effect type="fade" start="100" end="80" time="200" tween="cubic" easing="inout" center="auto"/>
+   <effect type="zoom" start="104" end="100" time="300" tween="cubic" easing="inout" center="auto"/>
+                    </animation>
+			<animation type="Conditional" condition="Control.HasFocus(200) | Control.HasFocus(300)" reversible="false">
+ <effect type="fade" start="80" end="100" time="200" tween="cubic" easing="inout" center="auto"/>
+  <effect type="zoom" start="100" end="104" time="300" tween="cubic" easing="inout" center="auto"/>
+                    </animation>
+                    
+									<control type="panel" id="200">
+
+
+                    
+		<visible>Container(9000).HasFocus(2) + System.InternetState</visible>
+<animation type="WindowOpen" condition="Window.Previous(Startup)">
+
+              <effect type="fade" start="0" end="100" time="300" tween="cubic" easing="inout" delay="2900"/>
+     
+                    </animation>
+
+<animation type="Conditional" condition="Control.HasFocus(200) | Control.HasFocus(300) | Control.HasFocus(400)">
+                        <effect type="slide" start="0,0" end="0,-445" time="300" tween="cubic" easing="inout" />
+                    </animation>
+<animation type="Conditional" condition="!Control.HasFocus(200) + !Control.HasFocus(300) + !Control.HasFocus(400)">
+ <effect type="zoom" start="100" end="95" time="300" tween="cubic" easing="inout" center="auto"/>
+                    </animation>
+<animation type="Conditional" condition="Control.HasFocus(100)">
+                        <effect type="slide" start="0,0" end="200,750" time="300" tween="cubic" easing="inout" />
+                    </animation>
+
+<animation type="Visible">
+                        <effect type="fade" start="0" end="100" time="300" tween="cubic" easing="inout" />
+                    </animation>
+<animation type="Hidden">
+                        <effect type="fade" start="100" end="0" time="300" tween="cubic" easing="inout" />
+                    </animation>
+			<left>197</left>
+			<top>705</top>
+			<width>1200</width>
+			<height>953</height>
+			<focusposition>1</focusposition>
+			<defaultcontrol>1</defaultcontrol>
+			<onup>9000</onup>
+			<ondown>300</ondown>
+			<onleft>-</onleft>
+			<onright>400</onright>
+			<orientation>vertical</orientation>
+			<scrolltime tween="sine" easing="out">240</scrolltime>
+
+			<itemlayout width="500" height="130">
+<control type="group">
+
+                    
+                    
+       
+				<control type="image">
+					<left>0</left>
+					<top>0</top>
+					<width>1070</width>
+					<height>90</height>
+					<texture>grey.png</texture>
+			<colordiffuse>40FFFFFF</colordiffuse>
+			<visible>String.Contains(Skin.String(themedir), Flow) | String.Contains(Skin.String(themedir), Dual) | String.Contains(Skin.String(themedir), Particles)</visible>
+				</control>
+
+				<control type="image">
+					<left>0</left>
+					<top>0</top>
+					<width>1070</width>
+					<height>90</height>
+					<texture>fallback.png</texture>
+			<colordiffuse>B3FFFFFF</colordiffuse>
+			<visible>!String.Contains(Skin.String(themedir), Flow) + !String.Contains(Skin.String(themedir), Dual) + !String.Contains(Skin.String(themedir), Particles)</visible>
+				</control>
+				
+																<control type="image">
+					<left>0</left>
+					<top>0</top>
+					<width>90</width>
+					<height>90</height>
+					<texture>$INFO[System.ProfileThumb]</texture>
+				</control>
+
+				<control type="label">
+					<left>150</left>
+					<top>-70</top>
+					<width>900</width>
+					<height>233</height>
+					<label>$INFO[ListItem.Label]</label>
+					<font>Font36</font>
+					<textcolor>white</textcolor>
+					<align>left</align>
+					<autoscroll>false</autoscroll>
+				</control>
+
+				</control>
+			</itemlayout>
+
+			<focusedlayout width="500" height="130">
+			<control type="group">
+
+
+
+
+												<control type="image">
+					<left>0</left>
+					<top>0</top>
+					<width>1070</width>
+					<height>90</height>
+					<texture>grey.png</texture>
+			<colordiffuse>40FFFFFF</colordiffuse>
+			<visible>String.Contains(Skin.String(themedir), Flow) | String.Contains(Skin.String(themedir), Dual) | String.Contains(Skin.String(themedir), Particles)</visible>
+				</control>
+
+				<control type="image">
+					<left>0</left>
+					<top>0</top>
+					<width>1070</width>
+					<height>90</height>
+					<texture>fallback.png</texture>
+			<colordiffuse>B3FFFFFF</colordiffuse>
+			<visible>!String.Contains(Skin.String(themedir), Flow) + !String.Contains(Skin.String(themedir), Dual) + !String.Contains(Skin.String(themedir), Particles)</visible>
+				</control>
+												<control type="image">
+					<left>0</left>
+					<top>0</top>
+					<width>90</width>
+					<height>90</height>
+					<texture>$INFO[System.ProfileThumb]</texture>
+				</control>
+				
+				
+								<control type="image">
+            <animation type="Conditional" condition="true">
+                                        <effect type="zoom" start="100" end="103" time="1" tween="sine" easing="inout" center="auto" />
+                                    </animation>
+                          <animation type="Focus">
+                                        <effect type="fade" start="0" end="100" time="200" tween="sine" easing="in" />
+                                    </animation>
+                                    <animation type="Unfocus">
+                                        <effect type="fade" start="100" end="0" time="200" tween="sine" easing="out" />
+                                    </animation>
+					<left>0</left>
+					<top>-14</top>
+					<width>1070</width>
+					<height>119</height>
+					<texture border="40">fo.png</texture>
+
+				</control>
+
+				<control type="label">
+					<left>150</left>
+					<top>-70</top>
+					<width>900</width>
+					<height>233</height>
+					<label>$INFO[ListItem.Label]</label>
+					<font>Font36</font>
+					<textcolor>white</textcolor>
+					<align>left</align>
+					<autoscroll>false</autoscroll>
+				</control>
+				</control>
+			</focusedlayout>
+
+  <content>
+
+   <item id="1">
+                              <label>What are you up to?</label>
+
+                             <onclick>Skin.SetString(status, )</onclick>
+															<onclick>Skin.SetString(status)</onclick>
+                       
+                      
+                            </item>
+
+
+               
+     
+                                
+  </content>
+
+		</control>
+		
+	<control type="panel" id="300">
+
+
+
+
+
+                    
+                    
+<visible>Container(9000).HasFocus(2) + System.InternetState</visible>
+<animation type="WindowOpen" condition="Window.Previous(Startup)">
+
+              <effect type="fade" start="0" end="100" time="300" tween="cubic" easing="inout" delay="2900"/>
+     
+                    </animation>
+
+
+<animation type="Conditional" condition="Control.HasFocus(200) | Control.HasFocus(300) | Control.HasFocus(400)">
+                        <effect type="slide" start="0,0" end="0,-445" time="300" tween="cubic" easing="inout" />
+                    </animation>
+<animation type="Conditional" condition="!Control.HasFocus(200) + !Control.HasFocus(300) + !Control.HasFocus(400)">
+ <effect type="zoom" start="100" end="95" time="300" tween="cubic" easing="inout" center="auto"/>
+                    </animation>
+<animation type="Conditional" condition="Control.HasFocus(100)">
+                        <effect type="slide" start="0,0" end="200,750" time="300" tween="cubic" easing="inout" />
+                    </animation>
+
+<animation type="Visible">
+                        <effect type="fade" start="0" end="100" time="300" tween="cubic" easing="inout" />
+                    </animation>
+<animation type="Hidden">
+                        <effect type="fade" start="100" end="0" time="300" tween="cubic" easing="inout" />
+                    </animation>
+			<left>200</left>
+			<top>805</top>
+			<width>1100</width>
+			<height>850</height>
+			<focusposition>1</focusposition>
+			<defaultcontrol>1</defaultcontrol>
+			<onup>200</onup>
+			<ondown>-</ondown>
+			<onleft>-</onleft>
+			<onright>400</onright>
+			<orientation>vertical</orientation>
+			<scrolltime tween="sine" easing="out">240</scrolltime>
+
+			<itemlayout width="1080" height="480">
+<control type="group">
+
+								<control type="image">
+					<left>0</left>
+					<top>0</top>
+					<width>1070</width>
+					<height>140</height>
+					<texture>grey.png</texture>
+			<colordiffuse>40FFFFFF</colordiffuse>
+			<visible>String.Contains(Skin.String(themedir), Flow) | String.Contains(Skin.String(themedir), Dual) | String.Contains(Skin.String(themedir), Particles)</visible>
+				</control>
+				<control type="image">
+					<left>0</left>
+					<top>140</top>
+					<width>1070</width>
+					<height>263</height>
+					<texture>grey.png</texture>
+			<colordiffuse>80FFFFFF</colordiffuse>
+			<visible>String.Contains(Skin.String(themedir), Flow) | String.Contains(Skin.String(themedir), Dual) | String.Contains(Skin.String(themedir), Particles)</visible>
+				</control>
+											<control type="image">
+					<left>0</left>
+					<top>0</top>
+					<width>1070</width>
+					<height>140</height>
+					<texture>fallback.png</texture>
+			<colordiffuse>B3FFFFFF</colordiffuse>
+			<visible>!String.Contains(Skin.String(themedir), Flow) + !String.Contains(Skin.String(themedir), Dual) + !String.Contains(Skin.String(themedir), Particles)</visible>
+				</control>
+				<control type="image">
+					<left>0</left>
+					<top>140</top>
+					<width>1070</width>
+					<height>263</height>
+					<texture>fallback.png</texture>
+			<colordiffuse>D9FFFFFF</colordiffuse>
+			<visible>!String.Contains(Skin.String(themedir), Flow) + !String.Contains(Skin.String(themedir), Dual) + !String.Contains(Skin.String(themedir), Particles)</visible>
+				</control>
+								<control type="image">
+					<left>0</left>
+					<top>0</top>
+					<width>135</width>
+					<height>140</height>
+					<texture>$INFO[ListItem.Property(thumb3)]</texture>
+										<aspectratio>scale</aspectratio>
+				</control>
+											<control type="image">
+					<left>135</left>
+					<top>0</top>
+					<width>135</width>
+					<height>140</height>
+					<texture>$INFO[ListItem.Property(thumb2)]</texture>
+										<aspectratio>scale</aspectratio>
+				</control>
+				<control type="image">
+					<left>0</left>
+					<top>140</top>
+					<width>270</width>
+					<height>265</height>
+					<texture>$INFO[ListItem.Property(thumb1)]</texture>
+										<aspectratio>scale</aspectratio>
+				</control>
+
+				<control type="textbox">
+					<left>290</left>
+					<top>10</top>
+					<width>665</width>
+					<height>233</height>
+					<label>$INFO[ListItem.Label]</label>
+					<font>Font36light</font>
+					<textcolor>white</textcolor>
+					<align>left</align>
+				</control>
+				<control type="textbox">
+					<left>290</left>
+					<top>98</top>
+					<width>650</width>
+					<height>233</height>
+					<label>$INFO[ListItem.Property(label2)]</label>
+					<font>Font27</font>
+					<textcolor>white</textcolor>
+					<align>left</align>
+				</control>
+				
+								<control type="image">
+					<left>300</left>
+					<top>200</top>
+					<width>60</width>
+					<height>60</height>
+					<texture>$INFO[ListItem.Property(thumb4)]</texture>
+										<aspectratio>scale</aspectratio>
+				</control>
+								<control type="textbox">
+					<left>400</left>
+					<top>205</top>
+					<width>650</width>
+					<height>233</height>
+					<label>$INFO[ListItem.Property(label3)]</label>
+					<font>Font39light</font>
+					<textcolor>white</textcolor>
+					<align>left</align>
+				</control>
+				
+												<control type="textbox">
+					<left>300</left>
+					<top>290</top>
+					<width>650</width>
+					<height>233</height>
+					<label>$INFO[ListItem.Property(label4)]</label>
+					<font>Font36light</font>
+					<textcolor>white</textcolor>
+					<align>left</align>
+				</control>
+
+				</control>
+			</itemlayout>
+
+			<focusedlayout width="1080" height="480">
+			<control type="group">
+
+									<control type="image">
+					<left>0</left>
+					<top>0</top>
+					<width>1070</width>
+					<height>140</height>
+					<texture>grey.png</texture>
+			<colordiffuse>40FFFFFF</colordiffuse>
+			<visible>String.Contains(Skin.String(themedir), Flow) | String.Contains(Skin.String(themedir), Dual) | String.Contains(Skin.String(themedir), Particles)</visible>
+				</control>
+				<control type="image">
+					<left>0</left>
+					<top>140</top>
+					<width>1070</width>
+					<height>263</height>
+					<texture>grey.png</texture>
+			<colordiffuse>80FFFFFF</colordiffuse>
+			<visible>String.Contains(Skin.String(themedir), Flow) | String.Contains(Skin.String(themedir), Dual) | String.Contains(Skin.String(themedir), Particles)</visible>
+				</control>
+											<control type="image">
+					<left>0</left>
+					<top>0</top>
+					<width>1070</width>
+					<height>140</height>
+					<texture>fallback.png</texture>
+			<colordiffuse>B3FFFFFF</colordiffuse>
+			<visible>!String.Contains(Skin.String(themedir), Flow) + !String.Contains(Skin.String(themedir), Dual) + !String.Contains(Skin.String(themedir), Particles)</visible>
+				</control>
+				<control type="image">
+					<left>0</left>
+					<top>140</top>
+					<width>1070</width>
+					<height>263</height>
+					<texture>fallback.png</texture>
+			<colordiffuse>D9FFFFFF</colordiffuse>
+			<visible>!String.Contains(Skin.String(themedir), Flow) + !String.Contains(Skin.String(themedir), Dual) + !String.Contains(Skin.String(themedir), Particles)</visible>
+				</control>
+								<control type="image">
+					<left>0</left>
+					<top>0</top>
+					<width>135</width>
+					<height>140</height>
+					<texture>$INFO[ListItem.Property(thumb3)]</texture>
+										<aspectratio>scale</aspectratio>
+				</control>
+											<control type="image">
+					<left>135</left>
+					<top>0</top>
+					<width>135</width>
+					<height>140</height>
+					<texture>$INFO[ListItem.Property(thumb2)]</texture>
+										<aspectratio>scale</aspectratio>
+				</control>
+				<control type="image">
+					<left>0</left>
+					<top>140</top>
+					<width>270</width>
+					<height>265</height>
+					<texture>$INFO[ListItem.Property(thumb1)]</texture>
+										<aspectratio>scale</aspectratio>
+				</control>
+
+				<control type="textbox">
+					<left>290</left>
+					<top>10</top>
+					<width>665</width>
+					<height>233</height>
+					<label>$INFO[ListItem.Label]</label>
+					<font>Font36light</font>
+					<textcolor>white</textcolor>
+					<align>left</align>
+				</control>
+				<control type="textbox">
+					<left>290</left>
+					<top>98</top>
+					<width>650</width>
+					<height>233</height>
+					<label>$INFO[ListItem.Property(label2)]</label>
+					<font>Font27</font>
+					<textcolor>white</textcolor>
+					<align>left</align>
+				</control>
+				
+								<control type="image">
+					<left>300</left>
+					<top>200</top>
+					<width>60</width>
+					<height>60</height>
+					<texture>$INFO[ListItem.Property(thumb4)]</texture>
+										<aspectratio>scale</aspectratio>
+				</control>
+								<control type="textbox">
+					<left>400</left>
+					<top>205</top>
+					<width>650</width>
+					<height>233</height>
+					<label>$INFO[ListItem.Property(label3)]</label>
+					<font>Font39light</font>
+					<textcolor>white</textcolor>
+					<align>left</align>
+				</control>
+				
+												<control type="textbox">
+					<left>300</left>
+					<top>290</top>
+					<width>650</width>
+					<height>233</height>
+					<label>$INFO[ListItem.Property(label4)]</label>
+					<font>Font36light</font>
+					<textcolor>white</textcolor>
+					<align>left</align>
+				</control>
+				
+								<control type="image">
+            <animation type="Conditional" condition="true">
+                                        <effect type="zoom" start="100" end="108" time="1" tween="sine" easing="inout" center="auto" />
+                                    </animation>
+                              <animation type="Focus">
+                                        <effect type="fade" start="0" end="100" time="200" tween="sine" easing="in" />
+                                    </animation>
+                                    <animation type="Unfocus">
+                                        <effect type="fade" start="100" end="0" time="200" tween="sine" easing="out" />
+                                    </animation>
+					<left>22</left>
+					<top>0</top>
+					<width>1021</width>
+					<height>405</height>
+					<texture border="100">fo.png</texture>
+				</control>
+				</control>
+			</focusedlayout>
+
+  <content>
+
+				
+   	<item id="3">
+					<label>[B]TiredSniper[/B] earned a trophy from [B]Battlefield 1[/B]</label>
+<property name="thumb1">icons/trophies/battlefield1.png</property>
+<property name="thumb2">icons/apps/bf1.png</property>
+<property name="thumb3">avatars/10.png</property>
+<property name="thumb4">icons/trophies/trophy1.png</property>
+<property name="label2">$INFO[System.Date(dd/mm/yyyy)]</property>
+<property name="label3">World War One Hero</property>
+<property name="label4">Aquire all other trophies in the game.</property>
+					<thumb />
+                 <onclick>-</onclick>
+				</item>
+				
+				   	<item id="3">
+					<label>[B]StinkyChicken[/B] earned a trophy from [B]Call Of Duty WWII[/B]</label>
+<property name="thumb1">icons/trophies/ww22.png</property>
+<property name="thumb2">icons/apps/ww2.jpeg</property>
+<property name="thumb3">avatars/4.jpg</property>
+<property name="thumb4">icons/trophies/trophy4.png</property>
+<property name="label2">$INFO[System.Date(dd/mm/yyyy)]</property>
+<property name="label3">Rescuer</property>
+<property name="label4">Save an ally by shooting the enemy which they are in a struggle with.</property>
+					<thumb />
+                 <onclick>-</onclick>
+				</item>
+								   	<item id="3">
+					<label>[B]GhostMuscles[/B] earned a trophy from [B]Tearaway[/B]</label>
+<property name="thumb1">icons/trophies/tearaway3.png</property>
+<property name="thumb2">icons/apps/tear.jpg</property>
+<property name="thumb3">avatars/7.png</property>
+<property name="thumb4">icons/trophies/trophy2.png</property>
+<property name="label2">$INFO[System.Date(dd/mm/yyyy)]</property>
+<property name="label3">Gifted</property>
+<property name="label4">Collect every red present in every level</property>
+					<thumb />
+                 <onclick>-</onclick>
+				</item>
+   
+												   	<item id="3">
+					<label>[B]TiredSniper[/B] earned a trophy from [B]Battlefield 1[/B]</label>
+<property name="thumb1">icons/trophies/battlefield13.png</property>
+<property name="thumb2">icons/apps/bf1.png</property>
+<property name="thumb3">avatars/10.png</property>
+<property name="thumb4">icons/trophies/trophy2.png</property>
+<property name="label2">$INFO[System.Date(dd/mm/yyyy)]</property>
+<property name="label3">Master Of Adaption</property>
+<property name="label4">Complete all challenges in the campaign</property>
+					<thumb />
+                 <onclick>-</onclick>
+				</item>
+  
+  
+  </content>
+
+		</control>
+		</control>
+		
+				</control>
+
+</control>
+	</include>
+</includes>

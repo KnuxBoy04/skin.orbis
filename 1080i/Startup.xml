@@ -1,0 +1,103 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<window>
+	<!-- startup -->
+		<onload>XBMC.RunScript(script.favourites)</onload>
+	
+	<onload>Skin.Reset(HideSettings)</onload>
+	<onload>AlarmClock(CloseStartup,ReplaceWindow($INFO[System.StartupWindow]),00:4,silent)</onload>
+	<controls>
+<control type="group">
+<animation type="WindowOpen">
+    <effect type="fade" start="0" end="100" time="300" tween="cubic" easing="inout"delay="2500"/>
+                    </animation>
+<control type="videowindow">
+				<include>FullscreenDimensions</include>
+				<visible>Player.HasVideo + Skin.HasSetting(BackgroundVideo)</visible>
+				<visible>!$PARAM[animate]</visible>
+			</control>
+
+			<!-- Water Image -->
+			<control type="image">
+				<include>FullscreenDimensions</include>
+				<texture background="true">$VAR[OSMCBackgroundImage]</texture>
+				<visible>![Player.HasVideo + Skin.HasSetting(BackgroundVideo)]</visible>
+				<visible>!$PARAM[animate]</visible>
+			</control>
+
+			<!-- Background Image -->
+			<control type="image" id="10000">
+				<include>FullscreenDimensions</include>
+				<texture background="true" fallback="transparent.png">special://skin/extras/bg.jpg</texture>
+				<fadetime>400</fadetime>
+				<visible>![Player.HasVideo + Skin.HasSetting(BackgroundVideo)]</visible>
+				<visible>!Skin.HasSetting(HideFanart)</visible>
+			</control>
+
+			<!-- Artists Slideshow -->
+			<control type="multiimage">
+				<include>FullscreenDimensions</include>
+				<imagepath background="true">$INFO[Window(Visualisation).Property(ArtistSlideshow)]</imagepath>
+				<aspectratio>keep</aspectratio>
+				<timeperimage>10000</timeperimage>
+				<fadetime>2000</fadetime>
+				<randomize>true</randomize>
+				<visible>Player.HasAudio + System.HasAddon(script.artistslideshow) + Skin.HasSetting(EnableArtistFanart)</visible>
+			</control>
+
+			<!-- Visualisation -->
+			<control type="visualisation">
+				<include>FullscreenDimensions</include>
+				<visible>Player.HasAudio + Skin.HasSetting(BackgroundVisualisation) + !String.Contains(Window(Videos).Property(TvTunesIsAlive),True)</visible>
+			</control>
+
+			<!-- Overlay -->
+			<control type="image">
+				<include>FullscreenDimensions</include>
+			<texture background="true">color_white.png</texture>
+			<colordiffuse>8C000000</colordiffuse>
+				<include>VisibleFadeAnimation</include>
+				<visible>!Window.Is(visualisation) | [Window.Is(visualisation) + [Player.ShowInfo | Window.IsActive(musicosd)]]</visible>
+			</control>
+			<control type="image">
+				<include>FullscreenDimensions</include>
+				<texture background="true">color_white.png</texture>
+				<colordiffuse>$INFO[Skin.String(color.background)]</colordiffuse>
+				<include>VisibleFadeAnimation</include>
+				<visible>!Window.Is(visualisation) | [Window.Is(visualisation) + [Player.ShowInfo | Window.IsActive(musicosd)]]</visible>
+				<visible>Skin.String(color.background) + Skin.HasSetting(BackgroundCustomColour)</visible>
+			</control>
+
+
+</control>
+
+
+			<control type="image">
+<animation type="WindowOpen">
+    <effect type="fade" start="0" end="100" time="1" tween="cubic" easing="inout"/>
+    <effect type="fade" start="100" end="0" time="2000" tween="cubic" easing="inout" delay="2500"/>
+                    </animation>
+				<include>FullscreenDimensions</include>
+			<texture background="true">color_white.png</texture>
+			<colordiffuse>black</colordiffuse>
+				<include>VisibleFadeAnimation</include>
+			</control>
+
+			
+								<control type="label">
+
+<animation type="WindowOpen">
+              <effect type="fade" start="0" end="100" time="1000" tween="cubic" easing="inout"/>
+    <effect type="fade" start="100" end="0" time="1000" tween="cubic" easing="inout" delay="2000"/>
+                    </animation>
+                    
+						<left>530</left>
+						<top>500</top>
+						<width>1018</width>
+						<height>90</height>
+						<font>Font36</font>
+						<label>[LIGHT]See important health and safety warnings in the settings menu.[/LIGHT]</label>
+						<textcolor>white</textcolor>
+					</control>
+	
+	</controls>
+</window>

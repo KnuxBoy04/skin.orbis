@@ -1,0 +1,12 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<window>
+	<!-- playercontrols -->
+	<defaultcontrol always="true">5</defaultcontrol>
+<onload>Dialog.Close(all,true)</onload>
+<onload>ActivateWindow(Home)</onload>
+	<controls>
+
+		
+	</controls>
+
+</window>

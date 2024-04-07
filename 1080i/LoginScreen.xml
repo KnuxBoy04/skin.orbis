@@ -1,0 +1,283 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<window>
+	<!-- loginscreen -->
+	<backgroundcolor>0x00000000</backgroundcolor>
+	<defaultcontrol always="true">1</defaultcontrol>
+
+	<controls>
+<control type="group">
+
+						         <animation type="WindowOpen">
+             
+                                             <effect type="fade" start="0" end="100" time="300" delay="6000" tween="sine" easing="in" />
+                                    </animation>
+						<control type="image">
+				<include>FullscreenDimensions</include>
+				<texture background="true">color_white.png</texture>
+				<colordiffuse>FF001D66</colordiffuse>
+				<animation effect="fade" start="0" end="100" time="200" condition="$PARAM[animate]">WindowOpen</animation>
+				<animation effect="fade" start="100" end="0" time="200" delay="70" condition="$PARAM[animate]">WindowClose</animation>
+				<include>VisibleFadeAnimation</include>
+			</control>
+
+
+		
+   <control type="button" id="1">
+   			<animation type="Conditional" condition="true">
+              <effect type="fade" start="100" end="0" time="1" tween="cubic" easing="inout"/>
+
+                    </animation>
+             
+   <width>0</width>
+   <height>0</height>
+            <onclick>Control.SetFocus(52)</onclick>
+        </control>
+        
+		<!-- Logo -->
+		<control type="image">
+		<animation type="WindowOpen">
+              <effect type="fade" start="0" end="100" time="300" tween="cubic" easing="inout"/>
+
+                    </animation>
+<animation type="WindowClose">
+              <effect type="fade" start="100" end="0" time="300" tween="cubic" easing="inout"/>
+
+                    </animation>
+
+			<left>100</left>
+			<top>20</top>
+			<width>260</width>
+			<height>150</height>
+			<texture>ico.png</texture>
+			<include>WindowFadeAnimation</include>
+		</control>
+
+		<control type="group">
+
+                    			<animation type="Conditional" condition="Control.HasFocus(1)">
+                    			              <effect type="zoom" start="75" end="100" time="300" tween="sine" easing="out"center="auto"/>
+              <effect type="fade" start="0" end="100" time="300" tween="cubic" easing="inout"/>
+
+                    </animation>
+                    
+                    			<animation type="Conditional" condition="!Control.HasFocus(1)">
+            
+              <effect type="fade" start="100" end="0" time="200" tween="cubic" easing="inout"/>
+
+                    </animation>
+                    
+		<animation type="WindowOpen">
+                   			              <effect type="zoom" start="75" end="100" time="300" tween="sine" easing="out"center="auto"/>
+              <effect type="fade" start="0" end="100" time="300" tween="cubic" easing="inout"/>
+                    </animation>
+<animation type="WindowClose">
+              <effect type="fade" start="100" end="0" time="200" tween="cubic" easing="inout"/>
+
+                    </animation>
+		<!-- Time -->
+
+				<control type="textbox">
+
+					<left>690</left>
+					<top>480</top>
+					<width>850</width>
+					<height>233</height>
+					<label>Welcome back to PlayStation</label>
+					<font>Font43</font>
+					<textcolor>white</textcolor>
+					<align>left</align>
+				</control>
+
+				<control type="textbox">
+
+					<left>665</left>
+					<top>580</top>
+					<width>850</width>
+					<height>233</height>
+					<label>Pless the PS button to use the controller.</label>
+					<font>Font36</font>
+					<textcolor>white</textcolor>
+					<align>left</align>
+				</control>
+</control>
+		<!-- Main group -->
+		<control type="group">
+									<animation type="Conditional" condition="!Control.HasFocus(52)">
+              <effect type="fade" start="100" end="0" time="1" tween="cubic" easing="inout"/>
+
+                    </animation>
+                    			<animation type="Conditional" condition="Control.HasFocus(52)">
+                    			              <effect type="zoom" start="75" end="100" time="300" tween="sine" easing="out"center="auto"/>
+              <effect type="fade" start="0" end="100" time="300" tween="cubic" easing="inout"/>
+
+                    </animation>
+		<animation type="WindowOpen">
+              <effect type="fade" start="0" end="100" time="300" tween="cubic" easing="inout"/>
+
+                    </animation>
+<animation type="WindowClose">
+              <effect type="fade" start="100" end="0" time="300" tween="cubic" easing="inout"/>
+
+                    </animation>
+		<!-- Time -->
+		<include>Time</include>
+		<control type="image">
+
+
+			<left>603</left>
+			<top>260</top>
+			<width>85</width>
+			<height>85</height>
+			<texture>icons/xmb/program.png</texture>
+
+		</control>
+
+				<control type="textbox">
+
+					<left>615</left>
+					<top>280</top>
+					<width>850</width>
+					<height>233</height>
+					<label>          DUALSHOCK 4 wireless controller connected.[CR]Who is using the controller?</label>
+					<font>Font36</font>
+					<textcolor>white</textcolor>
+					<align>left</align>
+				</control>
+
+
+			<!-- View -->
+			<control type="fixedlist" id="52">
+
+				<left>0</left>
+				<top>500</top>
+				<centertop>50%</centertop>
+				<width>1920</width>
+				<height>720</height>
+				<onup>52</onup>
+				<ondown>52</ondown>
+				<onleft>ActivateWindow(shutdownmenu)</onleft>
+				<onright>ActivateWindow(shutdownmenu)</onright>
+				<focusposition>1</focusposition>
+				<orientation>horizontal</orientation>
+				<viewtype label="535">list</viewtype>
+				<scrolltime tween="sine" easing="out">240</scrolltime>
+
+						<itemlayout width="290" height="440">
+<control type="group">
+
+				<control type="image">
+					<left>0</left>
+					<top>0</top>
+					<width>270</width>
+					<height>420</height>
+					<texture>grey.png</texture>
+			<colordiffuse>26000000</colordiffuse>
+
+				</control>
+								<control type="image">
+					<left>0</left>
+					<top>0</top>
+					<width>270</width>
+					<height>270</height>
+					<texture>icons/bg.png</texture>
+				</control>
+				<control type="image">
+					<left>0</left>
+					<top>0</top>
+					<width>270</width>
+					<height>270</height>
+					<texture fallback="avatars/defaultavatar.png">$INFO[ListItem.Icon]</texture>
+					<aspectratio>scale</aspectratio>
+				</control>
+
+				<control type="textbox">
+					<left>15</left>
+					<top>280</top>
+					<width>250</width>
+					<height>233</height>
+					<label>$INFO[ListItem.Label]</label>
+					<font>Font36</font>
+					<textcolor>white</textcolor>
+					<align>left</align>
+				</control>
+
+				</control>
+			</itemlayout>
+
+			<focusedlayout width="290" height="440">
+			<control type="group">
+				<control type="image">
+					<left>0</left>
+					<top>0</top>
+					<width>270</width>
+					<height>420</height>
+					<texture>grey.png</texture>
+			<colordiffuse>26000000</colordiffuse>
+				</control>
+								<control type="image">
+					<left>0</left>
+					<top>0</top>
+					<width>270</width>
+					<height>270</height>
+					<texture>icons/bg.png</texture>
+				</control>
+				<control type="image">
+					<left>0</left>
+					<top>0</top>
+					<width>270</width>
+					<height>270</height>
+					<texture fallback="avatars/defaultavatar.png">$INFO[ListItem.Icon]</texture>
+										<aspectratio>scale</aspectratio>
+				</control>
+				<control type="textbox">
+					<left>15</left>
+					<top>280</top>
+					<width>250</width>
+					<height>233</height>
+					<label>$INFO[ListItem.Label]</label>
+					<font>Font36</font>
+					<textcolor>white</textcolor>
+					<align>left</align>
+				</control>
+
+								<control type="image">
+            <animation type="Conditional" condition="true">
+                                        <effect type="zoom" start="100" end="111" time="1" tween="sine" easing="inout" center="auto" />
+                                    </animation>
+                              <animation type="Focus">
+                                        <effect type="fade" start="0" end="100" time="200" tween="sine" easing="in" />
+                                    </animation>
+                                    <animation type="Unfocus">
+                                        <effect type="fade" start="100" end="0" time="200" tween="sine" easing="out" />
+                                    </animation>
+					<left>0</left>
+					<top>5</top>
+					<width>270</width>
+					<height>410</height>
+					<texture border="100">fo.png</texture>
+				</control>
+				</control>
+			</focusedlayout>
+
+			</control>
+<include>bottombar</include>
+		</control>
+</control>
+
+						<control type="image">
+						         <animation type="WindowOpen" reversible="false">
+                                        <effect type="fade" start="0" end="100" time="300" tween="sine" easing="in" />
+                                             <effect type="fade" start="100" end="0" time="300" delay="5000" tween="sine" easing="in" />
+                                    </animation>
+                                             <animation type="WindowClose" reversible="false">
+                                        <effect type="fade" start="0" end="0" time="0" tween="sine" easing="in" />
+   
+                                    </animation>
+				<include>FullscreenDimensions</include>
+				<texture background="true">splash_startup.png</texture>
+
+
+			</control>
+	</controls>
+
+</window>

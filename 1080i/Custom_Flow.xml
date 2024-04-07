@@ -1,0 +1,250 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<window id="1601">
+	<!-- skinsettings -->
+	<defaultcontrol always="true">9000</defaultcontrol>
+
+	<controls>
+	
+		<!-- Background -->
+		<include>WindowBackgroundImage</include>
+		<control type="group">
+		
+		<animation type="WindowOpen">
+              <effect type="fade" start="0" end="100" time="300" tween="cubic" easing="inout"/>
+              <effect type="zoom" start="120" end="100" time="400" tween="cubic" easing="out" center="auto"/>
+                    </animation>
+<animation type="WindowClose">
+              <effect type="fade" start="100" end="0" time="300" tween="cubic" easing="inout"/>
+              <effect type="zoom" start="100" end="120" time="400" tween="cubic" easing="out"center="auto"/>
+                    </animation>
+
+		<include content="Time">
+			<param name="heading">Flow Theme</param>
+		</include>
+
+<control type="panel" id="9000">
+
+<animation type="Conditional" condition="true">
+ <effect type="zoom" start="100" end="85" time="1" tween="cubic" easing="inout" center="auto"/>
+                    </animation>
+
+
+			<left>70</left>
+			<top>250</top>
+			<width>1895</width>
+			<height>825</height>
+			<focusposition>1</focusposition>
+			<defaultcontrol>1</defaultcontrol>
+			<onup>-</onup>
+			<ondown>-</ondown>
+			<onleft>-</onleft>
+			<onright>-</onright>
+			<orientation>vertical</orientation>
+			<scrolltime tween="sine" easing="out">240</scrolltime>
+
+			<itemlayout width="590" height="290">
+<control type="group">
+
+				<control type="image">
+					<left>0</left>
+					<top>0</top>
+					<width>570</width>
+					<height>270</height>
+					<texture>grey.png</texture>
+			<colordiffuse>26000000</colordiffuse>
+
+				</control>
+	
+				<control type="image">
+					<left>-2</left>
+					<top>1</top>
+					<width>268</width>
+					<height>268</height>
+					<texture>$INFO[ListItem.Thumb]</texture>
+				</control>
+
+				<control type="textbox">
+					<left>300</left>
+					<top>30</top>
+					<width>300</width>
+					<height>233</height>
+					<label>$INFO[ListItem.Label]</label>
+					<font>Font36</font>
+					<textcolor>white</textcolor>
+					<align>left</align>
+				</control>
+
+				</control>
+			</itemlayout>
+
+			<focusedlayout width="590" height="290">
+			<control type="group">
+				<control type="image">
+					<left>0</left>
+					<top>0</top>
+					<width>570</width>
+					<height>270</height>
+					<texture>grey.png</texture>
+			<colordiffuse>26000000</colordiffuse>
+				</control>
+
+
+				<control type="image">
+					<left>-2</left>
+					<top>1</top>
+					<width>268</width>
+					<height>268</height>
+					<texture>$INFO[ListItem.Thumb]</texture>
+				</control>
+				<control type="textbox">
+					<left>300</left>
+					<top>30</top>
+					<width>300</width>
+					<height>233</height>
+					<label>$INFO[ListItem.Label]</label>
+					<font>Font36</font>
+					<textcolor>white</textcolor>
+					<align>left</align>
+				</control>
+								<control type="image">
+            <animation type="Conditional" condition="true">
+                                        <effect type="zoom" start="100" end="111" time="1" tween="sine" easing="inout" center="auto" />
+                                    </animation>
+                              <animation type="Focus">
+                                        <effect type="fade" start="0" end="100" time="200" tween="sine" easing="in" />
+                                    </animation>
+                                    <animation type="Unfocus">
+                                        <effect type="fade" start="100" end="0" time="200" tween="sine" easing="out" />
+                                    </animation>
+					<left>10</left>
+					<top>0</top>
+					<width>550</width>
+					<height>270</height>
+					<texture border="100">fo.png</texture>
+				</control>
+				</control>
+			</focusedlayout>
+
+  <content>
+     <item id="1">
+<onclick condition="!Skin.HasSetting(themes)">Skin.ToggleSetting(themes)</onclick>
+                              <label>Default</label>
+              	<onclick>Skin.SetString(color.tile, white)</onclick>
+                                        <onclick condition="String.IsEqual(Skin.String(BackgroundImage),Custom)">Skin.SetString(BackgroundImage, )</onclick>
+                                        <onclick condition="!Skin.HasSetting(BackgroundCustomColour)">Skin.ToggleSetting(BackgroundCustomColour)</onclick>
+                               <onclick>Skin.SetString(themedir, special://skin/THEMES/Flow/)</onclick>
+                             <onclick>ActivateWindow(Home)</onclick>
+															<onclick>Skin.SetString(color.background, FF001D66)</onclick>
+                                                                <thumb>wave/default.png</thumb>
+                            
+                            </item>
+                            
+   <item id="1">
+   <onclick condition="!Skin.HasSetting(themes)">Skin.ToggleSetting(themes)</onclick>
+                              <label>Gold</label>
+        <label2>FFB38E00</label2>
+         	<onclick>Skin.SetString(color.tile, white)</onclick>
+                                        <onclick condition="String.IsEqual(Skin.String(BackgroundImage),Custom)">Skin.SetString(BackgroundImage, )</onclick>
+                                        <onclick condition="!Skin.HasSetting(BackgroundCustomColour)">Skin.ToggleSetting(BackgroundCustomColour)</onclick>
+                               <onclick>Skin.SetString(themedir, special://skin/THEMES/Flow/)</onclick>
+                             <onclick>ActivateWindow(Home)</onclick>
+															<onclick>Skin.SetString(color.background, FF967818)</onclick>
+                                                                <thumb>wave/gold.png</thumb>
+                            
+                            </item>
+                            
+                               <item id="1">
+                               <onclick condition="!Skin.HasSetting(themes)">Skin.ToggleSetting(themes)</onclick>
+                              <label>Steel Blue</label>
+        <label2>FF012E4D</label2>
+         	<onclick>Skin.SetString(color.tile, white)</onclick>
+                                        <onclick condition="String.IsEqual(Skin.String(BackgroundImage),Custom)">Skin.SetString(BackgroundImage, )</onclick>
+                                        <onclick condition="!Skin.HasSetting(BackgroundCustomColour)">Skin.ToggleSetting(BackgroundCustomColour)</onclick>
+                               <onclick>Skin.SetString(themedir, special://skin/THEMES/Flow/)</onclick>
+                             <onclick>ActivateWindow(Home)</onclick>
+															<onclick>Skin.SetString(color.background, FF103b59)</onclick>
+                                                                <thumb>wave/greyblue.png</thumb>
+                            
+                            </item>
+                            
+                       <item id="1">
+                       <onclick condition="!Skin.HasSetting(themes)">Skin.ToggleSetting(themes)</onclick>
+                              <label>Red</label>
+        <label2>FF660000</label2>
+         	<onclick>Skin.SetString(color.tile, white)</onclick>
+                                        <onclick condition="String.IsEqual(Skin.String(BackgroundImage),Custom)">Skin.SetString(BackgroundImage, )</onclick>
+                                        <onclick condition="!Skin.HasSetting(BackgroundCustomColour)">Skin.ToggleSetting(BackgroundCustomColour)</onclick>
+                               <onclick>Skin.SetString(themedir, special://skin/THEMES/Flow/)</onclick>
+                             <onclick>ActivateWindow(Home)</onclick>
+															<onclick>Skin.SetString(color.background, FF6d0707)</onclick>
+                                                                <thumb>wave/red.png</thumb>
+                            
+                            </item>
+                            
+                               <item id="1">
+                               <onclick condition="!Skin.HasSetting(themes)">Skin.ToggleSetting(themes)</onclick>
+                              <label>Light Blue</label>
+        <label2>FF008081</label2>
+         	<onclick>Skin.SetString(color.tile, white)</onclick>
+                                        <onclick condition="String.IsEqual(Skin.String(BackgroundImage),Custom)">Skin.SetString(BackgroundImage, )</onclick>
+                                        <onclick condition="!Skin.HasSetting(BackgroundCustomColour)">Skin.ToggleSetting(BackgroundCustomColour)</onclick>
+                               <onclick>Skin.SetString(themedir, special://skin/THEMES/Flow/)</onclick>
+                             <onclick>ActivateWindow(Home)</onclick>
+															<onclick>Skin.SetString(color.background, FF017387)</onclick>
+                                                                <thumb>wave/lightblue.png</thumb>
+                            
+                            </item>
+                                           <item id="1">
+                                           <onclick condition="!Skin.HasSetting(themes)">Skin.ToggleSetting(themes)</onclick>
+                              <label>Purple</label>
+        <label2>FF4C007F</label2>
+         	<onclick>Skin.SetString(color.tile, white)</onclick>
+                                        <onclick condition="String.IsEqual(Skin.String(BackgroundImage),Custom)">Skin.SetString(BackgroundImage, )</onclick>
+                                        <onclick condition="!Skin.HasSetting(BackgroundCustomColour)">Skin.ToggleSetting(BackgroundCustomColour)</onclick>
+                               <onclick>Skin.SetString(themedir, special://skin/THEMES/Flow/)</onclick>
+                             <onclick>ActivateWindow(Home)</onclick>
+															<onclick>Skin.SetString(color.background, FF3a0060)</onclick>
+                                                                <thumb>wave/purple.png</thumb>
+                            
+                            </item>
+                                  <item id="1">
+                                  <onclick condition="!Skin.HasSetting(themes)">Skin.ToggleSetting(themes)</onclick>
+                              <label>Grey</label>
+        <label2>FF2E2E2E</label2>
+         	<onclick>Skin.SetString(color.tile, white)</onclick>
+                                        <onclick condition="String.IsEqual(Skin.String(BackgroundImage),Custom)">Skin.SetString(BackgroundImage, )</onclick>
+                                        <onclick condition="!Skin.HasSetting(BackgroundCustomColour)">Skin.ToggleSetting(BackgroundCustomColour)</onclick>
+                               <onclick>Skin.SetString(themedir, special://skin/THEMES/Flow/)</onclick>
+                             <onclick>ActivateWindow(Home)</onclick>
+															<onclick>Skin.SetString(color.background, FF232222)</onclick>
+                                                                <thumb>wave/grey.png</thumb>
+                            
+                            </item>
+                            
+                                        <item id="1">
+                                        <onclick condition="!Skin.HasSetting(themes)">Skin.ToggleSetting(themes)</onclick>
+                              <label>Pink</label>
+                               	<onclick>Skin.SetString(color.tile, white)</onclick>
+        <label2>FF800033</label2>
+                                        <onclick condition="String.IsEqual(Skin.String(BackgroundImage),Custom)">Skin.SetString(BackgroundImage, )</onclick>
+                                        <onclick condition="!Skin.HasSetting(BackgroundCustomColour)">Skin.ToggleSetting(BackgroundCustomColour)</onclick>
+                               <onclick>Skin.SetString(themedir, special://skin/THEMES/Flow/)</onclick>
+                             <onclick>ActivateWindow(Home)</onclick>
+															<onclick>Skin.SetString(color.background, FF720046)</onclick>
+                                                                <thumb>wave/pink.png</thumb>
+                            
+                            </item>
+
+                            
+               
+  
+  </content>
+
+		</control>
+		</control>
+		<!-- Home items -->
+		
+<include>bottombar</include>
+	</controls>
+
+</window>

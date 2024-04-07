@@ -1,0 +1,1059 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<window>
+	<!-- home -->
+	<backgroundcolor>0x00000000</backgroundcolor>
+	<defaultcontrol>1</defaultcontrol>
+	<onload condition="Window.Previous(Startup) + Skin.HasSetting(syssound)">AlarmClock(CloseStartupsound,PlayMedia(special://home/addons/resource.uisounds.PlayStation/resources/Startup.wav),00:1.5,silent)</onload>
+	
+	<onload condition="Window.Previous(Startup) + Skin.HasSetting(syssound) + !String.Contains(Skin.String(themedir), Spiral) + !String.Contains(Skin.String(themedir), PlayStation) + !String.Contains(Skin.String(themedir), Destiny)">AlarmClock(CloseStartupsounds,PlayMedia(special://skin/scripts/system.mp3),00:4,silent)</onload>
+		<onload condition="Window.Previous(Startup) + Skin.HasSetting(syssound) + !String.Contains(Skin.String(themedir), Spiral) + !String.Contains(Skin.String(themedir), PlayStation) + !String.Contains(Skin.String(themedir), Destiny)">AlarmClock(CloseStartupsoundse,AlarmClock(playmeinloop,PlayMedia(special://skin/scripts/system.mp3),10:00,silent,loop),00:4,silent)</onload>
+		
+		
+		<onload condition="!Player.HasMedia + !Window.Previous(Startup) + Skin.HasSetting(syssound) + !String.Contains(Skin.String(themedir), Spiral) + !String.Contains(Skin.String(themedir), PlayStation) + !String.Contains(Skin.String(themedir), Destiny)">PlayMedia(special://skin/scripts/system.mp3)</onload> <!-- add after 1st onload play command force playback in loop at the time expiration -->
+		<onload condition="!Player.HasMedia + !Window.Previous(Startup) + Skin.HasSetting(syssound) + !String.Contains(Skin.String(themedir), Spiral) + !String.Contains(Skin.String(themedir), PlayStation) + !String.Contains(Skin.String(themedir), Destiny)">AlarmClock(playmeinloop,PlayMedia(special://skin/scripts/system.mp3),10:00,silent,loop)</onload> <!-- add after 1st onload play command force playback in loop at the time expiration -->
+
+
+	<onload condition="Window.Previous(Startup) + Skin.HasSetting(syssound) + String.Contains(Skin.String(themedir), Destiny)">AlarmClock(CloseStartupsounds,PlayMedia(special://skin/scripts/destiny.mp3),00:4,silent)</onload>
+		<onload condition="Window.Previous(Startup) + Skin.HasSetting(syssound) + String.Contains(Skin.String(themedir), Destiny)">AlarmClock(CloseStartupsoundse,AlarmClock(playmeinloop,PlayMedia(special://skin/scripts/destiny.mp3),7:36,silent,loop),00:4,silent)</onload>
+		
+		
+		<onload condition="!Player.HasMedia + !Window.Previous(Startup) + Skin.HasSetting(syssound) + String.Contains(Skin.String(themedir), Destiny)">PlayMedia(special://skin/scripts/destiny.mp3)</onload> <!-- add after 1st onload play command force playback in loop at the time expiration -->
+		<onload condition="!Player.HasMedia + !Window.Previous(Startup) + Skin.HasSetting(syssound) + String.Contains(Skin.String(themedir), Destiny)">AlarmClock(playmeinloop,PlayMedia(special://skin/scripts/destiny.mp3),7:36,silent,loop)</onload> <!-- add after 1st onload play command force playback in loop at the time expiration -->
+		
+			<onload condition="Window.Previous(Startup) + Skin.HasSetting(syssound) + String.Contains(Skin.String(themedir), Spiral)">AlarmClock(CloseStartupsounds,PlayMedia(special://skin/scripts/spiral.mp3),00:4,silent)</onload>
+		<onload condition="Window.Previous(Startup) + Skin.HasSetting(syssound) + String.Contains(Skin.String(themedir), Spiral)">AlarmClock(CloseStartupsoundse,AlarmClock(playmeinloop,PlayMedia(special://skin/scripts/spiral.mp3),4:13,silent,loop),00:4,silent)</onload>
+		
+		
+		<onload condition="!Player.HasMedia + !Window.Previous(Startup) + Skin.HasSetting(syssound) + String.Contains(Skin.String(themedir), Spiral)">PlayMedia(special://skin/scripts/spiral.mp3)</onload> <!-- add after 1st onload play command force playback in loop at the time expiration -->
+		<onload condition="!Player.HasMedia + !Window.Previous(Startup) + Skin.HasSetting(syssound) + String.Contains(Skin.String(themedir), Spiral)">AlarmClock(playmeinloop,PlayMedia(special://skin/scripts/spiral.mp3),4:13,silent,loop)</onload> <!-- add after 1st onload play command force playback in loop at the time expiration -->
+		
+			<onload condition="Window.Previous(Startup) + Skin.HasSetting(syssound) + String.Contains(Skin.String(themedir), Anniversary)">AlarmClock(CloseStartupsounds,PlayMedia(special://skin/scripts/PlayStation.wav),00:4,silent)</onload>
+		<onload condition="Window.Previous(Startup) + Skin.HasSetting(syssound) + String.Contains(Skin.String(themedir), Anniversary)">AlarmClock(CloseStartupsoundse,AlarmClock(playmeinloop,PlayMedia(special://skin/scripts/PlayStation.wav),8:50,silent,loop),00:4,silent)</onload>
+		
+		
+		<onload condition="!Player.HasMedia + !Window.Previous(Startup) + Skin.HasSetting(syssound) + String.Contains(Skin.String(themedir), Anniversary)">PlayMedia(special://skin/scripts/PlayStation.wav)</onload> <!-- add after 1st onload play command force playback in loop at the time expiration -->
+		<onload condition="!Player.HasMedia + !Window.Previous(Startup) + Skin.HasSetting(syssound) + String.Contains(Skin.String(themedir), Anniversary)">AlarmClock(playmeinloop,PlayMedia(special://skin/scripts/PlayStation.wav),8:50,silent,loop)</onload> <!-- add after 1st onload play command force playback in loop at the time expiration -->
+		
+		
+<onunload condition="Skin.HasSetting(syssound)">CancelAlarm(playmeinloop,true)</onunload> <!-- put after stop onunload, cancel loop on exit -->
+<onunload condition="Skin.HasSetting(syssound)">PlayerControl(Stop)</onunload>
+
+	<onload condition="!Window.Previous(startup) + String.IsEmpty(skin.string(booted))">Skin.SetString(booted, done)</onload>
+	<onload condition="Window.Previous(startup)">Skin.SetString(booted, )</onload>
+		<onfocus condition="Window.Previous(Startup)">AlarmClock(CloseStartups,Skin.SetString(booted, done),00:3,silent)</onfocus>
+<onload condition="!Skin.HasSetting(firsttime)">RunScript(special://skin/scripts/setup.py)</onload>
+
+	<onload condition="!Skin.HasSetting(firsttime) + !Skin.HasSetting(DisableFiles)">Skin.ToggleSetting(DisableFiles)</onload>
+		<onload condition="!Skin.HasSetting(firsttime) + !Skin.HasSetting(DisableFiles)">Skin.ToggleSetting(DisableFavs)</onload>
+	<onload condition="String.IsEqual(Skin.String(BackgroundImage),Custom) + !Skin.HasSetting(firsttime)">Skin.SetString(BackgroundImage, )</onload>
+                                        <onload condition="!Skin.HasSetting(BackgroundCustomColour) + !Skin.HasSetting(firsttime)">Skin.ToggleSetting(BackgroundCustomColour)</onload>
+                               <onload condition="!Skin.HasSetting(firsttime)">Skin.SetString(themedir, special://skin/THEMES/Flow/)</onload>
+															<onload condition="!Skin.HasSetting(firsttime)">Skin.SetString(color.background, FF001D66)</onload>
+															<onload condition="!Skin.HasSetting(firsttime)">Skin.SetString(color.tile, white)</onload>
+																																													<onload condition="!Skin.HasSetting(firsttime)">Skin.SetString(color.overlay, D9000000)</onload>
+															
+															<onload condition="!Skin.HasSetting(themes) + !Skin.HasSetting(firsttime)">Skin.ToggleSetting(themes)</onload>
+
+<onload condition="!Skin.HasSetting(firsttime)">Skin.ToggleSetting(FirstTime)</onload>
+	<onload condition="!Window.Previous(Startup)">XBMC.RunScript(script.favourites)</onload>
+	
+
+
+	<controls>
+
+
+   <control type="button" id="1">
+   <width>0</width>
+   <height>0</height>
+            <onclick>-</onclick>
+	<onfocus condition="Window.Previous(Startup)">AlarmClock(CloseStartup,Control.SetFocus(9000),00:2,silent)</onfocus>
+	<onfocus condition="!Window.Previous(Startup)">Control.SetFocus(9000)</onfocus>
+        </control>
+
+
+		<!-- Background -->
+			<control type="image">
+				<include>FullscreenDimensions</include>
+				<texture background="true" fallback="icons/bg.png">$VAR[OSMCBackgroundImage]</texture>
+<visible>!Skin.HasSetting(themes)</visible>
+			</control>
+						<control type="image">
+				<include>FullscreenDimensions</include>
+			<texture background="true">color_white.png</texture>
+			<colordiffuse>8C000000</colordiffuse>
+				<animation effect="fade" start="0" end="100" time="200" condition="$PARAM[animate]">WindowOpen</animation>
+				<animation effect="fade" start="100" end="0" time="200" delay="70" condition="$PARAM[animate]">WindowClose</animation>
+				<include>VisibleFadeAnimation</include>
+				<visible>!Skin.HasSetting(themes)</visible>
+			</control>
+						<control type="image">
+				<include>FullscreenDimensions</include>
+				<texture background="true">color_white.png</texture>
+				<colordiffuse>$INFO[Skin.String(color.background)]</colordiffuse>
+				<animation effect="fade" start="0" end="100" time="200" condition="$PARAM[animate]">WindowOpen</animation>
+				<animation effect="fade" start="100" end="0" time="200" delay="70" condition="$PARAM[animate]">WindowClose</animation>
+				<include>VisibleFadeAnimation</include>
+								<visible>Skin.HasSetting(themes)</visible>
+			</control>
+
+			<control type="image">
+
+															
+			<animation type="WindowOpen" condition="Window.Previous(Startup)">
+              <effect type="fade" start="0" end="100" time="500" tween="cubic" easing="inout" />
+                    </animation>
+				<include>FullscreenDimensions</include>
+			<texture background="true">$INFO[Skin.String(themedir)]bg.jpg</texture>
+				<animation effect="fade" start="0" end="100" time="200" condition="$PARAM[animate]">WindowOpen</animation>
+				<animation effect="fade" start="100" end="0" time="200" delay="70" condition="$PARAM[animate]">WindowClose</animation>
+				<include>VisibleFadeAnimation</include>
+				<visible>Skin.HasSetting(themes)</visible>
+			</control>
+			<control type="image">
+			<animation type="WindowOpen" condition="Window.Previous(Startup)">
+              <effect type="fade" start="0" end="100" time="500" tween="cubic" easing="inout" />
+                    </animation>
+				<include>FullscreenDimensions</include>
+			<texture background="true">$INFO[Skin.String(themedir)]bg2.jpg</texture>
+				<animation effect="fade" start="0" end="100" time="200" condition="$PARAM[animate]">WindowOpen</animation>
+				<animation effect="fade" start="100" end="0" time="200" delay="70" condition="$PARAM[animate]">WindowClose</animation>
+				<include>VisibleFadeAnimation</include>
+				<visible>Skin.HasSetting(themes) + Control.HasFocus(100)</visible>
+			</control>
+
+			<control type="multiimage" id="1">
+
+			<animation type="WindowOpen" condition="Window.Previous(Startup)">
+              <effect type="fade" start="0" end="100" time="500" tween="cubic" easing="inout" />
+                    </animation>
+                    						<animation type="conditional" condition="true">
+              <effect type="fade" start="100" end="40" time="1" tween="cubic" easing="inout" />
+                    </animation>
+				<animation effect="fade" start="0" end="100" time="200" condition="$PARAM[animate]">WindowOpen</animation>
+				<animation effect="fade" start="100" end="0" time="200" delay="70" condition="$PARAM[animate]">WindowClose</animation>
+				<include>VisibleFadeAnimation</include>
+      <description>My first slideshow control</description>
+      <left>0</left>
+      <top>0</top>
+      <width>1920</width>
+      <height>1080</height>
+      <imagepath>$INFO[Skin.String(themedir)]LIVE</imagepath>
+      <timeperimage>30</timeperimage>
+      <fadetime>0</fadetime>
+      <pauseatend>0</pauseatend>
+      <randomize>false</randomize>
+      <loop>yes</loop>
+      <aspectratio>scale</aspectratio>
+				<visible>Skin.HasSetting(themes) + String.Contains(Skin.String(themedir), Particles)</visible>
+</control>
+
+<control type="multiimage" id="1">
+			<animation type="WindowOpen" condition="Window.Previous(Startup)">
+              <effect type="fade" start="0" end="100" time="500" tween="cubic" easing="inout" />
+                    </animation>
+				<animation effect="fade" start="0" end="100" time="200" condition="$PARAM[animate]">WindowOpen</animation>
+				<animation effect="fade" start="100" end="0" time="200" delay="70" condition="$PARAM[animate]">WindowClose</animation>
+				<include>VisibleFadeAnimation</include>
+      <description>My first slideshow control</description>
+      <left>0</left>
+      <top>0</top>
+      <width>1920</width>
+      <height>1080</height>
+      <imagepath>$INFO[Skin.String(themedir)]LIVE</imagepath>
+      <timeperimage>35</timeperimage>
+      <fadetime>0</fadetime>
+      <pauseatend>0</pauseatend>
+      <randomize>false</randomize>
+      <loop>yes</loop>
+      <aspectratio>stretch</aspectratio>
+				<visible>Skin.HasSetting(themes) + String.Contains(Skin.String(themedir), Crash Bandicoot) | String.Contains(Skin.String(themedir), WW2) | String.Contains(Skin.String(themedir), Battlefield) | String.Contains(Skin.String(themedir), The River)</visible>
+</control>
+
+<control type="multiimage" id="1">
+			<animation type="WindowOpen" condition="Window.Previous(Startup)">
+              <effect type="fade" start="0" end="100" time="500" tween="cubic" easing="inout" />
+                    </animation>
+				<animation effect="fade" start="0" end="100" time="200" condition="$PARAM[animate]">WindowOpen</animation>
+				<animation effect="fade" start="100" end="0" time="200" delay="70" condition="$PARAM[animate]">WindowClose</animation>
+				<include>VisibleFadeAnimation</include>
+      <description>My first slideshow control</description>
+      <left>0</left>
+      <top>0</top>
+      <width>1920</width>
+      <height>1080</height>
+      <imagepath>$INFO[Skin.String(themedir)]LIVE</imagepath>
+      <timeperimage>20</timeperimage>
+      <fadetime>3000</fadetime>
+      <pauseatend>0</pauseatend>
+      <randomize>true</randomize>
+      <loop>yes</loop>
+      <aspectratio>stretch</aspectratio>
+				<visible>Skin.HasSetting(themes) + String.Contains(Skin.String(themedir), Cubes)</visible>
+</control>
+						<control type="image">
+
+									<animation type="Conditional" condition="true" reversible="false">
+			              <effect type="fade" start="100" end="90" time="1" tween="cubic" easing="inout" />
+                    </animation>
+                    
+												<animation type="WindowOpen" condition="Window.Previous(Startup)">
+              <effect type="fade" start="0" end="100" time="700" delay="1000" tween="cubic" easing="inout" />
+                    </animation>
+                    
+
+			<animation type="Conditional" condition="Control.HasFocus(100)" reversible="false">
+			              <effect type="fade" start="0" end="100" time="600" tween="cubic" easing="inout" />
+                    </animation>
+                    			<animation type="Conditional" condition="!Control.HasFocus(100)" reversible="false">
+			              <effect type="fade" start="100" end="0" time="600" tween="cubic" easing="inout" />
+                    </animation>
+
+  <left>50</left>
+      <top>30</top>
+      <width>958</width>
+      <height>954</height>
+			<texture background="true" condition="!Control.HasFocus(100)">$INFO[Skin.String(themedir)]clock/bg.png</texture>
+				<animation effect="fade" start="0" end="100" time="200" condition="$PARAM[animate]">WindowOpen</animation>
+				<animation effect="fade" start="100" end="0" time="200" delay="70" condition="$PARAM[animate]">WindowClose</animation>
+				<include>VisibleFadeAnimation</include>
+				<visible>Skin.HasSetting(themes) + String.Contains(Skin.String(themedir), Heroes)</visible>
+			</control>
+			
+						<control type="image">
+
+								<animation type="Conditional" condition="true" reversible="false">
+			              <effect type="rotate" start="0" end="-6" time="1" tween="sine" easing="out" center="auto"/>
+                                    
+                    </animation>
+                    
+						<animation type="Conditional" condition="Integer.IsGreaterOrEqual(System.Time(mm),0) + !Integer.IsGreaterOrEqual(System.Time(mm),15)" reversible="false">
+			              <effect type="zoom" start="100" end="80" time="500" tween="sine" easing="out" center="auto"/>
+                    </animation>
+                    
+                    						<animation type="Conditional" condition="Integer.IsGreaterOrEqual(System.Time(mm),15) + !Integer.IsGreaterOrEqual(System.Time(mm),30)" reversible="false">
+			              <effect type="zoom" start="100" end="90" time="500" tween="sine" easing="out" center="auto"/>
+                    </animation>
+                    
+                    		<animation type="Conditional" condition="Integer.IsGreaterOrEqual(System.Time(mm),30) + !Integer.IsGreaterOrEqual(System.Time(mm),45)" reversible="false">
+			              <effect type="zoom" start="100" end="100" time="500" tween="sine" easing="out" center="auto"/>
+                    </animation>
+                    
+                    		<animation type="Conditional" condition="Integer.IsGreaterOrEqual(System.Time(mm),45) + !Integer.IsGreaterOrEqual(System.Time(mm),59)" reversible="false">
+			              <effect type="zoom" start="100" end="106" time="500" tween="sine" easing="out" center="auto"/>
+                    </animation>
+												
+									<animation type="Conditional" condition="true" reversible="false">
+			              <effect type="fade" start="100" end="90" time="1" tween="cubic" easing="inout" />
+                    </animation>
+                    
+												<animation type="WindowOpen" condition="Window.Previous(Startup)">
+              <effect type="fade" start="0" end="100" time="700" delay="1000" tween="cubic" easing="inout" />
+                    </animation>
+                    
+
+			<animation type="Conditional" condition="Control.HasFocus(100)" reversible="false">
+			              <effect type="fade" start="0" end="100" time="600" tween="cubic" easing="inout" />
+                    </animation>
+                    			<animation type="Conditional" condition="!Control.HasFocus(100)" reversible="false">
+			              <effect type="fade" start="100" end="0" time="600" tween="cubic" easing="inout" />
+                    </animation>
+
+  <left>50</left>
+      <top>30</top>
+      <width>958</width>
+      <height>954</height>
+			<texture background="true" condition="!Control.HasFocus(100)">$INFO[Skin.String(themedir)]clock/full.png</texture>
+				<animation effect="fade" start="0" end="100" time="200" condition="$PARAM[animate]">WindowOpen</animation>
+				<animation effect="fade" start="100" end="0" time="200" delay="70" condition="$PARAM[animate]">WindowClose</animation>
+				<include>VisibleFadeAnimation</include>
+				<visible>Skin.HasSetting(themes) + String.Contains(Skin.String(themedir), Heroes)</visible>
+			</control>
+			
+						<control type="image">
+						
+													<animation type="Conditional" condition="Integer.IsGreaterOrEqual(System.Time(mm),0) + !Integer.IsGreaterOrEqual(System.Time(mm),15)" reversible="false">
+			              <effect type="zoom" start="100" end="80" time="500" tween="sine" easing="out" center="auto"/>
+                    </animation>
+                    
+                    						<animation type="Conditional" condition="Integer.IsGreaterOrEqual(System.Time(mm),15) + !Integer.IsGreaterOrEqual(System.Time(mm),30)" reversible="false">
+			              <effect type="zoom" start="100" end="90" time="500" tween="sine" easing="out" center="auto"/>
+                    </animation>
+                    
+                    		<animation type="Conditional" condition="Integer.IsGreaterOrEqual(System.Time(mm),30) + !Integer.IsGreaterOrEqual(System.Time(mm),45)" reversible="false">
+			              <effect type="zoom" start="100" end="100" time="500" tween="sine" easing="out" center="auto"/>
+                    </animation>
+                    
+                    		<animation type="Conditional" condition="Integer.IsGreaterOrEqual(System.Time(mm),45) + !Integer.IsGreaterOrEqual(System.Time(mm),59)" reversible="false">
+			              <effect type="zoom" start="100" end="106" time="500" tween="sine" easing="out" center="auto"/>
+                    </animation>
+
+            					<animation type="Conditional" condition="true" reversible="false">
+			              <effect type="rotate" start="0" end="-6" time="1" tween="sine" easing="out" center="auto"/>
+                                    
+                    </animation>
+                    
+												<animation type="WindowOpen" condition="Window.Previous(Startup)">
+              <effect type="fade" start="0" end="100" time="700" delay="1000" tween="cubic" easing="inout" />
+                    </animation>
+                    
+
+			<animation type="Conditional" condition="Control.HasFocus(100)" reversible="false">
+			              <effect type="fade" start="0" end="100" time="600" tween="cubic" easing="inout" />
+                    </animation>
+                    			<animation type="Conditional" condition="!Control.HasFocus(100)" reversible="false">
+			              <effect type="fade" start="100" end="0" time="600" tween="cubic" easing="inout" />
+                    </animation>
+
+  <left>50</left>
+      <top>30</top>
+      <width>958</width>
+      <height>954</height>
+			<texture background="true" condition="!Control.HasFocus(100)">$INFO[Skin.String(themedir)]clock/$INFO[System.Time(hh)].png</texture>
+				<animation effect="fade" start="0" end="100" time="200" condition="$PARAM[animate]">WindowOpen</animation>
+				<animation effect="fade" start="100" end="0" time="200" delay="70" condition="$PARAM[animate]">WindowClose</animation>
+				<include>VisibleFadeAnimation</include>
+				<visible>Skin.HasSetting(themes) + String.Contains(Skin.String(themedir), Heroes)</visible>
+			</control>
+			
+
+			
+			<control type="image">
+			
+						<animation type="WindowOpen" condition="Window.Previous(startup)">
+              <effect type="fade" start="0" end="100" time="1500" delay="1000" tween="cubic" easing="inout" />
+                            <effect type="slide" start="0,-450" end="0,0" time="2950" delay="2000" tween="cubic" easing="inout" />
+               <effect type="zoom" start="370" end="100" time="2950" delay="1000" tween="cubic" easing="inout" center="460,405"/>
+                    </animation>
+                    
+												<animation type="Conditional" condition="!System.Idletime(10)" reversible="false">
+ <effect type="fade" start="0" end="100" time="500" tween="cubic" easing="inout" center="auto"/>
+                    </animation>
+                    									<animation type="Conditional" condition="System.Idletime(10)" reversible="false">
+ <effect type="fade" start="100" end="0" time="500" tween="cubic" easing="inout" center="auto"/>
+                    </animation>
+                    
+			<animation type="Conditional" condition="Control.HasFocus(100)" reversible="false">
+ <effect type="zoom" start="150" end="70" time="950" tween="cubic" easing="inout" center="460,405"/>
+                    </animation>
+                    			<animation type="Conditional" condition="!Control.HasFocus(100)" reversible="false">
+ <effect type="zoom" start="75" end="150" time="950" tween="cubic" easing="inout" center="460,405"/>
+                    </animation>
+						<animation effect="rotate" end="-360" center="auto" time="4600" loop="true" condition="!Control.HasFocus(100)" reversible="false">Conditional</animation>
+												<animation effect="rotate" end="-360" center="auto" time="3500" loop="true" condition="Control.HasFocus(100)" reversible="false">Conditional</animation>
+  <left>306</left>
+      <top>300</top>
+      <width>500</width>
+      <height>500</height>
+			<texture background="true" condition="!Control.HasFocus(100)">$INFO[Skin.String(themedir)]dots4.png</texture>
+				<animation effect="fade" start="0" end="100" time="200" condition="$PARAM[animate]">WindowOpen</animation>
+				<animation effect="fade" start="100" end="0" time="200" delay="70" condition="$PARAM[animate]">WindowClose</animation>
+				<include>VisibleFadeAnimation</include>
+				<visible>Skin.HasSetting(themes) + String.Contains(Skin.String(themedir), Heroes)</visible>
+			</control>
+			
+			
+			
+						<control type="image">
+						<animation type="WindowOpen" condition="Window.Previous(startup)">
+              <effect type="fade" start="0" end="100" time="1500" delay="1000" tween="cubic" easing="inout" />
+                            <effect type="slide" start="0,-450" end="0,0" time="2950" delay="2000" tween="cubic" easing="inout" />
+               <effect type="zoom" start="370" end="100" time="2950" delay="1000" tween="cubic" easing="inout" center="460,405"/>
+                    </animation>
+                    
+									<animation type="Conditional" condition="System.Idletime(10)" reversible="false">
+ <effect type="fade" start="0" end="100" time="500" tween="cubic" easing="inout" center="auto"/>
+                    </animation>
+                    									<animation type="Conditional" condition="!System.Idletime(10)" reversible="false">
+ <effect type="fade" start="100" end="0" time="500" tween="cubic" easing="inout" center="auto"/>
+                    </animation>
+			<animation type="Conditional" condition="Control.HasFocus(100)" reversible="false">
+ <effect type="zoom" start="150" end="75" time="950" tween="cubic" easing="inout" center="460,405"/>
+                    </animation>
+                    			<animation type="Conditional" condition="!Control.HasFocus(100)" reversible="false">
+ <effect type="zoom" start="75" end="150" time="950" tween="cubic" easing="inout" center="460,405"/>
+                    </animation>
+						<animation effect="rotate" end="-360" center="auto" time="3600" loop="true" condition="!Control.HasFocus(100)" reversible="false">Conditional</animation>
+												<animation effect="rotate" end="-360" center="auto" time="2500" loop="true" condition="Control.HasFocus(100)" reversible="false">Conditional</animation>
+  <left>304</left>
+      <top>300</top>
+      <width>500</width>
+      <height>500</height>
+			<texture background="true" condition="!Control.HasFocus(100)">$INFO[Skin.String(themedir)]dots2.png</texture>
+				<animation effect="fade" start="0" end="100" time="200" condition="$PARAM[animate]">WindowOpen</animation>
+				<animation effect="fade" start="100" end="0" time="200" delay="70" condition="$PARAM[animate]">WindowClose</animation>
+				<include>VisibleFadeAnimation</include>
+				<visible>Skin.HasSetting(themes) + String.Contains(Skin.String(themedir), Heroes)</visible>
+			</control>
+			
+
+
+
+
+			<control type="image">
+				<include>FullscreenDimensions</include>
+			<texture background="true">color_white.png</texture>
+			<colordiffuse>73000000</colordiffuse>
+				<animation effect="fade" start="0" end="100" time="200" condition="$PARAM[animate]">WindowOpen</animation>
+				<animation effect="fade" start="100" end="0" time="200" delay="70" condition="$PARAM[animate]">WindowClose</animation>
+				<include>VisibleFadeAnimation</include>
+				<visible>Skin.HasSetting(themes) + !String.Contains(Skin.String(themedir), PlayStation) + !String.Contains(Skin.String(themedir), Spiral) + !String.Contains(Skin.String(themedir), Particles) + !String.Contains(Skin.String(themedir), Heroes)</visible>
+			</control>
+			
+						<control type="image">
+				<include>FullscreenDimensions</include>
+			<texture background="true">color_white.png</texture>
+			<colordiffuse>26000000</colordiffuse>
+				<animation effect="fade" start="0" end="100" time="200" condition="$PARAM[animate]">WindowOpen</animation>
+				<animation effect="fade" start="100" end="0" time="200" delay="70" condition="$PARAM[animate]">WindowClose</animation>
+				<include>VisibleFadeAnimation</include>
+				<visible>Skin.HasSetting(themes) + String.Contains(Skin.String(themedir), Heroes) + Control.HasFocus(100)</visible>
+			</control>
+
+			<control type="image">
+			<animation type="WindowOpen" condition="Window.Previous(Startup)">
+              <effect type="fade" start="0" end="100" time="500" tween="cubic" easing="inout" />
+                    </animation>
+				<include>FullscreenDimensions</include>
+<animation type="Conditional" condition="Control.HasFocus(100)">
+                        <effect type="zoom" start="100" end="120" time="300" tween="cubic" easing="inout" center="auto"/>
+                    </animation>
+                    
+
+			<texture background="true">$INFO[Skin.String(themedir)]background.png</texture>
+				<animation effect="fade" start="0" end="100" time="200" condition="$PARAM[animate]">WindowOpen</animation>
+				<animation effect="fade" start="100" end="0" time="200" delay="70" condition="$PARAM[animate]">WindowClose</animation>
+				<include>VisibleFadeAnimation</include>
+				<aspectratio>scale</aspectratio>
+				<visible>Skin.HasSetting(themes) + String.Contains(Skin.String(themedir), Spiral)</visible>
+			</control>
+
+
+			<control type="image">
+			<animation type="WindowOpen" condition="Window.Previous(Startup)">
+              <effect type="fade" start="0" end="100" time="500" tween="cubic" easing="inout" />
+                    </animation>
+			<posx>580</posx>
+			<posy>420</posy>
+			<width>200</width>
+			<height>200</height>
+<animation type="Conditional" condition="Control.HasFocus(100)">
+                        <effect type="zoom" start="100" end="120" time="300" tween="cubic" easing="inout" center="900,500"/>
+                    </animation>
+                    
+
+			<texture background="true">$INFO[Skin.String(themedir)]turbine-spinningA.png</texture>
+				<animation effect="fade" start="0" end="100" time="200" condition="$PARAM[animate]">WindowOpen</animation>
+				<animation effect="fade" start="100" end="0" time="200" delay="70" condition="$PARAM[animate]">WindowClose</animation>
+			
+			<animation effect="rotate" end="-360" center="auto" time="18000" loop="true" condition="true">Conditional</animation>
+				<include>VisibleFadeAnimation</include>
+				<aspectratio>scale</aspectratio>
+				<visible>Skin.HasSetting(themes) + String.Contains(Skin.String(themedir), Spiral)</visible>
+			</control>
+			
+						<control type="image">
+				<include>FullscreenDimensions</include>
+			<texture background="true">color_white.png</texture>
+			<colordiffuse>33000000</colordiffuse>
+				<animation effect="fade" start="0" end="100" time="200" condition="$PARAM[animate]">WindowOpen</animation>
+				<animation effect="fade" start="100" end="0" time="200" delay="70" condition="$PARAM[animate]">WindowClose</animation>
+				<include>VisibleFadeAnimation</include>
+				<visible>Skin.HasSetting(themes) + String.Contains(Skin.String(themedir), PlayStation) + Control.HasFocus(100)</visible>
+			</control>
+			
+									<control type="image">
+				<include>FullscreenDimensions</include>
+			<texture background="true">color_white.png</texture>
+			<colordiffuse>1A000000</colordiffuse>
+				<animation effect="fade" start="0" end="100" time="200" condition="$PARAM[animate]">WindowOpen</animation>
+				<animation effect="fade" start="100" end="0" time="200" delay="70" condition="$PARAM[animate]">WindowClose</animation>
+				<include>VisibleFadeAnimation</include>
+				<visible>Skin.HasSetting(themes) + String.Contains(Skin.String(themedir), PlayStation) + !Control.HasFocus(100)</visible>
+			</control>
+			
+									<control type="image">
+				<include>FullscreenDimensions</include>
+			<texture background="true">color_white.png</texture>
+			<colordiffuse>1A000000</colordiffuse>
+				<animation effect="fade" start="0" end="100" time="200" condition="$PARAM[animate]">WindowOpen</animation>
+				<animation effect="fade" start="100" end="0" time="200" delay="70" condition="$PARAM[animate]">WindowClose</animation>
+				<include>VisibleFadeAnimation</include>
+				<visible>Skin.HasSetting(themes) + String.Contains(Skin.String(themedir), Spiral)</visible>
+			</control>
+			
+						<control type="image">
+
+				<include>FullscreenDimensions</include>
+				<texture background="true">color_white.png</texture>
+				<colordiffuse>$INFO[Skin.String(color.background)]</colordiffuse>
+				<animation effect="fade" start="0" end="100" time="200" condition="$PARAM[animate]">WindowOpen</animation>
+				<animation effect="fade" start="100" end="0" time="200" delay="70" condition="$PARAM[animate]">WindowClose</animation>
+				<include>VisibleFadeAnimation</include>
+				<visible>!Window.Is(visualisation) | [Window.Is(visualisation) + [Player.ShowInfo | Window.IsActive(musicosd)]]</visible>
+				<visible>Skin.String(color.background) + Skin.HasSetting(BackgroundCustomColour) + String.Contains(Skin.String(themedir), Flow) | String.Contains(Skin.String(themedir), Dual) + Skin.HasSetting(themes)</visible>
+			</control>
+			<control type="image" id="10000">
+
+<animation type="WindowOpen" condition="Window.Previous(Startup)">
+              <effect type="fade" start="0" end="100" time="2000" tween="cubic" easing="inout" />
+                    </animation>
+
+<animation type="conditional" condition="true">
+              <effect type="fade" start="100" end="9" time="1" tween="cubic" easing="inout" />
+                    </animation>
+
+<visible>String.Contains(Skin.String(themedir), Flow) + !String.IsEqual(Skin.String(BackgroundImage),Custom) + Skin.HasSetting(themes)</visible>
+
+
+<animation type="Conditional" condition="true" loop="true">
+              <effect type="zoom" start="100" end="120" time="7000" tween="cubic" easing="inout"/>
+              <effect type="zoom" start="120" end="100" time="10000" tween="cubic" easing="inout"/>
+              <effect type="rotate" start="-5" end="5" time="17000" tween="cubic" easing="inout"/>
+              <effect type="rotate" start="5" end="-5" time="24000" tween="cubic" easing="inout"/>
+                    </animation>
+
+
+<animation type="Conditional" condition="true">
+              <effect type="rotate" start="0" end="-40" time="2400" tween="cubic" easing="inout"/>
+                    </animation>
+
+<posx>-50</posx>
+			<posy>-150</posy>
+<width>1920</width>
+<height>400</height>
+				<texture background="true" fallback="transparent.png">wave/body-wave5.png</texture>
+				<fadetime>400</fadetime>
+				<animation effect="fade" start="0" end="100" time="100" delay="70">WindowOpen</animation>
+				<animation effect="fade" start="100" end="0" time="100">WindowClose</animation>
+
+
+
+			</control>
+			
+			
+						<control type="image" id="10000">
+
+<animation type="WindowOpen" condition="Window.Previous(Startup)">
+              <effect type="fade" start="0" end="100" time="2000" tween="cubic" easing="inout" />
+                    </animation>
+
+<animation type="conditional" condition="true">
+              <effect type="fade" start="100" end="4" time="1" tween="cubic" easing="inout" />
+                    </animation>
+
+<visible>String.Contains(Skin.String(themedir), Flow) + !String.IsEqual(Skin.String(BackgroundImage),Custom) + Skin.HasSetting(themes)</visible>
+
+
+<animation type="Conditional" condition="true" loop="true">
+              <effect type="zoom" start="100" end="120" time="12000" tween="cubic" easing="inout"/>
+              <effect type="zoom" start="120" end="100" time="14000" tween="cubic" easing="inout"/>
+              <effect type="rotate" start="-5" end="10" time="30000" tween="cubic" easing="inout"/>
+              <effect type="rotate" start="10" end="-5" time="42000" tween="cubic" easing="inout"/>
+                    </animation>
+
+
+
+
+<posx>-50</posx>
+			<posy>-150</posy>
+<width>1920</width>
+<height>400</height>
+				<texture background="true" fallback="transparent.png">wave/body-wave6.png</texture>
+				<fadetime>400</fadetime>
+				<animation effect="fade" start="0" end="100" time="100" delay="70">WindowOpen</animation>
+				<animation effect="fade" start="100" end="0" time="100">WindowClose</animation>
+
+
+
+			</control>
+
+			
+						<control type="image" id="10000">
+
+<animation type="WindowOpen" condition="Window.Previous(Startup)">
+              <effect type="fade" start="0" end="100" time="2000" tween="cubic" easing="inout" />
+                    </animation>
+
+<visible>String.Contains(Skin.String(themedir), Dual) + !String.IsEqual(Skin.String(BackgroundImage),Custom) + Skin.HasSetting(themes)</visible>
+<animation type="Conditional" condition="true" loop="true">
+              <effect type="zoom" start="100" end="120" time="3000" tween="cubic" easing="inout"/>
+              <effect type="zoom" start="120" end="100" time="6000" tween="cubic" easing="inout"/>
+              <effect type="rotate" start="10" end="-5" time="7000" tween="cubic" easing="inout"/>
+              <effect type="rotate" start="-5" end="10" time="14000" tween="cubic" easing="inout"/>
+                    </animation>
+<animation type="Conditional" condition="Control.HasFocus(100)">
+         <effect type="slide" start="0,0" end="-250,250" time="1000" tween="cubic" easing="inout"/>
+         <effect type="zoom" start="100" end="110" time="1000" tween="cubic" easing="inout"/>
+              <effect type="rotate" start="0" end="20" time="1000" tween="cubic" easing="inout"/>
+                    </animation>
+
+<animation type="Conditional" condition="true">
+              <effect type="rotate" start="0" end="-5" time="2000" tween="cubic" easing="inout"/>
+                    </animation>
+
+<posx>-150</posx>
+			<posy>150</posy>
+<width>1920</width>
+<height>1080</height>
+				<texture background="true" fallback="transparent.png">wave/flow.png</texture>
+				<fadetime>400</fadetime>
+				<animation effect="fade" start="0" end="100" time="100" delay="70">WindowOpen</animation>
+				<animation effect="fade" start="100" end="0" time="100">WindowClose</animation>
+
+
+
+			</control>
+			
+
+			
+						<control type="image">
+				<include>FullscreenDimensions</include>
+			<texture background="true">color_white.png</texture>
+			<colordiffuse>1A000000</colordiffuse>
+				<animation effect="fade" start="0" end="100" time="200" condition="$PARAM[animate]">WindowOpen</animation>
+				<animation effect="fade" start="100" end="0" time="200" delay="70" condition="$PARAM[animate]">WindowClose</animation>
+				<include>VisibleFadeAnimation</include>
+				<visible>Skin.HasSetting(themes) + !String.Contains(Skin.String(themedir), Dual) + !String.Contains(Skin.String(themedir), Flow) + System.InternetState + !Container(9000).HasFocus(1) + !Container(9000).HasFocus(2) + !Container(9000).HasFocus(3) + !Container(9000).HasFocus(4) + !Container(9000).HasFocus(5) + !Container(9000).HasFocus(6) + !Container(9000).HasFocus(7) + !Container(9000).HasFocus(8) + !Container(9000).HasFocus(9) + !Container(9000).HasFocus(500) + !Container(9000).HasFocus(700) + Control.HasFocus(200)</visible>
+			</control>
+			
+
+			<control type="image">
+			<posx>100</posx>
+			<posy>-100</posy>
+			<width>200</width>
+			<height>200</height>
+
+                    			<animation type="WindowOpen" condition="Window.Previous(Startup)">
+              <effect type="fade" start="0" end="100" time="500" tween="cubic" easing="inout" />
+                    </animation>
+
+			<texture background="true">$INFO[Skin.String(themedir)]circle.png</texture>
+				<animation effect="fade" start="0" end="100" time="200" condition="$PARAM[animate]">WindowOpen</animation>
+				<animation effect="fade" start="100" end="0" time="200" delay="70" condition="$PARAM[animate]">WindowClose</animation>
+    <animation effect="slide" start="0,-100" end="0,1300" time="12000" delay="1300" reversible="false" loop="true" condition="true">Conditional</animation>
+    <animation effect="slide" start="40,0" end="-30,0" time="4000" delay="200" reversible="false" pulse="true" condition="true">Conditional</animation>
+				<include>VisibleFadeAnimation</include>
+				<aspectratio>scale</aspectratio>
+				<visible>Skin.HasSetting(themes) + String.Contains(Skin.String(themedir), PlayStation)</visible>
+			</control>
+
+
+
+
+			<control type="image">
+			<posx>600</posx>
+			<posy>-100</posy>
+			<width>200</width>
+			<height>200</height>
+			<animation type="WindowOpen" condition="Window.Previous(Startup)">
+              <effect type="fade" start="0" end="100" time="500" tween="cubic" easing="inout" />
+                    </animation>
+
+
+			<texture background="true">$INFO[Skin.String(themedir)]triangle.png</texture>
+				<animation effect="fade" start="0" end="100" time="200" condition="$PARAM[animate]">WindowOpen</animation>
+				<animation effect="fade" start="100" end="0" time="200" delay="70" condition="$PARAM[animate]">WindowClose</animation>
+    <animation effect="slide" start="0,-100" end="0,1300" time="12000" delay="3300" reversible="false" loop="true" condition="true">Conditional</animation>
+    <animation effect="slide" start="40,0" end="-20,0" time="3200" delay="300" reversible="false" pulse="true" condition="true">Conditional</animation>
+				<include>VisibleFadeAnimation</include>
+				<aspectratio>stetch</aspectratio>
+				<visible>Skin.HasSetting(themes) + String.Contains(Skin.String(themedir), PlayStation)</visible>
+			</control>
+			
+			
+
+			
+									<control type="image">
+			<posx>1200</posx>
+			<posy>-100</posy>
+			<width>200</width>
+			<height>200</height>
+			<animation type="WindowOpen" condition="Window.Previous(Startup)">
+              <effect type="fade" start="0" end="100" time="500" tween="cubic" easing="inout" />
+                    </animation>
+                    
+
+			<texture background="true">$INFO[Skin.String(themedir)]square.png</texture>
+				<animation effect="fade" start="0" end="100" time="200" condition="$PARAM[animate]">WindowOpen</animation>
+				<animation effect="fade" start="100" end="0" time="200" delay="70" condition="$PARAM[animate]">WindowClose</animation>
+    <animation effect="slide" start="0,-100" end="0,1300" time="12000" delay="6300" reversible="false" loop="true" condition="true">Conditional</animation>
+    <animation effect="slide" start="20,0" end="-60,0" time="5300" delay="300" reversible="false" pulse="true" condition="true">Conditional</animation>
+				<include>VisibleFadeAnimation</include>
+				<aspectratio>scale</aspectratio>
+				<visible>Skin.HasSetting(themes) + String.Contains(Skin.String(themedir), PlayStation)</visible>
+			</control>
+			
+
+
+												<control type="image">
+			<posx>1700</posx>
+			<posy>-100</posy>
+			<width>200</width>
+			<height>200</height>
+			<animation type="WindowOpen" condition="Window.Previous(Startup)">
+              <effect type="fade" start="0" end="100" time="500" tween="cubic" easing="inout" />
+                    </animation>
+                    
+
+			<texture background="true">$INFO[Skin.String(themedir)]cross.png</texture>
+				<animation effect="fade" start="0" end="100" time="200" condition="$PARAM[animate]">WindowOpen</animation>
+				<animation effect="fade" start="100" end="0" time="200" delay="70" condition="$PARAM[animate]">WindowClose</animation>
+    <animation effect="slide" start="0,-100" end="0,1300" time="12000" delay="9300" reversible="false" loop="true" condition="true">Conditional</animation>
+    <animation effect="slide" start="40,0" end="-30,0" time="4000" delay="200" reversible="false" pulse="true" condition="true">Conditional</animation>
+				<include>VisibleFadeAnimation</include>
+				<aspectratio>scale</aspectratio>
+				<visible>Skin.HasSetting(themes) + String.Contains(Skin.String(themedir), PlayStation)</visible>
+			</control>
+
+		<!-- Home layout -->
+		<control type="group">
+			<include>WindowFadeAnimation</include>
+			<include>HomeOSMC</include>
+		</control>
+
+
+<control type="group">
+<animation type="Conditional" condition="Control.HasFocus(300) | Control.HasFocus(400) | Control.HasFocus(200) + !Container(9000).HasFocus(6) + !Container(9000).HasFocus(500) + !Container(9000).HasFocus(700)">
+                        <effect type="fade" start="100" end="0" time="300" tween="cubic" easing="inout" />
+                        <effect type="slide" start="0,0" end="0,-250" time="300" tween="circle" easing="inout" />
+                    </animation>
+                    
+		<!-- Time -->
+				<control type="label">
+
+<animation type="WindowOpen" condition="Window.Previous(Startup)">
+              <effect type="fade" start="0" end="100" time="300" tween="cubic" easing="inout" delay="3600"/>
+                    </animation>
+
+
+					<left>1700</left>
+					<top>95</top>
+					<width>1400</width>
+					<height>33</height>
+					<label>$INFO[System.Time]</label>
+					<font>Font30</font>
+					<textcolor>DialogColor1</textcolor>
+			<include>WindowFadeAnimation</include>
+				</control>
+
+		<!-- Logo -->
+		<control type="image">
+<animation type="WindowOpen" condition="Window.Previous(Startup)">
+              <effect type="fade" start="0" end="100" time="100" delay="2000"tween="cubic" easing="inout"/>
+
+                        <effect type="zoom" start="65" end="100" time="1000" delay="3200" tween="cubic" easing="inout" center="650,-50"/>
+                    </animation>
+<animation type="Conditional" condition="Control.HasFocus(100)" reversible="false">
+      <effect type="fade" start="100" end="100" time="450"  tween="circle" easing="inout" />
+                        <effect type="zoom" start="100" end="170" time="420"  tween="circle" easing="inout" center="867,-760"/>
+                                                 <effect type="fade" start="100" end="0" time="550" delay="150" tween="circle" easing="inout" />
+                    </animation>
+                    <animation type="Conditional" condition="!Control.HasFocus(100)" reversible="false">
+      <effect type="fade" start="80" end="100" time="450" tween="circle" easing="inout" />
+                        <effect type="zoom" start="170" end="100" time="450"  tween="circle" easing="inout" center="867,-760"/>
+                    </animation>
+
+			<left>953</left>
+			<top>80</top>
+			<width>60</width>
+			<height>60</height>
+			<texture fallback="avatars/Defaultavatar.png">$INFO[System.ProfileThumb]</texture>
+			<include>WindowFadeAnimation</include>
+		</control>
+				<control type="label">
+<animation type="WindowOpen" condition="Window.Previous(Startup)">
+              <effect type="fade" start="0" end="100" time="300" tween="cubic" easing="inout" delay="3600"/>
+                    </animation>
+<animation type="Conditional" condition="Control.HasFocus(100)" reversible="false">
+                        <effect type="fade" start="100" end="0" time="150" tween="cubic" easing="inout" />
+                        <effect type="slide" start="0,0" end="1200,750" time="450" tween="circle" easing="inout" />
+                    </animation>
+<animation type="Conditional" condition="!Control.HasFocus(100)" reversible="false">
+                        <effect type="fade" start="0" end="100" time="1050" tween="cubic" easing="inout" />
+                        <effect type="slide" start="1200,750" end="0,0" time="450" tween="circle" easing="inout" />
+                    </animation>
+
+					<left>1025</left>
+					<top>95</top>
+					<width>1400</width>
+					<height>33</height>
+					<label>$INFO[System.ProfileName]</label>
+					<font>Font25</font>
+					<textcolor>DialogColor1</textcolor>
+			<include>WindowFadeAnimation</include>
+				</control>
+				
+								<control type="label">
+<animation type="WindowOpen" condition="Window.Previous(Startup)">
+              <effect type="fade" start="0" end="100" time="300" tween="cubic" easing="inout" delay="3600"/>
+                    </animation>
+<animation type="Conditional" condition="Control.HasFocus(100)" reversible="false">
+                        <effect type="fade" start="100" end="0" time="150" tween="cubic" easing="inout" />
+                        <effect type="slide" start="0,0" end="1200,750" time="450" tween="circle" easing="inout" />
+                    </animation>
+<animation type="Conditional" condition="!Control.HasFocus(100)" reversible="false">
+                        <effect type="fade" start="0" end="100" time="1050" tween="cubic" easing="inout" />
+                        <effect type="slide" start="1200,750" end="0,0" time="450" tween="circle" easing="inout" />
+                    </animation>
+
+					<left>1435</left>
+					<top>95</top>
+					<width>1400</width>
+					<height>33</height>
+					<label>$INFO[Container(9000).NumItems]</label>
+					<font>Font25</font>
+					<textcolor>DialogColor1</textcolor>
+			<include>WindowFadeAnimation</include>
+				</control>
+				
+		
+
+		<!-- RSS -->
+
+		<control type="image">
+<animation type="WindowOpen" condition="Window.Previous(Startup)">
+              <effect type="fade" start="0" end="100" time="100" delay="2000"tween="cubic" easing="inout"/>
+
+                        <effect type="zoom" start="65" end="100" time="1000" delay="3200" tween="cubic" easing="inout" center="850,-50"/>
+                    </animation>
+<animation type="Conditional" condition="Control.HasFocus(100)" reversible="false">
+      <effect type="fade" start="100" end="100" time="450"  tween="circle" easing="inout" />
+                        <effect type="zoom" start="100" end="135" time="420"  tween="circle" easing="inout" center="-430,-1600"/>
+                              <effect type="fade" start="100" end="0" time="150" delay="400" tween="circle" easing="inout" />
+                    </animation>
+                    
+                    <animation type="Conditional" condition="!Control.HasFocus(100)" reversible="false">
+      <effect type="fade" start="100" end="100" time="450" delay="300" tween="circle" easing="inout" />
+                        <effect type="zoom" start="135" end="100" time="450"  tween="circle" easing="inout" center="-430,-1600"/>
+                    </animation>
+
+			<left>40</left>
+			<top>62</top>
+			<width>100</width>
+			<height>100</height>
+			<texture>icons\newxmb\notification.png</texture>
+			<include>WindowFadeAnimation</include>
+								<visible>!Skin.HasSetting(themes)</visible>
+		</control>
+		
+				<control type="image">
+<animation type="WindowOpen" condition="Window.Previous(Startup)">
+              <effect type="fade" start="0" end="100" time="100" delay="2000"tween="cubic" easing="inout"/>
+
+                        <effect type="zoom" start="65" end="100" time="1000" delay="3200" tween="cubic" easing="inout" center="850,-50"/>
+                    </animation>
+<animation type="Conditional" condition="Control.HasFocus(100)" reversible="false">
+      <effect type="fade" start="100" end="100" time="450"  tween="circle" easing="inout" />
+                        <effect type="zoom" start="100" end="135" time="420"  tween="circle" easing="inout" center="-430,-1600"/>
+                              <effect type="fade" start="100" end="0" time="150" delay="400" tween="circle" easing="inout" />
+                    </animation>
+                    
+                    <animation type="Conditional" condition="!Control.HasFocus(100)" reversible="false">
+      <effect type="fade" start="100" end="100" time="450" delay="300" tween="circle" easing="inout" />
+                        <effect type="zoom" start="135" end="100" time="450"  tween="circle" easing="inout" center="-430,-1600"/>
+                    </animation>
+
+			<left>40</left>
+			<top>62</top>
+			<width>100</width>
+			<height>100</height>
+					<texture>$INFO[Skin.String(themedir)]texture/function_icon/notification.png</texture>
+			<include>WindowFadeAnimation</include>
+								<visible>Skin.HasSetting(themes)</visible>
+		</control>
+
+		<control type="image">
+<animation type="WindowOpen" condition="Window.Previous(Startup)">
+              <effect type="fade" start="0" end="100" time="100" delay="2000"tween="cubic" easing="inout"/>
+
+                        <effect type="zoom" start="65" end="100" time="1000" delay="3200" tween="cubic" easing="inout" center="450,-50"/>
+                    </animation>
+<animation type="Conditional" condition="Control.HasFocus(100)" reversible="false">
+      <effect type="fade" start="100" end="5" time="450" delay="150"tween="circle" easing="inout" />
+                        <effect type="zoom" start="100" end="130" time="470"  tween="circle" easing="inout" center="1090,-1910"/>
+                    </animation>
+                    <animation type="Conditional" condition="!Control.HasFocus(100)" reversible="false">
+      <effect type="fade" start="100" end="100" time="450" tween="circle" easing="inout" />
+                        <effect type="zoom" start="130" end="100" time="450"  tween="circle" easing="inout" center="1090,-1910"/>
+                    </animation>
+
+			<left>875</left>
+			<top>72</top>
+			<width>80</width>
+			<height>80</height>
+					<texture>icons\newxmb\friend.png</texture>
+										<visible>!Skin.HasSetting(themes)</visible>
+			<include>WindowFadeAnimation</include>
+		</control>
+				<control type="image">
+<animation type="WindowOpen" condition="Window.Previous(Startup)">
+              <effect type="fade" start="0" end="100" time="100" delay="2000"tween="cubic" easing="inout"/>
+
+                        <effect type="zoom" start="65" end="100" time="1000" delay="3200" tween="cubic" easing="inout" center="450,-50"/>
+                    </animation>
+<animation type="Conditional" condition="Control.HasFocus(100)" reversible="false">
+      <effect type="fade" start="100" end="5" time="500" delay="150"tween="circle" easing="inout" />
+                        <effect type="zoom" start="100" end="130" time="420"  tween="circle" easing="inout" center="1090,-1910"/>
+                    </animation>
+                    <animation type="Conditional" condition="!Control.HasFocus(100)" reversible="false">
+      <effect type="fade" start="100" end="100" time="450" tween="circle" easing="inout" />
+                        <effect type="zoom" start="130" end="100" time="450"  tween="circle" easing="inout" center="1090,-1910"/>
+                    </animation>
+
+			<left>875</left>
+			<top>72</top>
+			<width>80</width>
+			<height>80</height>
+					<texture>$INFO[Skin.String(themedir)]texture/function_icon/friend.png</texture>
+										<visible>Skin.HasSetting(themes)</visible>
+			<include>WindowFadeAnimation</include>
+		</control>
+		
+								<control type="image">
+<animation type="WindowOpen" condition="Window.Previous(Startup)">
+              <effect type="fade" start="0" end="100" time="100" delay="2000"tween="cubic" easing="inout"/>
+
+                        <effect type="zoom" start="65" end="100" time="1000" delay="3200" tween="cubic" easing="inout" center="150,-50"/>
+                    </animation>
+<animation type="Conditional" condition="Control.HasFocus(100)" reversible="false">
+      <effect type="fade" start="100" end="5" time="500" delay="150"tween="circle" easing="inout" />
+                        <effect type="zoom" start="100" end="130" time="420"  tween="circle" easing="inout" center="1420,-1910"/>
+                    </animation>
+                    <animation type="Conditional" condition="!Control.HasFocus(100)" reversible="false">
+      <effect type="fade" start="100" end="100" time="450" tween="circle" easing="inout" />
+                        <effect type="zoom" start="130" end="100" time="450"  tween="circle" easing="inout" center="1420,-1910"/>
+                    </animation>
+
+			<left>800</left>
+			<top>72</top>
+			<width>80</width>
+			<height>80</height>
+					<texture>icons/newxmb/message.png</texture>
+										<visible>!Skin.HasSetting(themes)</visible>
+			<include>WindowFadeAnimation</include>
+		</control>
+		
+						<control type="image">
+<animation type="WindowOpen" condition="Window.Previous(Startup)">
+              <effect type="fade" start="0" end="100" time="100" delay="2000"tween="cubic" easing="inout"/>
+
+                        <effect type="zoom" start="65" end="100" time="1000" delay="3200" tween="cubic" easing="inout" center="150,-50"/>
+                    </animation>
+<animation type="Conditional" condition="Control.HasFocus(100)" reversible="false">
+      <effect type="fade" start="100" end="5" time="500" delay="150"tween="circle" easing="inout" />
+                        <effect type="zoom" start="100" end="130" time="420"  tween="circle" easing="inout" center="1420,-1910"/>
+                    </animation>
+                    <animation type="Conditional" condition="!Control.HasFocus(100)" reversible="false">
+      <effect type="fade" start="100" end="100" time="450" tween="circle" easing="inout" />
+                        <effect type="zoom" start="130" end="100" time="450"  tween="circle" easing="inout" center="1420,-1910"/>
+                    </animation>
+
+			<left>800</left>
+			<top>72</top>
+			<width>80</width>
+			<height>80</height>
+					<texture>$INFO[Skin.String(themedir)]texture/function_icon/message.png</texture>
+										<visible>Skin.HasSetting(themes)</visible>
+			<include>WindowFadeAnimation</include>
+		</control>
+		
+		
+								<control type="image">
+<animation type="WindowOpen" condition="Window.Previous(Startup)">
+              <effect type="fade" start="0" end="100" time="100" delay="2000"tween="cubic" easing="inout"/>
+
+                        <effect type="zoom" start="65" end="100" time="1000" delay="3200" tween="cubic" easing="inout" center="150,-50"/>
+                    </animation>
+<animation type="Conditional" condition="Control.HasFocus(100)" reversible="false">
+      <effect type="fade" start="100" end="5" time="500" delay="150"tween="circle" easing="inout" />
+                        <effect type="zoom" start="100" end="130" time="420"  tween="circle" easing="inout" center="1807,-1910"/>
+                    </animation>
+                    <animation type="Conditional" condition="!Control.HasFocus(100)" reversible="false">
+      <effect type="fade" start="100" end="100" time="450" tween="circle" easing="inout" />
+                        <effect type="zoom" start="130" end="100" time="450"  tween="circle" easing="inout" center="1807,-1910"/>
+                    </animation>
+
+			<left>1350</left>
+			<top>72</top>
+			<width>80</width>
+			<height>80</height>
+					<texture>icons/newxmb/trophy.png</texture>
+										<visible>!Skin.HasSetting(themes)</visible>
+			<include>WindowFadeAnimation</include>
+		</control>
+		
+						<control type="image">
+
+
+<animation type="WindowOpen" condition="Window.Previous(Startup)">
+              <effect type="fade" start="0" end="100" time="100" delay="2000"tween="cubic" easing="inout"/>
+
+                        <effect type="zoom" start="65" end="100" time="1000" delay="3200" tween="cubic" easing="inout" center="150,-50"/>
+                    </animation>
+<animation type="Conditional" condition="Control.HasFocus(100)" reversible="false">
+      <effect type="fade" start="100" end="5" time="500" delay="150"tween="circle" easing="inout" />
+                        <effect type="zoom" start="100" end="130" time="420"  tween="circle" easing="inout" center="1807,-1910"/>
+                    </animation>
+                    <animation type="Conditional" condition="!Control.HasFocus(100)" reversible="false">
+      <effect type="fade" start="100" end="100" time="450" tween="circle" easing="inout" />
+                        <effect type="zoom" start="130" end="100" time="450"  tween="circle" easing="inout" center="1807,-1910"/>
+                    </animation>
+
+			<left>1350</left>
+			<top>72</top>
+			<width>80</width>
+			<height>80</height>
+					<texture>$INFO[Skin.String(themedir)]texture/function_icon/trophy.png</texture>
+										<visible>Skin.HasSetting(themes)</visible>
+			<include>WindowFadeAnimation</include>
+		</control>
+		
+		
+				<control type="label">
+<animation type="WindowOpen" condition="Window.Previous(Startup)">
+              <effect type="fade" start="0" end="100" time="300" tween="cubic" easing="inout" delay="3600"/>
+                    </animation>
+<animation type="Conditional" condition="Control.HasFocus(100)">
+                        <effect type="fade" start="100" end="0" time="450" tween="cubic" easing="inout" />
+                        <effect type="slide" start="0,0" end="200,750" time="450" tween="circle" easing="inout" />
+                    </animation>
+
+					<left>205</left>
+					<top>45</top>
+					<width>1400</width>
+					<height>33</height>
+					<label>$INFO[System.ProfileCount]</label>
+					<font>Font25</font>
+					<align>center</align>
+					<textcolor>DialogColor1</textcolor>
+								<include>WindowFadeAnimation</include>
+				</control>
+
+		<control type="rss" id="1">
+<animation type="WindowOpen" condition="Window.Previous(Startup)">
+              <effect type="fade" start="0" end="100" time="300" tween="cubic" easing="inout" delay="3600"/>
+                    </animation>
+<animation type="Conditional" condition="Control.HasFocus(100)">
+                        <effect type="fade" start="100" end="0" time="450" tween="cubic" easing="inout" />
+                        <effect type="slide" start="0,0" end="200,750" time="450" tween="circle" easing="inout" />
+                    </animation>
+
+			<left>140</left>
+			<top>95</top>
+			<width>656</width>
+			<height>35</height>
+			<font>Font30</font>
+			<textcolor>TextColor2</textcolor>
+			<headlinecolor>TextColor2</headlinecolor>
+			<titlecolor>TextColor2</titlecolor>
+			<urlset>1</urlset>
+			<include>WindowFadeAnimation</include>
+		</control>
+
+</control>
+
+
+<include>bottombar</include>
+	</controls>
+
+</window>

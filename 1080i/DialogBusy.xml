@@ -1,0 +1,51 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<window>
+	<!-- busydialog -->
+
+	<controls>
+
+		<!-- Background -->
+		<include>DialogFadeBackgroundImage</include>
+		<include>DialogFadeBackgroundImage</include>
+		<include>DialogFadeBackgroundImage</include>
+
+		<!-- Main group -->
+		<control type="group">
+			<include>DialogZoomAnimation</include>
+			<control type="multiimage" id="1">
+
+				<animation effect="fade" start="0" end="100" time="200" condition="$PARAM[animate]">WindowOpen</animation>
+				<animation effect="fade" start="100" end="0" time="200" delay="70" condition="$PARAM[animate]">WindowClose</animation>
+				<include>VisibleFadeAnimation</include>
+      <description>My first slideshow control</description>
+      <left>830</left>
+      <top>500</top>
+      <width>70</width>
+      <height>70</height>
+      <imagepath>loading</imagepath>
+      <timeperimage>300</timeperimage>
+      <fadetime>400</fadetime>
+      <pauseatend>0</pauseatend>
+      <randomize>false</randomize>
+      <loop>yes</loop>
+      <aspectratio>stretch</aspectratio>
+		=
+</control>
+				<control type="label">
+
+		<animation effect="fade" start="0" end="100" time="200" condition="$PARAM[animate]">WindowOpen</animation>
+				<animation effect="fade" start="100" end="0" time="200" delay="70" condition="$PARAM[animate]">WindowClose</animation>
+					<left>920</left>
+					<top>520</top>
+					<width>1400</width>
+					<height>33</height>
+					<label>Please wait</label>
+					<font>Font30</font>
+					<textcolor>DialogColor1</textcolor>
+			<include>WindowFadeAnimation</include>
+				</control>
+		</control>
+
+	</controls>
+
+</window>

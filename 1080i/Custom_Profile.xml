@@ -1,0 +1,346 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<window id="1806">
+	<!-- skinsettings -->
+	<defaultcontrol always="true">8000</defaultcontrol>
+	<controls>
+	
+		<!-- Background -->
+		<include>WindowBackgroundImage</include>
+				<control type="group">
+		
+		<animation type="WindowOpen">
+              <effect type="fade" start="0" end="100" time="300" tween="cubic" easing="inout"/>
+              <effect type="zoom" start="120" end="100" time="400" tween="cubic" easing="out" center="auto"/>
+                    </animation>
+<animation type="WindowClose">
+              <effect type="fade" start="100" end="0" time="300" tween="cubic" easing="inout"/>
+              <effect type="zoom" start="100" end="120" time="400" tween="cubic" easing="out"center="auto"/>
+                    </animation>
+									<control type="image">
+<left></left>
+<top>0</top>
+<width>1920</width>
+<height>1080</height>
+			<texture background="true">$INFO[Skin.String(profilecover)]</texture>
+
+				<animation effect="fade" start="0" end="100" time="200" condition="$PARAM[animate]">WindowOpen</animation>
+				<animation effect="fade" start="100" end="0" time="200" delay="70" condition="$PARAM[animate]">WindowClose</animation>
+				<include>VisibleFadeAnimation</include>
+				<visible>!String.IsEmpty(Skin.String(profilecover))</visible>
+
+			</control>
+			
+	
+			
+					<control type="image">
+<left></left>
+<top>420</top>
+<width>1920</width>
+<height>900</height>
+			<texture background="true">color_white.png</texture>
+			<colordiffuse>D9000000</colordiffuse>
+				<animation effect="fade" start="0" end="100" time="200" condition="$PARAM[animate]">WindowOpen</animation>
+				<animation effect="fade" start="100" end="0" time="200" delay="70" condition="$PARAM[animate]">WindowClose</animation>
+				<include>VisibleFadeAnimation</include>
+								<visible>!String.IsEmpty(Skin.String(profilecover))</visible>
+			</control>
+								<control type="image">
+<left></left>
+<top>-1200</top>
+<width>1920</width>
+<height>2280</height>
+			<texture background="true">icons/fade.png</texture>
+
+				<animation effect="fade" start="0" end="100" time="200" condition="$PARAM[animate]">WindowOpen</animation>
+				<animation effect="fade" start="100" end="0" time="200" delay="70" condition="$PARAM[animate]">WindowClose</animation>
+				<include>VisibleFadeAnimation</include>
+								<visible>!String.IsEmpty(Skin.String(profilecover))</visible>
+			</control>
+			
+										<control type="image">
+<left></left>
+<top>420</top>
+<width>1920</width>
+<height>900</height>
+			<texture background="true">color_white.png</texture>
+			<colordiffuse>1A000000</colordiffuse>
+				<animation effect="fade" start="0" end="100" time="200" condition="$PARAM[animate]">WindowOpen</animation>
+				<animation effect="fade" start="100" end="0" time="200" delay="70" condition="$PARAM[animate]">WindowClose</animation>
+				<include>VisibleFadeAnimation</include>
+				<visible>String.IsEmpty(Skin.String(profilecover))</visible>
+			</control>
+			
+
+
+
+
+
+<control type="panel" id="8000">
+
+<animation type="Conditional" condition="true">
+ <effect type="zoom" start="100" end="85" time="1" tween="cubic" easing="inout" center="auto"/>
+                    </animation>
+
+			
+                    
+			<left>50</left>
+			<top>490</top>
+			<width>600</width>
+			<height>875</height>
+			<focusposition>1</focusposition>
+			<defaultcontrol>1</defaultcontrol>
+			<onup>-</onup>
+			<ondown>-</ondown>
+			<onleft>-</onleft>
+			<onright>9000</onright>
+			<orientation>vertical</orientation>
+			<scrolltime tween="sine" easing="out">240</scrolltime>
+
+			<itemlayout width="500" height="130">
+<control type="group">
+
+				<control type="image">
+					<left>0</left>
+					<top>120</top>
+					<width>500</width>
+			<height>2</height>
+			<texture>color_white.png</texture>
+			<colordiffuse>80FFFFFF</colordiffuse>
+				</control>
+								<control type="image">
+					<left>0</left>
+					<top>10</top>
+					<width>110</width>
+			<height>110</height>
+			<texture>$INFO[ListItem.Thumb]</texture>
+
+				</control>
+				<control type="label">
+					<left>150</left>
+					<top>-50</top>
+					<width>900</width>
+					<height>233</height>
+					<label>$INFO[ListItem.Label]</label>
+					<font>Font36</font>
+					<textcolor>white</textcolor>
+					<align>left</align>
+					<autoscroll>false</autoscroll>
+				</control>
+
+				</control>
+			</itemlayout>
+
+			<focusedlayout width="500" height="130">
+			<control type="group">
+				<control type="image">
+					<left>0</left>
+					<top>120</top>
+					<width>500</width>
+			<height>2</height>
+			<texture>color_white.png</texture>
+			<colordiffuse>80FFFFFF</colordiffuse>
+				</control>
+
+												<control type="image">
+					<left>0</left>
+					<top>10</top>
+					<width>110</width>
+			<height>110</height>
+			<texture>$INFO[ListItem.Thumb]</texture>
+
+				</control>
+				<control type="label">
+					<left>150</left>
+					<top>-50</top>
+					<width>900</width>
+					<height>233</height>
+					<label>$INFO[ListItem.Label]</label>
+					<font>Font36</font>
+					<textcolor>white</textcolor>
+					<align>left</align>
+					<autoscroll>false</autoscroll>
+				</control>
+								<control type="image">
+            <animation type="Conditional" condition="true">
+                                        <effect type="zoom" start="100" end="111" time="1" tween="sine" easing="inout" center="auto" />
+                                    </animation>
+                              <animation type="Focus">
+                                        <effect type="fade" start="0" end="100" time="200" tween="sine" easing="in" />
+                                    </animation>
+                                    <animation type="Unfocus">
+                                        <effect type="fade" start="100" end="0" time="200" tween="sine" easing="out" />
+                                    </animation>
+					<left>0</left>
+					<top>0</top>
+					<width>500</width>
+					<height>130</height>
+					<texture border="40">fo.png</texture>
+				</control>
+				</control>
+			</focusedlayout>
+
+  <content>
+   <item id="1">
+                              <label>Set Profile Cover</label>
+
+                             <onclick>Skin.SetImage(profilecover)</onclick>
+															
+                                                                <thumb>icons/xmb/pictures.png</thumb>
+                      
+                            </item>
+     <item id="2">
+                              <label>Change PSN Name</label>
+
+                             <onclick>Skin.SetString(gtag)</onclick>
+															
+                                                                <thumb>icons/xmb/user.png</thumb>
+                      
+                            </item>
+                                 <item id="2">
+                              <label>Change About Me</label>
+
+                             <onclick>Skin.SetString(aboutme)</onclick>
+															
+                                                                <thumb>icons/xmbmain/chat2.png</thumb>
+                      
+                            </item>
+                                 <item id="3">
+                              <label>Profile Settings</label>
+
+                             <onclick>ActivateWindow(profiles)</onclick>
+															
+                                                                <thumb>icons/xmb/settings.png</thumb>
+                      
+                            </item>
+               
+     
+                                
+  </content>
+
+		</control>
+				
+				
+									<control type="image">
+					<left>100</left>
+					<top>370</top>
+					<width>180</width>
+			<height>180</height>
+			<texture>$INFO[System.ProfileThumb]</texture>
+
+				</control>
+							<control type="label">
+
+					<left>310</left>
+					<top>340</top>
+					<width>900</width>
+					<height>233</height>
+					<label>$INFO[System.ProfileName]</label>
+					<font>Font42</font>
+					<textcolor>white</textcolor>
+					<align>left</align>
+					<autoscroll>false</autoscroll>
+				</control>
+				
+						<control type="label">
+
+					<left>310</left>
+					<top>390</top>
+					<width>900</width>
+					<height>233</height>
+					<label fallback="PSN">$INFO[Skin.String(gtag)]</label>
+					<font>Font33</font>
+					<textcolor>white</textcolor>
+					<align>left</align>
+					<autoscroll>false</autoscroll>
+				</control>
+						<control type="image">
+
+
+			<left>300</left>
+			<top>547</top>
+			<width>1920</width>
+			<height>2</height>
+			<texture>color_white.png</texture>
+			<colordiffuse>80FFFFFF</colordiffuse>
+		</control>
+				
+								<control type="image">
+					<left>680</left>
+					<top>840</top>
+					<width>984</width>
+			<height>117</height>
+			<texture>icons/trophies2.png</texture>
+
+				</control>
+				
+				
+										<control type="label">
+
+					<left>700</left>
+					<top>500</top>
+					<width>900</width>
+					<height>233</height>
+					<label>About Me</label>
+					<font>Font36</font>
+					<textcolor>grey</textcolor>
+					<align>left</align>
+					<autoscroll>false</autoscroll>
+				</control>
+				
+													<control type="label">
+
+					<left>700</left>
+					<top>540</top>
+					<width>900</width>
+					<height>233</height>
+					<label fallback="Hi, I'm...">$INFO[Skin.String(aboutme)]</label>
+					<font>Font30</font>
+					<textcolor>white</textcolor>
+					<align>left</align>
+					<autoscroll>false</autoscroll>
+				</control>
+				
+												<control type="label">
+
+					<left>700</left>
+					<top>600</top>
+					<width>900</width>
+					<height>233</height>
+					<label>Languages</label>
+					<font>Font36</font>
+					<textcolor>grey</textcolor>
+					<align>left</align>
+					<autoscroll>false</autoscroll>
+				</control>
+				
+													<control type="label">
+
+					<left>700</left>
+					<top>640</top>
+					<width>900</width>
+					<height>233</height>
+					<label fallback="English (United Kingdom)">$INFO[System.Language]</label>
+					<font>Font30</font>
+					<textcolor>white</textcolor>
+					<align>left</align>
+					<autoscroll>false</autoscroll>
+				</control>
+																<control type="label">
+
+					<left>700</left>
+					<top>710</top>
+					<width>900</width>
+					<height>233</height>
+					<label>Trophies</label>
+					<font>Font36</font>
+					<textcolor>white</textcolor>
+					<align>left</align>
+					<autoscroll>false</autoscroll>
+				</control>
+		</control>
+		<!-- Home items -->
+		
+<include>bottombar</include>
+	</controls>
+
+</window>
