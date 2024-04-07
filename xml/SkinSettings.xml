@@ -160,7 +160,7 @@
 					<height>66</height>
 					<textwidth>1120</textwidth>
 					<font>Font33</font>
-					<label>Enable themes - EXPECT BUGS!</label>
+					<label>Enable Themes (Beta)</label>
 					<onclick>Skin.ToggleSetting(themes)</onclick>
 					<onclick condition="Skin.HasSetting(BackgroundCustomColour)">Skin.ToggleSetting(BackgroundCustomColour)</onclick>
 					<onclick>Skin.SetString(BackgroundImage,1)</onclick>
@@ -320,7 +320,7 @@
 					<height>66</height>
 					<textwidth>1120</textwidth>
 					<font>Font33</font>
-					<label>Enable apps folder</label>
+					<label>Enable My Apps folder</label>
 					<onclick>Skin.ToggleSetting(appsfolder)</onclick>
 					<selected>Skin.HasSetting(appsfolder)</selected>
 				</control>

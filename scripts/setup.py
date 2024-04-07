@@ -3,18 +3,18 @@ import xbmc
 import time
 import xbmcgui
 
-# Create progress dialog object
-progress = xbmcgui.Dialog()
-progress.text = 'Installing update'
-progress.heading = 'Installing system update'
+# Assuming total progress steps are 10 (modify as needed)
+total_steps = 10
 
-# Simulate progress (adjusted for xbmcgui 5.17)
-for i in range(0, 101, 10):  # Update in 10% increments
-    progress.update(i, 'Completed ' + str(i) + '%')
-    time.sleep(0.5)
+progress = xbmcgui.DialogProgress()
+progress.create('Installing update','Installing system update')
 
-# Close progress dialog
-progress.close()
+# Update progress in smaller increments for smoother visuals
+for i in range(1, total_steps + 1):
+    progress_percent = int((i / total_steps) * 100)
+    progress.update(progress_percent, "", str(progress_percent) + '%', "")
+    time.sleep(0.2)  # Adjust sleep time as desired
 
-# Activate window (assuming window 1251 still applies)
+progress.update(100, "", '100%', "")
+xbmc.executebuiltin('Dialog.Close(all,true)')
 xbmc.executebuiltin('ActivateWindow(1251)')

@@ -39,7 +39,7 @@
 					<top>520</top>
 					<width>1400</width>
 					<height>33</height>
-					<label>Please wait</label>
+					<label>Please wait...</label>
 					<font>Font30</font>
 					<textcolor>DialogColor1</textcolor>
 			<include>WindowFadeAnimation</include>
