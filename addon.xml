@@ -1,22 +1,23 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
-<addon id="skin.playstation" version="3.7.0" name="PlayStation 4" provider-name="KnuxBoy04">
+<addon id="skin.playstation" version="3.7.1" name="PlayStation 4" provider-name="KnuxBoy04">
     <requires>
         <import addon="xbmc.gui" version="5.17.0"/>
         <import addon="script.favourites" version="6.0.4" />
     </requires>
     <extension point="xbmc.gui.skin" effectslowdown="0.80" debugging="false">
-        <res width="1920" height="1080" aspect="16:9" default="true" folder="1080i" />
+        <res width="1920" height="1080" aspect="16:9" default="true" folder="xml" />
     </extension>
     <extension point="xbmc.addon.metadata">
         <summary lang="en">PlayStation 4 Skin Orignally by Toyota12303, revived by KnuxBoy04</summary>
         <description lang="en">This skin is based off the default OSMC skin. Dedicated to Toyota12303</description>
         <platform>all</platform>
-        <license></license>
+        <license>Copyleft</license>
         <forum></forum>
-        <source></source>
+        <source>https://github.com/JayBoyAdvance/skin.playstation</source>
         <assets>
             <icon>resources/icon.png</icon>
             <fanart>resources/fanart.jpg</fanart>
+			<news>Initial release for Omega</news>
         </assets>
     </extension>
 </addon>

@@ -58,7 +58,7 @@
 						<label>13012</label>
 												<onclick>Dialog.Close(all,true)</onclick>
 						<onclick>ActivateWindow(7091)</onclick>
-						<onclick>XBMC.Quit()</onclick>
+						<onclick>Quit</onclick>
 
 						<visible>System.ShowExitButton</visible>
 					</item>
@@ -66,7 +66,7 @@
 						<label>13016</label>
 												<onclick>Dialog.Close(all,true)</onclick>
 						<onclick>ActivateWindow(7091)</onclick>
-						<onclick>XBMC.Powerdown()</onclick>
+						<onclick>Powerdown</onclick>
 						
 						<visible>System.CanPowerDown</visible>
 					</item>
@@ -74,12 +74,12 @@
 						<label>13011</label>
 												<onclick>Dialog.Close(all,true)</onclick>
 						<onclick>ActivateWindow(7091)</onclick>
-						<onclick>XBMC.Suspend()</onclick>
+						<onclick>Suspend</onclick>
 						<visible>System.CanSuspend</visible>
 					</item>
 					<item>
 						<label>13010</label>
-						<onclick>XBMC.Hibernate()</onclick>
+						<onclick>Hibernate</onclick>
 						<visible>System.CanHibernate</visible>
 					</item>
 					<item>
