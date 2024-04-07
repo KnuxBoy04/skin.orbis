@@ -2,11 +2,7 @@
 <window>
 	<!-- playercontrols -->
 	<defaultcontrol always="true">5</defaultcontrol>
-<onload>Dialog.Close(all,true)</onload>
-<onload>ActivateWindow(Home)</onload>
-	<controls>
-
-		
-	</controls>
-
+	<onload>Dialog.Close(all,true)</onload>
+	<onload>ActivateWindow(Home)</onload>
+	<controls></controls>
 </window>

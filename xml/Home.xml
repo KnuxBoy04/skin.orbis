@@ -799,7 +799,7 @@
 				<top>72</top>
 				<width>80</width>
 				<height>80</height>
-				<texture>icons/newxmb/trophy.png</texture>
+				<texture>icons/xmb/music.png</texture>
 				<visible>!Skin.HasSetting(themes)</visible>
 				<include>WindowFadeAnimation</include>
 			</control>
@@ -820,7 +820,7 @@
 				<top>72</top>
 				<width>80</width>
 				<height>80</height>
-				<texture>$INFO[Skin.String(themedir)]texture/function_icon/trophy.png</texture>
+				<texture>icons/xmb/music.png</texture>
 				<visible>Skin.HasSetting(themes)</visible>
 				<include>WindowFadeAnimation</include>
 			</control>

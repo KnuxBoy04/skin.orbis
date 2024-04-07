@@ -12,7 +12,7 @@
         <description lang="en">This skin is based off the default OSMC skin. Dedicated to Toyota12303</description>
         <platform>all</platform>
         <license>Copyleft</license>
-        <forum></forum>
+        <forum>https://forum.kodi.tv/showthread.php?tid=376974</forum>
         <source>https://github.com/JayBoyAdvance/skin.orbis</source>
         <assets>
             <icon>resources/icon.png</icon>
