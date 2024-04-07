@@ -86,7 +86,7 @@
 						<label>13013</label>
 												<onclick>Dialog.Close(all,true)</onclick>
 						<onclick>ActivateWindow(7091)</onclick>
-						<onclick>XBMC.Reset()</onclick>
+						<onclick>Reset</onclick>
 						<visible>System.CanReboot</visible>
 					</item>
 					<item>

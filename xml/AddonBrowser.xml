@@ -18,7 +18,7 @@
               <effect type="fade" start="0" end="100" time="300" tween="cubic" easing="inout"/>
               <effect type="zoom" start="120" end="100" time="400" tween="cubic" easing="out" center="auto"/>
                     </animation>
-<animation type="WindowClose">
+        <animation type="WindowClose">
               <effect type="fade" start="100" end="0" time="300" tween="cubic" easing="inout"/>
               <effect type="zoom" start="100" end="120" time="400" tween="cubic" easing="out"center="auto"/>
                     </animation>
@@ -288,7 +288,7 @@
 			</control>
 
 		</control>
-<include>bottombar</include>
+      <include>bottombar</include>
 	</controls>
 
 </window>
